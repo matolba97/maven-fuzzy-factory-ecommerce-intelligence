@@ -1,112 +1,112 @@
-# Maven Fuzzy Factory · E-Commerce Intelligence
+# Maven Fuzzy Factory — E-commerce Performance Analysis
 
-A Power BI portfolio project connecting financial performance, acquisition quality, conversion journeys, product economics and recorded refunds for a **fictional Maven Analytics retailer**.
+Power BI analysis of a fictional online teddy-bear retailer, covering sales, profitability, marketing acquisition, purchase conversion, customer behavior, and refunds.
 
-![Executive dashboard captured from Power BI Desktop](docs/screenshots/Executive%20Command%20Center.png)
+**[View Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWM4NmM1ODctMzNkMS00YWYxLWI1NWQtNTgxZWY5YTQyNTM5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)**
 
-**7 report pages · 88 DAX measures · 26 relationships · 472,871 sessions · 32,313 orders**
+## Project Overview
 
-## Business problem
+The dashboard connects website activity with orders, product sales, and refunds to examine how traffic becomes revenue. Seven report pages move from overall performance to acquisition channels, shopping stages, product combinations, and customer purchase cohorts.
 
-Management needs to understand which traffic converts, where the shopping journey loses sessions, how products contribute gross profit, and how refunds affect recorded revenue. The project answers these questions while preserving transaction grain and distinguishing order dates, session dates and refund dates.
+The extract contains **472,871 sessions, 32,313 orders, 40,025 sold items, and four products**. Sales and sessions cover March 19, 2012–March 19, 2015; refund events extend through April 1, 2015. This is an educational case study using a fictional business.
 
-## Explore the report
+## Business Problem
 
-| Page | Decision supported |
+- How do sales, gross profit, and average order value change over time?
+- Which traffic sources, campaigns, and devices generate converting sessions?
+- Where do sessions leave the shopping journey before purchase?
+- Which products and baskets contribute revenue, and where are recorded refunds concentrated?
+- How often do observed buyers purchase again, and how does this vary by first-purchase cohort?
+
+## Dashboard Objectives
+
+Provide a consistent view of financial and website performance, compare segments under selected filters, and identify areas for further investigation. The analysis separates traffic volume from conversion quality, product sales from whole-order totals, and refund cash flow from refund incidence among items sold in a particular period.
+
+## Key Metrics & KPIs
+
+Values below describe the full supplied extract. Interactive selections change the displayed context.
+
+| KPI | What it measures | Why it matters |
+|---|---|---|
+| Recorded sales — **$1,938,509.75** | Order sales before refunds | Establishes sales scale and supports period comparisons. |
+| Gross profit — **$1,216,139.50** | Sales less **$722,370.25** in COGS | Shows contribution before refunds and operating expenses; it is not net profit. |
+| Gross margin — **62.74%** | Gross profit / sales | Compares profitability relative to sales rather than volume alone. |
+| Orders — **32,313** | Number of orders | Separates transaction growth from changes in basket value. |
+| Average order value — **$59.99** | Sales / orders | Shows average spend per order before refunds. |
+| Sessions — **472,871** | Number of website sessions | Provides the traffic denominator for acquisition and conversion analysis. |
+| Session conversion — **6.83%** | Converted sessions / sessions | Measures how often a visit results in an order. |
+| Revenue per session | Sales attributed to selected sessions / sessions | Compares traffic value across sources, campaigns, and devices. |
+| Stage conversion and abandonment | Sessions progressing to the next ordered stage, and those lost | Locates transitions with the greatest observed drop-off. |
+| Recorded refunds — **$85,338.69** | Refund amounts by refund event date | Shows when refunded revenue is recorded. |
+| Revenue after recorded refunds — **$1,853,171.06** | Item sales on sale dates less refunds on refund dates | Shows period revenue after refund flows, with matching product scope. |
+| Product refund rate | Refunded sold items / units sold in the selected sale cohort | Compares recorded refund incidence; recent sales have less follow-up. |
+| Repeat buyer rate — **1.86%** | Buyer IDs with at least two observed purchases / buyer IDs | Describes repeat purchasing within this extract, separately from repeat visits. |
+
+[Full KPI definitions and DAX](Maven%20Fuzzy%20Factory/docs/04-kpi-reference.csv)
+
+## Dashboard Analysis
+
+| Report page | Analytical views |
 |---|---|
-| Executive Command Center | Assess recorded sales, gross profitability and conversion |
-| Revenue & Profitability | Compare complete months, basket value and product economics |
-| Marketing Acquisition | Evaluate source/campaign efficiency and device conversion |
-| Conversion Funnel | Locate losses in an ordered, distinct-session shopping journey |
-| Product & Basket | Compare products, additional items and observed combinations |
-| Customer Behavior | Separate visitors from buyers and inspect purchase cohorts |
-| Refunds & Business Risks | Track refund cash flow and original-sale-cohort incidence |
+| Executive Command Center | Sales, gross profit, margin, orders, sessions, and conversion; monthly trends, acquisition value, and leading products. |
+| Revenue & Profitability | Sales and profit trends, product contribution, monthly AOV, and valid complete-month MoM/YoY comparisons. |
+| Marketing Acquisition | Revenue per session by source, channel trends, campaign comparisons, and desktop/mobile conversion. |
+| Conversion Funnel | Ordered Landing → Product → Cart → Shipping → Billing → Purchase journey; stage losses, landing-page outcomes, and conversion over time. |
+| Product & Basket | Product sales and gross profit, primary/additional items, observed product combinations, and performance by calendar launch age. |
+| Customer Behavior | New/repeat visitor trends, buyer purchase frequency, and monthly first-purchase cohorts. |
+| Refunds & Business Risks | Refund amounts over time, product concentration, and refunded-item incidence by original sale cohort. |
 
-The native report includes date and acquisition slicers, context-aware titles, explanatory report-page tooltips, conditional formatting and product drillthrough. Slicers are page-local. Full manual click-through acceptance remains a documented limitation.
+Date, year, device, visitor type, and traffic group slicers support segment comparisons. Filters are page-local, so check selections after navigating. KPI tooltips explain definitions; product data points support a Product detail drillthrough page. See the [report walkthrough](Maven%20Fuzzy%20Factory/docs/07-report-walkthrough.md) for interaction details.
 
-<details><summary>Conversion and product screenshots</summary>
+## Key Insights
 
-![Ordered session funnel](docs/screenshots/Conversion%20Funnel.png)
+- **Complete-month sales increased:** February 2015 sales were **$129,212.94**, up **95.74%** from February 2014 (**$66,012.52**). March 2012 and March 2015 are partial months and require different treatment.
+- **Conversion differs by device:** desktop sessions converted at **8.50%**, compared with **3.09%** on mobile. Comparing source, campaign, and month can help investigate the gap; the aggregate difference does not establish its cause.
+- **Product-to-cart progression is a major loss point:** **94,953 of 261,231** product-reaching sessions progressed to cart (**36.35%**); **63.65%** did not. Product includes listing and detail views, and each stage counts a session once in order.
+- **Sales are concentrated in one product:** The Original Mr. Fuzzy generated **$1,211,057.74**, or **62.47%** of item sales. Products launched at different dates, so lifetime totals alone do not establish relative performance.
+- **Repeat purchasing is limited within the observed window:** **591 of 31,696** buyer IDs made at least two purchases (**1.86%**). This is observed recurrence, not lifetime loyalty or a churn estimate.
 
-![Product and basket intelligence](docs/screenshots/Product%20%26%20Basket.png)
+These are descriptive findings. Advertising spend, refund reasons, and operating expenses are unavailable, so the report cannot establish ROAS, causes of returns, or net profitability. [Supporting observations and investigation questions](Maven%20Fuzzy%20Factory/docs/06-business-insights.md)
+
+## Dashboard Preview
+
+Actual captures from the Power BI Desktop report.
+
+![Executive page: financial KPIs, monthly sales and profit, acquisition value, and product rankings](docs/screenshots/Executive%20Command%20Center.png)
+
+<details>
+<summary>Conversion funnel and product analysis</summary>
+
+![Conversion page: ordered session funnel, stage drop-off, and landing-page comparisons](docs/screenshots/Conversion%20Funnel.png)
+
+![Product page: sales and gross profit comparisons, baskets, and launch-age trends](docs/screenshots/Product%20%26%20Basket.png)
 
 </details>
 
-[Browse all actual report captures](docs/screenshots/) · [Detailed walkthrough](Maven%20Fuzzy%20Factory/docs/07-report-walkthrough.md)
+[Browse all report screenshots](docs/screenshots/)
 
-## Technology and architecture
+## Tools & Techniques
 
-**Power BI Desktop · PBIP/PBIR · TMDL · DAX · Power Query M · Python · pandas · NumPy · SQLite**
+- **Power BI Desktop:** interactive report pages, slicers, conditional formatting, report-page tooltips, and product drillthrough.
+- **Power Query:** parameterized CSV import and explicit data types.
+- **DAX:** financial ratios, acquisition metrics, ordered-stage comparisons, complete-month growth, and customer cohorts.
+- **Data modeling:** separate order, item, refund, and session facts with shared dimensions and single-direction relationships to avoid duplicated totals.
+- **Python, pandas, NumPy, and SQLite:** data profiling, session-event preparation, basket/cohort derivation, and independent reconciliation.
 
-Four independent facts retain one order, one sold item, one refund event and one website session per row. Shared date, customer, channel, device, visitor and landing dimensions filter facts in one direction. Product filters item/refund facts. Disconnected stage and cohort-age tables drive explicit measures.
+[Model and relationships](Maven%20Fuzzy%20Factory/docs/05-model-and-relationships.md) · [Validation evidence and limits](Maven%20Fuzzy%20Factory/docs/08-validation-and-runtime.md)
 
-```mermaid
-flowchart LR
-    A[Six original CSV tables] --> B[Python preparation and validation]
-    B --> C[Prepared native-grain CSVs]
-    C --> D[Power Query typed Import]
-    D --> E[TMDL semantic model and DAX]
-    E --> F[Seven Power BI report pages]
-    A --> G[Independent CSV and SQLite audit]
-    C --> G
-```
+To explore locally, install the Python dependencies, run `python scripts/configure_local.py`, then open [Maven Fuzzy Factory.pbip](Maven%20Fuzzy%20Factory/powerbi/Maven%20Fuzzy%20Factory.pbip) in Power BI Desktop and refresh. Prepared data is included. [Setup and refresh details](Maven%20Fuzzy%20Factory/README.md)
 
-[Model relationships and grain documentation](Maven%20Fuzzy%20Factory/docs/05-model-and-relationships.md) · [KPI formulas](Maven%20Fuzzy%20Factory/docs/04-kpi-reference.csv)
+## Data Source
 
-[Download the interactive architecture diagram](docs/assets/analytics-pipeline.html) and open it locally. Generated with Archify; automated artifact and browser checks passed. The Mermaid overview above renders directly on GitHub.
+**365 Data Science** is credited as the dataset provider identified by the project owner: [official website](https://365datascience.com/). The specific 365 Data Science dataset or course page could not be confirmed from the supplied files or official-site searches.
 
-## Verified results
+The local filenames, data dictionary, and teddy-bear products identify the extract as **Maven Fuzzy Factory**. The verified official matching dataset is [Maven Analytics — Toy Store E-Commerce Database](https://mavenanalytics.io/data-playground/toy-store-e-commerce-database), which credits Maven Analytics and lists a **Public Domain** license. This attribution is retained; distribution through 365 Data Science has not been independently verified.
 
-| Full-extract metric | Value |
-|---|---:|
-| Recorded sales | $1,938,509.75 |
-| Recorded COGS | $722,370.25 |
-| Gross profit before refunds and operating expenses | $1,216,139.50 |
-| Gross margin | 62.74% |
-| Recorded refunds | $85,338.69 |
-| Revenue after all recorded refunds | $1,853,171.06 |
-| Session conversion | 6.83% |
+Six CSV tables contain orders, order items, item refunds, products, website sessions, and pageviews, plus a data dictionary. Transactions support financial and basket analysis; sessions and pageviews support acquisition and ordered conversion analysis. [Source and licensing details](Maven%20Fuzzy%20Factory/SOURCE-AND-LICENSE.md)
 
-Desktop conversion is 8.50% versus 3.09% on mobile. February 2015 recorded sales are 95.74% above February 2014. These observations support investigation; they do not establish causal device effects or realized improvements.
+## Live Dashboard
 
-Sales/sessions span March 19, 2012–March 19, 2015; refunds extend through April 1, 2015. Both boundary sales months are partial. Gross profit is not operating/net profit. Traffic tagging does not prove paid status; advertising spend, ROAS and CAC are unavailable. [Evidence and recommendations](Maven%20Fuzzy%20Factory/docs/06-business-insights.md).
+[View Interactive Dashboard](https://app.powerbi.com/view?r=eyJrIjoiYWM4NmM1ODctMzNkMS00YWYxLWI1NWQtNTgxZWY5YTQyNTM5IiwidCI6IjJiYjZlNWJjLWMxMDktNDdmYi05NDMzLWMxYzZmNGZhMzNmZiIsImMiOjl9)
 
-## Run locally
-
-1. Clone or download this repository. Install a current Power BI Desktop version supporting PBIP/TMDL.
-2. Install Python dependencies and configure this clone:
-
-   ```powershell
-   python -m pip install -r requirements.txt
-   python scripts/configure_local.py
-   ```
-
-3. Open [`Maven Fuzzy Factory.pbip`](Maven%20Fuzzy%20Factory/powerbi/Maven%20Fuzzy%20Factory.pbip) and refresh the Import model. `PreparedFolder` is configured by the preceding script; it can also be set in Manage parameters.
-4. Navigate the seven pages. In Desktop editing mode, action buttons require Ctrl+click.
-
-Prepared CSVs and the authored model are included. To refresh changed raw files, run `python scripts/profile_and_prepare.py` first, then refresh Power BI. This is a documented hybrid Python/Power Query pipeline, not a raw-CSV-only one-click refresh. Model/report authoring scripts are optional and can regenerate artifacts; see [build instructions](scripts/README.md).
-
-## Validation
-
-The original Desktop acceptance run on **October 21, 2026** completed full Import refresh, executed all 88 measures, and passed **903 reference comparisons** across totals, months, products, devices, funnel stages, cohorts and edge cases. A separate audit passed **54 checks**, including 299 filtered aggregate cells. Static artifact checks passed **51 checks**. All 15 main/support pages were captured from the actual report.
-
-Reproduce data and saved-engine-evidence checks:
-
-```powershell
-python scripts/independent_validate.py
-python scripts/verify_live.py
-```
-
-`verify_live.py` checks saved Desktop results; it does **not** start or query a live engine. Runtime queries are supplied under `Maven Fuzzy Factory/qa/`. [Validation scope and limits](Maven%20Fuzzy%20Factory/docs/08-validation-and-runtime.md).
-
-## Live demonstration
-
-This is a native Power BI project, not a deployed web application. The public alternative is the screenshot gallery and the reproducible PBIP. No public Power BI Service URL is claimed. Publishing an interactive Power BI report requires a suitable account/workspace and sharing configuration.
-
-## Data and attribution
-
-Source: [Maven Analytics — Toy Store E-Commerce Database](https://mavenanalytics.io/data-playground/toy-store-e-commerce-database). The provider lists the dataset as **Public Domain**, rechecked November 12, 2026. Original CSV bytes are preserved and fingerprinted. The company and transactions are educational source data, not a real client engagement. Generated code has no separately granted open-source license; dataset terms do not automatically license project code.
-
-## Author
-
-[matolba97](https://github.com/matolba97) — Power BI and e-commerce analytics portfolio.
+Explore the report in Power BI using the corrected sharing URL supplied by the project owner. The same URL is available in this repository's Website field.

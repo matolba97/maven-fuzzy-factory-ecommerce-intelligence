@@ -26,6 +26,6 @@ The Revenue comparison matrix colors valid MoM growth teal/amber; unavailable co
 
 Bookmarks and field parameters were not added: navigation, clear-slicer actions, separate pages and focused native comparisons already support the required decisions. A single cohort-age utility table supports the retention matrix without field-parameter or calculation-group complexity.
 
-## Runtime acceptance still required
+## Validation scope
 
-Structural checks cannot verify Desktop rendering, tooltip sizing, native interactions, refresh latency or DAX engine execution. Complete the checklist in 08-validation-and-runtime.md before representing screenshots or runtime behavior as verified. No HTML recreation or simulated screenshot is substituted for a Power BI capture.
+The saved October 21, 2026 Desktop run completed Import refresh, executed all 88 measures, and passed 903 reference comparisons. The existing screenshots are captures of the actual report. Exhaustive manual tooltip, filtering, and drillthrough acceptance remains incomplete; metadata checks alone do not verify those interactions. See [validation evidence and remaining checks](08-validation-and-runtime.md).
