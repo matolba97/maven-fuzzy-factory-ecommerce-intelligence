@@ -1,0 +1,37 @@
+table,column,dtype,nulls,distinct,min,max
+orders,order_id,int64,0,32313,1,32313
+orders,created_at,datetime64[us],0,32299,2012-03-19 10:42:46,2015-03-19 05:38:31
+orders,website_session_id,int64,0,32313,20,472818
+orders,user_id,int64,0,31696,13,394273
+orders,primary_product_id,int64,0,4,1,4
+orders,items_purchased,int64,0,2,1,2
+orders,price_usd,float64,0,10,29.99,109.98
+orders,cogs_usd,float64,0,10,9.49,41.98
+order_items,order_item_id,int64,0,40025,1,40025
+order_items,created_at,datetime64[us],0,32299,2012-03-19 10:42:46,2015-03-19 05:38:31
+order_items,order_id,int64,0,32313,1,32313
+order_items,product_id,int64,0,4,1,4
+order_items,is_primary_item,int64,0,2,0,1
+order_items,price_usd,float64,0,4,29.99,59.99
+order_items,cogs_usd,float64,0,4,9.49,22.49
+order_item_refunds,order_item_refund_id,int64,0,1731,1,1731
+order_item_refunds,created_at,datetime64[us],0,1731,2012-04-06 11:32:43,2015-04-01 18:11:08
+order_item_refunds,order_item_id,int64,0,1731,57,39950
+order_item_refunds,order_id,int64,0,1723,57,32255
+order_item_refunds,refund_amount_usd,float64,0,4,29.99,59.99
+products,product_id,int64,0,4,1,4
+products,created_at,datetime64[us],0,4,2012-03-19 08:00:00,2014-02-05 10:00:00
+products,product_name,str,0,4,The Birthday Sugar Panda,The Original Mr. Fuzzy
+website_sessions,website_session_id,int64,0,472871,1,472871
+website_sessions,created_at,datetime64[us],0,470444,2012-03-19 08:04:16,2015-03-19 07:59:08
+website_sessions,user_id,int64,0,394318,1,394318
+website_sessions,is_repeat_session,int64,0,2,0,1
+website_sessions,utm_source,str,83328,3,bsearch,socialbook
+website_sessions,utm_campaign,str,83328,4,brand,pilot
+website_sessions,utm_content,str,83328,6,b_ad_1,social_ad_2
+website_sessions,device_type,str,0,2,desktop,mobile
+website_sessions,http_referer,str,39917,3,https://www.bsearch.com,https://www.socialbook.com
+website_pageviews,website_pageview_id,int64,0,1188124,1,1188124
+website_pageviews,created_at,datetime64[us],0,1171962,2012-03-19 08:04:16,2015-03-19 07:59:32
+website_pageviews,website_session_id,int64,0,472871,1,472871
+website_pageviews,pageview_url,str,0,16,/billing,/the-original-mr-fuzzy

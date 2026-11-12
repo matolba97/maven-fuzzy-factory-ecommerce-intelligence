@@ -1,0 +1,13 @@
+// Run each EVALUATE independently, comparing to qa CSVs and independent_validation.json.
+EVALUATE SUMMARIZECOLUMNS('Dim_FunnelStage'[Stage], "Sessions", [Stage Sessions], "Prior", [Previous Stage Sessions], "Conversion", [Stage Conversion %], "Drop off", [Funnel Abandonment Sessions]) ORDER BY 'Dim_FunnelStage'[Stage]
+
+EVALUATE SUMMARIZECOLUMNS('Dim_Date'[Year-Month], "Sales", [Gross Sales Revenue], "MoM", [MoM Revenue Growth], "YoY", [YoY Revenue Growth]) ORDER BY 'Dim_Date'[Year-Month]
+
+EVALUATE SUMMARIZECOLUMNS('Dim_Product'[Product], "Sales", [Product Revenue], "GP", [Product Gross Profit], "Refunds", [Total Refund Amount], "Net", [Net Revenue After Recorded Refunds], "Refund rate", [Product Refund Rate]) ORDER BY 'Dim_Product'[Product]
+
+EVALUATE SUMMARIZECOLUMNS('Dim_Device'[Device], "Sessions", [Total Sessions], "CVR", [Session-to-Order Conversion Rate], "Acquired sales", [Campaign Revenue]) ORDER BY 'Dim_Device'[Device]
+
+EVALUATE SUMMARIZECOLUMNS('Dim_Customer'[Purchase Cohort], 'Dim_CohortAge'[Month After First Purchase], "Cohort size", [Cohort Customers], "Active", [Cohort Active Customers], "Retention", [Cohort Retention %]) ORDER BY 'Dim_Customer'[Purchase Cohort], 'Dim_CohortAge'[Month After First Purchase]
+
+// Noncontiguous complete month selection: Revenue Growth % must be BLANK.
+EVALUATE CALCULATETABLE(ROW("Growth", [Revenue Growth %]), TREATAS({"2014-01", "2014-03"}, 'Dim_Date'[Year-Month]))

@@ -1,0 +1,104 @@
+relationship b3a3e106-f488-4439-96c1-7f5969b6cc04
+	fromColumn: Fact_Orders.'Order Date'
+	toColumn: Dim_Date.Date
+
+relationship ceeaebe9-54ce-4bc1-bc28-5c3d55492c46
+	fromColumn: Fact_Orders.'Customer ID'
+	toColumn: Dim_Customer.'Customer ID'
+
+relationship 184da7dc-d4f0-439d-9bfb-fd706503eb08
+	fromColumn: Fact_Orders.'Channel ID'
+	toColumn: Dim_Channel.'Channel ID'
+
+relationship 81b0cca1-a195-4a6e-ba4e-e8006b791557
+	fromColumn: Fact_Orders.Device
+	toColumn: Dim_Device.Device
+
+relationship a9e29a28-31ed-4535-8275-1ef27c3aa302
+	fromColumn: Fact_Orders.'Visitor Type'
+	toColumn: Dim_Visitor.'Visitor Type'
+
+relationship 5e519a14-73a0-44d3-8a40-81df552488a1
+	fromColumn: Fact_Orders.'Landing Page'
+	toColumn: Dim_Landing.'Landing Page'
+
+relationship 245c3906-06a3-4cce-b24d-b414e2619ae4
+	fromColumn: Fact_OrderItems.'Order Date'
+	toColumn: Dim_Date.Date
+
+relationship 76923f45-3d29-4ac3-8a58-25b5e5b38545
+	fromColumn: Fact_OrderItems.'Customer ID'
+	toColumn: Dim_Customer.'Customer ID'
+
+relationship 49f90767-72df-4129-855a-dae1ebd59baf
+	fromColumn: Fact_OrderItems.'Channel ID'
+	toColumn: Dim_Channel.'Channel ID'
+
+relationship 96fc8cd1-ef31-4591-8ba9-d4f5e9bfa388
+	fromColumn: Fact_OrderItems.Device
+	toColumn: Dim_Device.Device
+
+relationship 2f4ba346-b31f-47a2-b923-a3675e629e02
+	fromColumn: Fact_OrderItems.'Visitor Type'
+	toColumn: Dim_Visitor.'Visitor Type'
+
+relationship cf6bf810-1d06-4361-9de9-1961db027c99
+	fromColumn: Fact_OrderItems.'Landing Page'
+	toColumn: Dim_Landing.'Landing Page'
+
+relationship 384a04a0-ef23-41e1-99b4-dac52592214d
+	fromColumn: Fact_Refunds.'Refund Date'
+	toColumn: Dim_Date.Date
+
+relationship 9c109407-79a0-4de6-8e7b-436ab5847494
+	fromColumn: Fact_Refunds.'Customer ID'
+	toColumn: Dim_Customer.'Customer ID'
+
+relationship ae5fbd66-a612-4f7c-824e-94bd139bc4c0
+	fromColumn: Fact_Refunds.'Channel ID'
+	toColumn: Dim_Channel.'Channel ID'
+
+relationship dc8de72c-064d-40b6-883f-46f941c5ef3f
+	fromColumn: Fact_Refunds.Device
+	toColumn: Dim_Device.Device
+
+relationship ba3e84bd-5096-49cb-99a8-e7cd33109ff5
+	fromColumn: Fact_Refunds.'Visitor Type'
+	toColumn: Dim_Visitor.'Visitor Type'
+
+relationship b6bf1270-16c1-46ee-bdd6-719f6ef39736
+	fromColumn: Fact_Refunds.'Landing Page'
+	toColumn: Dim_Landing.'Landing Page'
+
+relationship a6cc44b2-438e-42e0-a6f7-e6135c8180d7
+	fromColumn: Fact_Sessions.'Session Date'
+	toColumn: Dim_Date.Date
+
+relationship 089185b5-93ab-42c0-8c24-b47e40e6ee3a
+	fromColumn: Fact_Sessions.'Customer ID'
+	toColumn: Dim_Customer.'Customer ID'
+
+relationship 514a5dec-0b37-42da-8ddb-d3d90b504aac
+	fromColumn: Fact_Sessions.'Channel ID'
+	toColumn: Dim_Channel.'Channel ID'
+
+relationship 18c8eb24-2e62-497e-96b9-19401a0a70bb
+	fromColumn: Fact_Sessions.Device
+	toColumn: Dim_Device.Device
+
+relationship 7b8e113c-ffd5-45c3-ae94-217fd3e2b50c
+	fromColumn: Fact_Sessions.'Visitor Type'
+	toColumn: Dim_Visitor.'Visitor Type'
+
+relationship efb33a03-bd88-4ce6-b786-3287581d0d13
+	fromColumn: Fact_Sessions.'Landing Page'
+	toColumn: Dim_Landing.'Landing Page'
+
+relationship 9e70547f-5f61-4f2d-aaac-7c41580a9cca
+	fromColumn: Fact_OrderItems.'Product ID'
+	toColumn: Dim_Product.'Product ID'
+
+relationship 8a19a7e1-5837-4615-92f0-d1c321963f07
+	fromColumn: Fact_Refunds.'Product ID'
+	toColumn: Dim_Product.'Product ID'
+

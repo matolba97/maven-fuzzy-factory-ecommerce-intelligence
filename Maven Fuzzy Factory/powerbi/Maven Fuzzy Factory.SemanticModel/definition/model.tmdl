@@ -1,0 +1,32 @@
+model Model
+	culture: en-US
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	discourageImplicitMeasures
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["MCP-PBIModeling","DevMode"]
+
+annotation PBI_QueryOrder = ["Fact_Orders","Fact_OrderItems","Fact_Refunds","Fact_Sessions","Dim_Product","Dim_Date","Dim_Customer","Dim_Channel","Dim_Device","Dim_Visitor","Dim_Landing","Dim_FunnelStage","Dim_CohortAge","_Measures","PreparedFolder"]
+
+ref table Fact_Orders
+ref table Fact_OrderItems
+ref table Fact_Refunds
+ref table Fact_Sessions
+ref table Dim_Product
+ref table Dim_Date
+ref table Dim_Customer
+ref table Dim_Channel
+ref table Dim_Device
+ref table Dim_Visitor
+ref table Dim_Landing
+ref table Dim_FunnelStage
+ref table Dim_CohortAge
+ref table _Measures
+
+ref cultureInfo en-US
+

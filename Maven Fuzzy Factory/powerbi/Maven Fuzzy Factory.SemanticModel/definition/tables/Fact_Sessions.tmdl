@@ -1,0 +1,189 @@
+/// One row per source session with ordered journey flags and one-to-one linked order aggregates. Optimizes raw pageviews.
+table Fact_Sessions
+	lineageTag: 86b83972-6cc0-44d6-82b8-90beefd58883
+
+	/// Website Session ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Website Session ID'
+		dataType: int64
+		isHidden
+		lineageTag: be6719e1-9283-4c70-8bb6-0e98e4b38eb0
+		summarizeBy: none
+		sourceColumn: Website Session ID
+
+	/// Customer ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Customer ID'
+		dataType: int64
+		isHidden
+		lineageTag: 0001f39c-daac-4109-8538-a4740029e164
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+	/// Session Date at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Session Date'
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: ddc69007-bacf-4ee2-9483-5603efabf3ae
+		summarizeBy: none
+		sourceColumn: Session Date
+
+	/// Channel ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Channel ID'
+		dataType: int64
+		isHidden
+		lineageTag: 53302fdc-31a0-427f-8b0c-79f67ba318f9
+		summarizeBy: none
+		sourceColumn: Channel ID
+
+	/// Device at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Device
+		dataType: string
+		lineageTag: 091629af-4506-49a9-b0d7-3832bf0d46f9
+		summarizeBy: none
+		sourceColumn: Device
+
+	/// Visitor Type at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Visitor Type'
+		dataType: string
+		lineageTag: 54cbeeed-8867-4439-9eb1-eb1f3c1f263f
+		summarizeBy: none
+		sourceColumn: Visitor Type
+
+	/// Landing Page at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Landing Page'
+		dataType: string
+		lineageTag: db6d19ca-24bc-40a5-93ba-c6aaac4741fd
+		summarizeBy: none
+		sourceColumn: Landing Page
+
+	/// Pageviews at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Pageviews
+		dataType: int64
+		isHidden
+		lineageTag: 8b06bf96-2662-4dce-acfc-6eb9453bb954
+		summarizeBy: none
+		sourceColumn: Pageviews
+
+	/// Bounced at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Bounced
+		dataType: int64
+		isHidden
+		lineageTag: 1b2907a4-92f4-4579-a32f-7a012a1c60a3
+		summarizeBy: none
+		sourceColumn: Bounced
+
+	/// Converted at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Converted
+		dataType: int64
+		isHidden
+		lineageTag: baaee7ae-6df6-4ef3-bb18-594f8a67f462
+		summarizeBy: none
+		sourceColumn: Converted
+
+	/// Session Orders at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Session Orders'
+		dataType: int64
+		isHidden
+		lineageTag: e6f142fe-bc47-41bb-b300-92195e9d8eee
+		summarizeBy: none
+		sourceColumn: Session Orders
+
+	/// Session Revenue at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Session Revenue'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: ad927ed5-bcbe-4b8e-8a30-4a1dece973f4
+		summarizeBy: none
+		sourceColumn: Session Revenue
+
+	/// Reach Product at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Reach Product'
+		dataType: int64
+		isHidden
+		lineageTag: a2d07156-e144-4c9d-b370-a8c01bc2b66c
+		summarizeBy: none
+		sourceColumn: Reach Product
+
+	/// Reach Cart at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Reach Cart'
+		dataType: int64
+		isHidden
+		lineageTag: 785eca0a-b78a-43ef-9c93-be915e9a7133
+		summarizeBy: none
+		sourceColumn: Reach Cart
+
+	/// Reach Shipping at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Reach Shipping'
+		dataType: int64
+		isHidden
+		lineageTag: c2d07a1f-a963-447a-9b50-b1e89fc98f48
+		summarizeBy: none
+		sourceColumn: Reach Shipping
+
+	/// Reach Billing at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Reach Billing'
+		dataType: int64
+		isHidden
+		lineageTag: 721c7b27-9047-48de-a283-3a929a8be8d9
+		summarizeBy: none
+		sourceColumn: Reach Billing
+
+	/// Reach Confirmation at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Reach Confirmation'
+		dataType: int64
+		isHidden
+		lineageTag: 48b07925-32ee-4163-976b-0536fe064775
+		summarizeBy: none
+		sourceColumn: Reach Confirmation
+
+	/// Sequential Product at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sequential Product'
+		dataType: int64
+		isHidden
+		lineageTag: 1d888d3e-f622-4441-9735-53be4cfc201a
+		summarizeBy: none
+		sourceColumn: Sequential Product
+
+	/// Sequential Cart at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sequential Cart'
+		dataType: int64
+		isHidden
+		lineageTag: 672317ae-c5bf-491c-ba38-564974effa5f
+		summarizeBy: none
+		sourceColumn: Sequential Cart
+
+	/// Sequential Shipping at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sequential Shipping'
+		dataType: int64
+		isHidden
+		lineageTag: 26807865-339d-4c11-b4d0-505db5478619
+		summarizeBy: none
+		sourceColumn: Sequential Shipping
+
+	/// Sequential Billing at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sequential Billing'
+		dataType: int64
+		isHidden
+		lineageTag: a848407e-09e7-486a-8c3e-a5b2a8483fc5
+		summarizeBy: none
+		sourceColumn: Sequential Billing
+
+	/// Sequential Purchase at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sequential Purchase'
+		dataType: int64
+		isHidden
+		lineageTag: ab6c7ed5-cde8-4fe3-8e05-54770fadb7b8
+		summarizeBy: none
+		sourceColumn: Sequential Purchase
+
+	partition Fact_Sessions = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Fact_Sessions.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Website Session ID", Int64.Type}, {"Customer ID", Int64.Type}, {"Session Date", type date}, {"Channel ID", Int64.Type}, {"Device", type text}, {"Visitor Type", type text}, {"Landing Page", type text}, {"Pageviews", Int64.Type}, {"Bounced", Int64.Type}, {"Converted", Int64.Type}, {"Session Orders", Int64.Type}, {"Session Revenue", Currency.Type}, {"Reach Product", Int64.Type}, {"Reach Cart", Int64.Type}, {"Reach Shipping", Int64.Type}, {"Reach Billing", Int64.Type}, {"Reach Confirmation", Int64.Type}, {"Sequential Product", Int64.Type}, {"Sequential Cart", Int64.Type}, {"Sequential Shipping", Int64.Type}, {"Sequential Billing", Int64.Type}, {"Sequential Purchase", Int64.Type}}, "en-US")
+				in
+				    Typed
+

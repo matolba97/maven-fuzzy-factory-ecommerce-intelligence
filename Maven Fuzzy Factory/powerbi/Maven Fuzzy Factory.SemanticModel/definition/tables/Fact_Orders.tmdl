@@ -1,0 +1,147 @@
+/// One row per recorded order. Financial measures use this grain; no fact-to-fact relationships.
+table Fact_Orders
+	lineageTag: 6cea6130-eb0c-46be-b78f-fa585581e44a
+
+	/// Order ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Order ID'
+		dataType: int64
+		isHidden
+		lineageTag: 5e1f577e-18a1-48ed-a30b-59ec2c8137e1
+		summarizeBy: none
+		sourceColumn: Order ID
+
+	/// Website Session ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Website Session ID'
+		dataType: int64
+		isHidden
+		lineageTag: 3a63aa04-dd70-4853-976b-29df1b6b6082
+		summarizeBy: none
+		sourceColumn: Website Session ID
+
+	/// Primary Product ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Primary Product ID'
+		dataType: int64
+		isHidden
+		lineageTag: a6f3e63c-9080-422a-bfc6-63f5b272349b
+		summarizeBy: none
+		sourceColumn: Primary Product ID
+
+	/// Items Purchased at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Items Purchased'
+		dataType: int64
+		isHidden
+		lineageTag: c0710462-1dda-4c3c-92b5-c2d0cfa6daff
+		summarizeBy: none
+		sourceColumn: Items Purchased
+
+	/// Sales Amount at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Sales Amount'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: 3633e52f-5e79-4b44-a831-2e5570977919
+		summarizeBy: none
+		sourceColumn: Sales Amount
+
+	/// COGS Amount at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'COGS Amount'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: 03c543bc-65eb-45b6-af9a-331b9607931f
+		summarizeBy: none
+		sourceColumn: COGS Amount
+
+	/// Order Date at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Order Date'
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: 34030d7e-a798-4bc0-ac3f-8e2384ebd5a5
+		summarizeBy: none
+		sourceColumn: Order Date
+
+	/// Customer ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Customer ID'
+		dataType: int64
+		isHidden
+		lineageTag: 86e09358-ff28-4f6d-81ab-4899a69882c7
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+	/// Channel ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Channel ID'
+		dataType: int64
+		isHidden
+		lineageTag: 4aec0ab0-1d72-4107-b9c2-821957804d77
+		summarizeBy: none
+		sourceColumn: Channel ID
+
+	/// Device at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Device
+		dataType: string
+		lineageTag: eb932572-1303-4acf-97ae-148ed90bb519
+		summarizeBy: none
+		sourceColumn: Device
+
+	/// Visitor Type at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Visitor Type'
+		dataType: string
+		lineageTag: 248f04ae-b9da-4ce9-b777-03d4eebbe7ac
+		summarizeBy: none
+		sourceColumn: Visitor Type
+
+	/// Landing Page at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Landing Page'
+		dataType: string
+		lineageTag: bf7a3dac-eacd-469b-8a2e-7bbfe6dce0ac
+		summarizeBy: none
+		sourceColumn: Landing Page
+
+	/// Purchase Number at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Purchase Number'
+		dataType: int64
+		isHidden
+		lineageTag: 953f3ea4-a976-462b-b505-71ac9c97769c
+		summarizeBy: none
+		sourceColumn: Purchase Number
+
+	/// Purchase Type at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Purchase Type'
+		dataType: string
+		lineageTag: 271ed0ee-0edf-467e-8c75-4b215bb730d9
+		summarizeBy: none
+		sourceColumn: Purchase Type
+
+	/// Basket at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Basket
+		dataType: string
+		lineageTag: 858ce6c8-6bdc-4ee8-9ff4-5345b322ad5f
+		summarizeBy: none
+		sourceColumn: Basket
+
+	/// Has Cross Sell at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Has Cross Sell'
+		dataType: int64
+		isHidden
+		lineageTag: 03b9b8fa-d9fc-40c9-b9c7-82554bf20f56
+		summarizeBy: none
+		sourceColumn: Has Cross Sell
+
+	/// Purchase Age Month at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Purchase Age Month'
+		dataType: int64
+		lineageTag: 19624700-784a-41c6-91d7-217738e7e22c
+		summarizeBy: none
+		sourceColumn: Purchase Age Month
+
+	partition Fact_Orders = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Fact_Orders.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Order ID", Int64.Type}, {"Website Session ID", Int64.Type}, {"Primary Product ID", Int64.Type}, {"Items Purchased", Int64.Type}, {"Sales Amount", Currency.Type}, {"COGS Amount", Currency.Type}, {"Order Date", type date}, {"Customer ID", Int64.Type}, {"Channel ID", Int64.Type}, {"Device", type text}, {"Visitor Type", type text}, {"Landing Page", type text}, {"Purchase Number", Int64.Type}, {"Purchase Type", type text}, {"Basket", type text}, {"Has Cross Sell", Int64.Type}, {"Purchase Age Month", Int64.Type}}, "en-US")
+				in
+				    Typed
+

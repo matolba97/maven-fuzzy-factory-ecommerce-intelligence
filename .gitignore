@@ -1,0 +1,15 @@
+**/.pbi/
+**/__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+!.env.example
+*.abf
+**/diagramLayout.json
+.publication/
+.archify/
+docs/assets/*.delivery.json
+docs/assets/*.finalize.json
+docs/assets/*.finalize-summary.json
+docs/assets/*.browser-check.json

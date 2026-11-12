@@ -1,0 +1,24 @@
+{
+  "schema_version":1,
+  "diagram_type":"dataflow",
+  "meta":{"title":"Maven Fuzzy Factory analytics pipeline","locale":"en","output":"docs/assets/analytics-pipeline.html","quality_profile":"showcase"},
+  "stages":[{"label":"Source"},{"label":"Preparation"},{"label":"Analytical files"},{"label":"Semantic model"},{"label":"Decision support"}],
+  "nodes":[
+    {"id":"sources","type":"database","label":"Six CSV tables","sublabel":"Maven source extract","stage":0,"row":1},
+    {"id":"prepare","type":"backend","label":"Python preparation","sublabel":"Safe joins and funnel","stage":1,"row":1},
+    {"id":"prepared","type":"database","label":"Prepared CSVs","sublabel":"Native fact grains","stage":2,"row":1},
+    {"id":"model","type":"backend","label":"Power Query + DAX","sublabel":"Typed Import model","stage":3,"row":1},
+    {"id":"report","type":"frontend","label":"Power BI report","sublabel":"Seven decision pages","stage":4,"row":1}
+  ],
+  "flows":[
+    {"from":"sources","to":"prepare","label":"Recorded rows"},
+    {"from":"prepare","to":"prepared","label":"Derived tables"},
+    {"from":"prepared","to":"model","label":"Typed import"},
+    {"from":"model","to":"report","label":"88 measures"}
+  ],
+  "cards":[
+    {"dot":"cyan","title":"Correct grain","items":["Orders, items, refunds and sessions remain independent facts.","Raw pageviews reduce to ordered distinct-session stage flags."]},
+    {"dot":"emerald","title":"Independent evidence","items":["CSV, integer cents and SQLite audit source/prepared reconciliation.","Saved Desktop DAX results support 903 reference comparisons."]},
+    {"dot":"amber","title":"Refresh boundary","items":["Rebuild prepared CSVs when raw sources change, then refresh Desktop.","This diagram describes the inspected pipeline, not cloud deployment."]}
+  ]
+}

@@ -1,0 +1,37 @@
+/// Conformed dimension: Dim_Product. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Product
+	lineageTag: c71d3147-1ce9-4104-8065-7fc3169295ff
+
+	/// Product ID at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Product ID'
+		dataType: int64
+		isHidden
+		lineageTag: dcf9eabf-d7ce-45e3-8a59-7d1d128d9cd8
+		summarizeBy: none
+		sourceColumn: Product ID
+
+	/// Launch Date at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Launch Date'
+		dataType: dateTime
+		formatString: dd MMM yyyy
+		lineageTag: 8b273840-10b8-4ad1-ab3f-f8435b9f2785
+		summarizeBy: none
+		sourceColumn: Launch Date
+
+	/// Product at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Product
+		dataType: string
+		lineageTag: aec02af4-f994-452c-9185-c839840b19ae
+		summarizeBy: none
+		sourceColumn: Product
+
+	partition Dim_Product = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Product.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Product ID", Int64.Type}, {"Launch Date", type date}, {"Product", type text}}, "en-US")
+				in
+				    Typed
+

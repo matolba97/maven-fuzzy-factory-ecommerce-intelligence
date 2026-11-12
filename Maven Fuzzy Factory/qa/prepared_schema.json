@@ -1,0 +1,440 @@
+{
+  "Fact_Orders": [
+    {
+      "name": "Order ID",
+      "type": "int64"
+    },
+    {
+      "name": "Website Session ID",
+      "type": "int64"
+    },
+    {
+      "name": "Primary Product ID",
+      "type": "int64"
+    },
+    {
+      "name": "Items Purchased",
+      "type": "int64"
+    },
+    {
+      "name": "Sales Amount",
+      "type": "decimal"
+    },
+    {
+      "name": "COGS Amount",
+      "type": "decimal"
+    },
+    {
+      "name": "Order Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Customer ID",
+      "type": "int64"
+    },
+    {
+      "name": "Channel ID",
+      "type": "int64"
+    },
+    {
+      "name": "Device",
+      "type": "string"
+    },
+    {
+      "name": "Visitor Type",
+      "type": "string"
+    },
+    {
+      "name": "Landing Page",
+      "type": "string"
+    },
+    {
+      "name": "Purchase Number",
+      "type": "int64"
+    },
+    {
+      "name": "Purchase Type",
+      "type": "string"
+    },
+    {
+      "name": "Basket",
+      "type": "string"
+    },
+    {
+      "name": "Has Cross Sell",
+      "type": "int64"
+    },
+    {
+      "name": "Purchase Age Month",
+      "type": "int64"
+    }
+  ],
+  "Fact_OrderItems": [
+    {
+      "name": "Order Item ID",
+      "type": "int64"
+    },
+    {
+      "name": "Order ID",
+      "type": "int64"
+    },
+    {
+      "name": "Product ID",
+      "type": "int64"
+    },
+    {
+      "name": "Item Sales Amount",
+      "type": "decimal"
+    },
+    {
+      "name": "Item COGS Amount",
+      "type": "decimal"
+    },
+    {
+      "name": "Order Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Customer ID",
+      "type": "int64"
+    },
+    {
+      "name": "Channel ID",
+      "type": "int64"
+    },
+    {
+      "name": "Device",
+      "type": "string"
+    },
+    {
+      "name": "Visitor Type",
+      "type": "string"
+    },
+    {
+      "name": "Landing Page",
+      "type": "string"
+    },
+    {
+      "name": "Item Role",
+      "type": "string"
+    },
+    {
+      "name": "Recorded Refund",
+      "type": "decimal"
+    },
+    {
+      "name": "Refunded Item",
+      "type": "int64"
+    },
+    {
+      "name": "Launch Age Month",
+      "type": "int64"
+    }
+  ],
+  "Fact_Refunds": [
+    {
+      "name": "Refund ID",
+      "type": "int64"
+    },
+    {
+      "name": "Order Item ID",
+      "type": "int64"
+    },
+    {
+      "name": "Order ID",
+      "type": "int64"
+    },
+    {
+      "name": "Product ID",
+      "type": "int64"
+    },
+    {
+      "name": "Refund Amount",
+      "type": "decimal"
+    },
+    {
+      "name": "Refund Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Order Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Customer ID",
+      "type": "int64"
+    },
+    {
+      "name": "Channel ID",
+      "type": "int64"
+    },
+    {
+      "name": "Device",
+      "type": "string"
+    },
+    {
+      "name": "Visitor Type",
+      "type": "string"
+    },
+    {
+      "name": "Landing Page",
+      "type": "string"
+    },
+    {
+      "name": "Refund Lag Days",
+      "type": "int64"
+    }
+  ],
+  "Fact_Sessions": [
+    {
+      "name": "Website Session ID",
+      "type": "int64"
+    },
+    {
+      "name": "Customer ID",
+      "type": "int64"
+    },
+    {
+      "name": "Session Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Channel ID",
+      "type": "int64"
+    },
+    {
+      "name": "Device",
+      "type": "string"
+    },
+    {
+      "name": "Visitor Type",
+      "type": "string"
+    },
+    {
+      "name": "Landing Page",
+      "type": "string"
+    },
+    {
+      "name": "Pageviews",
+      "type": "int64"
+    },
+    {
+      "name": "Bounced",
+      "type": "int64"
+    },
+    {
+      "name": "Converted",
+      "type": "int64"
+    },
+    {
+      "name": "Session Orders",
+      "type": "int64"
+    },
+    {
+      "name": "Session Revenue",
+      "type": "decimal"
+    },
+    {
+      "name": "Reach Product",
+      "type": "int64"
+    },
+    {
+      "name": "Reach Cart",
+      "type": "int64"
+    },
+    {
+      "name": "Reach Shipping",
+      "type": "int64"
+    },
+    {
+      "name": "Reach Billing",
+      "type": "int64"
+    },
+    {
+      "name": "Reach Confirmation",
+      "type": "int64"
+    },
+    {
+      "name": "Sequential Product",
+      "type": "int64"
+    },
+    {
+      "name": "Sequential Cart",
+      "type": "int64"
+    },
+    {
+      "name": "Sequential Shipping",
+      "type": "int64"
+    },
+    {
+      "name": "Sequential Billing",
+      "type": "int64"
+    },
+    {
+      "name": "Sequential Purchase",
+      "type": "int64"
+    }
+  ],
+  "Dim_Product": [
+    {
+      "name": "Product ID",
+      "type": "int64"
+    },
+    {
+      "name": "Launch Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Product",
+      "type": "string"
+    }
+  ],
+  "Dim_Date": [
+    {
+      "name": "Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Year",
+      "type": "int64"
+    },
+    {
+      "name": "Quarter",
+      "type": "string"
+    },
+    {
+      "name": "Month",
+      "type": "string"
+    },
+    {
+      "name": "Month Number",
+      "type": "int64"
+    },
+    {
+      "name": "Year-Month",
+      "type": "string"
+    },
+    {
+      "name": "Year Month Sort",
+      "type": "int64"
+    },
+    {
+      "name": "Week",
+      "type": "int64"
+    },
+    {
+      "name": "ISO Year",
+      "type": "int64"
+    },
+    {
+      "name": "Month Start",
+      "type": "dateTime"
+    },
+    {
+      "name": "Day",
+      "type": "int64"
+    },
+    {
+      "name": "Is Complete Sales Month",
+      "type": "int64"
+    },
+    {
+      "name": "Is In Sales Coverage",
+      "type": "int64"
+    }
+  ],
+  "Dim_Customer": [
+    {
+      "name": "Customer ID",
+      "type": "int64"
+    },
+    {
+      "name": "First Session Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "First Purchase Date",
+      "type": "dateTime"
+    },
+    {
+      "name": "Purchase Cohort",
+      "type": "string"
+    },
+    {
+      "name": "Observed Lifetime Orders",
+      "type": "int64"
+    },
+    {
+      "name": "Observed Frequency",
+      "type": "string"
+    },
+    {
+      "name": "Customer Status",
+      "type": "string"
+    }
+  ],
+  "Dim_Channel": [
+    {
+      "name": "Channel ID",
+      "type": "int64"
+    },
+    {
+      "name": "Traffic Group",
+      "type": "string"
+    },
+    {
+      "name": "Source",
+      "type": "string"
+    },
+    {
+      "name": "Campaign",
+      "type": "string"
+    },
+    {
+      "name": "Ad Content",
+      "type": "string"
+    },
+    {
+      "name": "Referrer",
+      "type": "string"
+    },
+    {
+      "name": "Channel",
+      "type": "string"
+    }
+  ],
+  "Dim_Device": [
+    {
+      "name": "Device",
+      "type": "string"
+    }
+  ],
+  "Dim_Visitor": [
+    {
+      "name": "Visitor Type",
+      "type": "string"
+    }
+  ],
+  "Dim_Landing": [
+    {
+      "name": "Landing Page",
+      "type": "string"
+    }
+  ],
+  "Dim_FunnelStage": [
+    {
+      "name": "Stage",
+      "type": "string"
+    },
+    {
+      "name": "Stage Order",
+      "type": "int64"
+    }
+  ],
+  "Dim_CohortAge": [
+    {
+      "name": "Month After First Purchase",
+      "type": "int64"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Channel ID,Traffic Group,Source,Campaign,Ad Content,Referrer,Channel
+1,Direct / unknown,Direct / unknown,(not tagged),(not tagged),(not tagged),Direct / unknown | (not tagged)
+2,Tagged search,bsearch,brand,b_ad_2,https://www.bsearch.com,bsearch | brand
+3,Tagged search,bsearch,nonbrand,b_ad_1,https://www.bsearch.com,bsearch | nonbrand
+4,Tagged search,gsearch,brand,g_ad_2,https://www.gsearch.com,gsearch | brand
+5,Tagged search,gsearch,nonbrand,g_ad_1,https://www.gsearch.com,gsearch | nonbrand
+6,Tagged social,socialbook,desktop_targeted,social_ad_2,https://www.socialbook.com,socialbook | desktop_targeted
+7,Tagged social,socialbook,pilot,social_ad_1,https://www.socialbook.com,socialbook | pilot
+8,Untagged search referral,bsearch referral,(not tagged),(not tagged),https://www.bsearch.com,bsearch referral | (not tagged)
+9,Untagged search referral,gsearch referral,(not tagged),(not tagged),https://www.gsearch.com,gsearch referral | (not tagged)

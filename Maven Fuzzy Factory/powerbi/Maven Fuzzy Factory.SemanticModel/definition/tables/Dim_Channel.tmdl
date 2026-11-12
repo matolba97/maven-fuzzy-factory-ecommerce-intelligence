@@ -1,0 +1,64 @@
+/// Conformed dimension: Dim_Channel. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Channel
+	lineageTag: 6d48fddf-2895-462b-b788-7df65621e7a6
+
+	/// Channel ID at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Channel ID'
+		dataType: int64
+		isHidden
+		lineageTag: 844e5840-912a-48e0-a787-4a48437efc06
+		summarizeBy: none
+		sourceColumn: Channel ID
+
+	/// Traffic Group at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Traffic Group'
+		dataType: string
+		lineageTag: c0d7e1b7-e06a-48a0-8d2d-ae7298b2621a
+		summarizeBy: none
+		sourceColumn: Traffic Group
+
+	/// Source at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Source
+		dataType: string
+		lineageTag: 8262c4d2-573b-4c4a-a676-df404ebb9e7c
+		summarizeBy: none
+		sourceColumn: Source
+
+	/// Campaign at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Campaign
+		dataType: string
+		lineageTag: d2d3e1df-8221-48e0-8761-5e62da9ab02f
+		summarizeBy: none
+		sourceColumn: Campaign
+
+	/// Ad Content at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Ad Content'
+		dataType: string
+		lineageTag: 375b66cc-4f17-4097-89cc-bfd62de430df
+		summarizeBy: none
+		sourceColumn: Ad Content
+
+	/// Referrer at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Referrer
+		dataType: string
+		lineageTag: ade07326-b014-40ed-a554-896d733553ec
+		summarizeBy: none
+		sourceColumn: Referrer
+
+	/// Channel at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Channel
+		dataType: string
+		lineageTag: fb7916f2-22e2-42c9-945e-fffb721851bd
+		summarizeBy: none
+		sourceColumn: Channel
+
+	partition Dim_Channel = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Channel.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Channel ID", Int64.Type}, {"Traffic Group", type text}, {"Source", type text}, {"Campaign", type text}, {"Ad Content", type text}, {"Referrer", type text}, {"Channel", type text}}, "en-US")
+				in
+				    Typed
+

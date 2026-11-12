@@ -1,0 +1,384 @@
+// Recorded order sales in USD, filtered by order date and conformed dimensions. Before recorded refunds; product selections apply to product measures instead.
+MEASURE '_Measures'[Gross Sales Revenue] =
+SUM('Fact_Orders'[Sales Amount])
+
+// Recorded cost of goods sold from orders, in USD. No refund-related COGS recovery is assumed.
+MEASURE '_Measures'[COGS] =
+SUM('Fact_Orders'[COGS Amount])
+
+// Recorded sales less recorded COGS. Gross profit before refunds, operating costs, tax, shipping costs and advertising expense; not net profit.
+MEASURE '_Measures'[Gross Profit] =
+[Gross Sales Revenue] - [COGS]
+
+// Gross profit divided by recorded sales; blank when sales are zero.
+MEASURE '_Measures'[Gross Margin %] =
+DIVIDE([Gross Profit], [Gross Sales Revenue])
+
+// Number of orders at native order grain, by order date. Does not multiply with items or pageviews.
+MEASURE '_Measures'[Total Orders] =
+COUNTROWS('Fact_Orders')
+
+// Recorded sales divided by orders in the selected order-date period; before refunds.
+MEASURE '_Measures'[Average Order Value] =
+DIVIDE([Gross Sales Revenue], [Total Orders])
+
+// Recorded item count from orders divided by native order count.
+MEASURE '_Measures'[Average Items Per Order] =
+DIVIDE(SUM('Fact_Orders'[Items Purchased]), [Total Orders])
+
+// Recorded refund events in USD, selected by refund event date. This is cash-flow timing, not the original sale cohort.
+MEASURE '_Measures'[Total Refund Amount] =
+SUM('Fact_Refunds'[Refund Amount])
+
+// Item sales on order dates less refund events on refund dates within the selected period. Both sides share sold-product scope. Item sales reconcile to order sales when no product is selected. This is period flow, not a restated sale cohort.
+MEASURE '_Measures'[Net Revenue After Recorded Refunds] =
+[Product Revenue] - [Total Refund Amount]
+
+// Item-level gross profit less recorded refunds with matching product scope, assuming no COGS recovery. Reconciles to order-level gross profit less refunds without product filters. Excludes operating costs; not net profit.
+MEASURE '_Measures'[Gross Profit After Refunds (No Recovery)] =
+[Product Gross Profit] - [Total Refund Amount]
+
+// Refund event dollars divided by same-period item sales dollars with matching product scope. Item sales reconcile to orders. Event dates differ from sale dates; can exceed 100% in a narrow refund-heavy period.
+MEASURE '_Measures'[Refund Amount %] =
+DIVIDE([Total Refund Amount], [Product Revenue])
+
+// Count of recorded refund events by refund date; distinct from refunded items or refunded orders.
+MEASURE '_Measures'[Refund Events] =
+COUNTROWS('Fact_Refunds')
+
+// Orders with at least one refund event in the selected refund-date period.
+MEASURE '_Measures'[Refunded Orders (Event Date)] =
+DISTINCTCOUNT('Fact_Refunds'[Order ID])
+
+// Mean calendar days from original order date to recorded refund event date for selected refund events.
+MEASURE '_Measures'[Average Refund Lag Days] =
+AVERAGE('Fact_Refunds'[Refund Lag Days])
+
+// All recorded refunds attached to items sold in the selected order-date period, observed through the refund-file cutoff. Recent sales have shorter follow-up.
+MEASURE '_Measures'[Recorded Refunds On Selected Sales] =
+SUM('Fact_OrderItems'[Recorded Refund])
+
+// Number of sold items with any recorded refund through the source cutoff, filtered by original sale date. Each item counts at most once.
+MEASURE '_Measures'[Refunded Items (Sale Cohort)] =
+SUM('Fact_OrderItems'[Refunded Item])
+
+// Refunded sold items divided by units sold in the original sale cohort. Right-censored at the refund cutoff; compare equally mature cohorts.
+MEASURE '_Measures'[Product Refund Rate] =
+DIVIDE([Refunded Items (Sale Cohort)], [Units Sold])
+
+// Recorded refund dollars on the selected sold-item cohort divided by that cohort’s item sales dollars. Not refund event-date cash flow.
+MEASURE '_Measures'[Sale Cohort Refund Amount %] =
+DIVIDE([Recorded Refunds On Selected Sales], [Product Revenue])
+
+// Count of distinct native session rows by session start date. One row per source website session.
+MEASURE '_Measures'[Total Sessions] =
+COUNTROWS('Fact_Sessions')
+
+// Distinct observed website user IDs active in the selected session-date period. IDs are not verified people or identity-resolved customers.
+MEASURE '_Measures'[Unique Website Visitors] =
+DISTINCTCOUNT('Fact_Sessions'[Customer ID])
+
+// Sessions with source is_repeat_session = 0. Source flag is preserved; no invented visitor identity logic.
+MEASURE '_Measures'[New Visitor Sessions] =
+CALCULATE([Total Sessions], KEEPFILTERS('Dim_Visitor'[Visitor Type] = "New visitor session"))
+
+// Sessions with source is_repeat_session = 1; this does not imply a prior purchase.
+MEASURE '_Measures'[Repeat Visitor Sessions] =
+CALCULATE([Total Sessions], KEEPFILTERS('Dim_Visitor'[Visitor Type] = "Repeat visitor session"))
+
+// Sessions with at least one linked recorded order, attributed to session start date. Multiple orders would still count once.
+MEASURE '_Measures'[Converted Sessions] =
+SUM('Fact_Sessions'[Converted])
+
+// Converted sessions / total sessions, with both numerator and denominator on session date. This is not a ratio of order-date orders to session-date sessions.
+MEASURE '_Measures'[Session-to-Order Conversion Rate] =
+DIVIDE([Converted Sessions], [Total Sessions])
+
+// Linked recorded order count attributed to the acquiring session’s date, channel and campaign. May differ from order-date counts near midnight.
+MEASURE '_Measures'[Campaign Orders] =
+SUM('Fact_Sessions'[Session Orders])
+
+// Recorded linked order sales attributed to the acquiring session’s start date and tagging. Revenue is grouped to one session before enrichment.
+MEASURE '_Measures'[Campaign Revenue] =
+SUM('Fact_Sessions'[Session Revenue])
+
+// Session-attributed recorded sales / sessions in the same session-date context, in USD.
+MEASURE '_Measures'[Revenue Per Session] =
+DIVIDE([Campaign Revenue], [Total Sessions])
+
+// Sessions for the current traffic selection divided by sessions across all channels; other conformed filters retained.
+MEASURE '_Measures'[Traffic Source Contribution] =
+DIVIDE([Total Sessions], CALCULATE([Total Sessions], REMOVEFILTERS('Dim_Channel')))
+
+// Revenue per session restricted to observed tagged search/social traffic. Tagging is not proof of paid acquisition.
+MEASURE '_Measures'[Revenue Per Tagged Marketing Session] =
+VAR _revenue = CALCULATE([Campaign Revenue], KEEPFILTERS('Dim_Channel'[Traffic Group] IN {"Tagged search", "Tagged social"}))
+VAR _sessions = CALCULATE([Total Sessions], KEEPFILTERS('Dim_Channel'[Traffic Group] IN {"Tagged search", "Tagged social"}))
+RETURN DIVIDE(_revenue, _sessions)
+
+// Converted desktop sessions / desktop sessions on session date. Blank if an incompatible device filter is active.
+MEASURE '_Measures'[Desktop Conversion] =
+CALCULATE([Session-to-Order Conversion Rate], KEEPFILTERS('Dim_Device'[Device] = "desktop"))
+
+// Converted mobile sessions / mobile sessions on session date. Blank if an incompatible device filter is active.
+MEASURE '_Measures'[Mobile Conversion] =
+CALCULATE([Session-to-Order Conversion Rate], KEEPFILTERS('Dim_Device'[Device] = "mobile"))
+
+// Sessions with exactly one recorded pageview. This is a pageview-count bounce definition; engagement time is unavailable.
+MEASURE '_Measures'[Bounced Sessions] =
+SUM('Fact_Sessions'[Bounced])
+
+// Sessions with exactly one recorded pageview divided by all sessions, grouped by the earliest (timestamp, pageview ID) URL. No engagement threshold is available.
+MEASURE '_Measures'[Landing Page Bounce Rate] =
+DIVIDE([Bounced Sessions], [Total Sessions])
+
+// Total source pageviews from per-session aggregation, filtered by session start date rather than individual pageview dates.
+MEASURE '_Measures'[Total Pageviews] =
+SUM('Fact_Sessions'[Pageviews])
+
+// Sessions with any observed product stage URL. Repeat views count once; this measure does not impose prior-stage ordering.
+MEASURE '_Measures'[Product Reach Sessions] =
+SUM('Fact_Sessions'[Reach Product])
+
+// Any-reach product sessions / all sessions. For ordered progression use the sequential funnel measures.
+MEASURE '_Measures'[Product Page Reach Rate] =
+DIVIDE([Product Reach Sessions], [Total Sessions])
+
+// Sessions with any observed cart stage URL. Repeat views count once; this measure does not impose prior-stage ordering.
+MEASURE '_Measures'[Cart Reach Sessions] =
+SUM('Fact_Sessions'[Reach Cart])
+
+// Any-reach cart sessions / all sessions. For ordered progression use the sequential funnel measures.
+MEASURE '_Measures'[Cart Reach Rate] =
+DIVIDE([Cart Reach Sessions], [Total Sessions])
+
+// Sessions with any observed shipping stage URL. Repeat views count once; this measure does not impose prior-stage ordering.
+MEASURE '_Measures'[Shipping Reach Sessions] =
+SUM('Fact_Sessions'[Reach Shipping])
+
+// Any-reach shipping sessions / all sessions. For ordered progression use the sequential funnel measures.
+MEASURE '_Measures'[Shipping Reach Rate] =
+DIVIDE([Shipping Reach Sessions], [Total Sessions])
+
+// Sessions with any observed billing stage URL. Repeat views count once; this measure does not impose prior-stage ordering.
+MEASURE '_Measures'[Billing Reach Sessions] =
+SUM('Fact_Sessions'[Reach Billing])
+
+// Any-reach billing sessions / all sessions. For ordered progression use the sequential funnel measures.
+MEASURE '_Measures'[Billing Reach Rate] =
+DIVIDE([Billing Reach Sessions], [Total Sessions])
+
+// Sessions completing every stage through product in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.
+MEASURE '_Measures'[Sequential Product Sessions] =
+SUM('Fact_Sessions'[Sequential Product])
+
+// Sessions completing every stage through cart in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.
+MEASURE '_Measures'[Sequential Cart Sessions] =
+SUM('Fact_Sessions'[Sequential Cart])
+
+// Sessions completing every stage through shipping in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.
+MEASURE '_Measures'[Sequential Shipping Sessions] =
+SUM('Fact_Sessions'[Sequential Shipping])
+
+// Sessions completing every stage through billing in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.
+MEASURE '_Measures'[Sequential Billing Sessions] =
+SUM('Fact_Sessions'[Sequential Billing])
+
+// Sessions completing every stage through purchase in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.
+MEASURE '_Measures'[Sequential Purchase Sessions] =
+SUM('Fact_Sessions'[Sequential Purchase])
+
+// Sessions reaching /shipping at any point divided by sessions. Shipping is the first observed checkout step.
+MEASURE '_Measures'[Checkout Reach Rate] =
+DIVIDE([Shipping Reach Sessions], [Total Sessions])
+
+// Strict sequential purchases divided by strict sequential billing sessions. Both use the session-start cohort.
+MEASURE '_Measures'[Purchase Completion Rate] =
+DIVIDE([Sequential Purchase Sessions], [Sequential Billing Sessions])
+
+// Distinct sessions completing every stage up to the selected ordered stage. Blank for a total spanning multiple stages.
+MEASURE '_Measures'[Stage Sessions] =
+// Disconnected stage axis selects distinct session flags; never count pageview rows.
+VAR _stage = SELECTEDVALUE('Dim_FunnelStage'[Stage Order])
+RETURN SWITCH(_stage, 1, [Total Sessions], 2, [Sequential Product Sessions], 3, [Sequential Cart Sessions], 4, [Sequential Shipping Sessions], 5, [Sequential Billing Sessions], 6, [Sequential Purchase Sessions])
+
+// Distinct sessions at the preceding sequential stage; landing uses all sessions as its baseline.
+MEASURE '_Measures'[Previous Stage Sessions] =
+VAR _stage = SELECTEDVALUE('Dim_FunnelStage'[Stage Order])
+RETURN SWITCH(_stage, 1, [Total Sessions], 2, [Total Sessions], 3, [Sequential Product Sessions], 4, [Sequential Cart Sessions], 5, [Sequential Shipping Sessions], 6, [Sequential Billing Sessions])
+
+// Current ordered stage sessions / previous stage sessions. Landing is 100% when sessions exist.
+MEASURE '_Measures'[Stage Conversion %] =
+DIVIDE([Stage Sessions], [Previous Stage Sessions])
+
+// Current ordered stage sessions / all selected sessions.
+MEASURE '_Measures'[Stage Reach %] =
+DIVIDE([Stage Sessions], [Total Sessions])
+
+// Previous-stage sessions less current-stage sessions. These are observed stage drop-offs, not inferred causes.
+MEASURE '_Measures'[Funnel Abandonment Sessions] =
+[Previous Stage Sessions] - [Stage Sessions]
+
+// Drop-off sessions / preceding ordered-stage sessions; zero at landing.
+MEASURE '_Measures'[Funnel Abandonment %] =
+DIVIDE([Funnel Abandonment Sessions], [Previous Stage Sessions])
+
+// Recorded item sales by product and original order date. Additive across sold products; includes primary and cross-sell items.
+MEASURE '_Measures'[Product Revenue] =
+SUM('Fact_OrderItems'[Item Sales Amount])
+
+// Recorded item-level cost by product and original order date, before any assumed recovery.
+MEASURE '_Measures'[Product COGS] =
+SUM('Fact_OrderItems'[Item COGS Amount])
+
+// Item sales less item COGS; product-level estimated gross profit before refunds and operating costs.
+MEASURE '_Measures'[Product Gross Profit] =
+[Product Revenue] - [Product COGS]
+
+// Product gross profit / recorded product revenue.
+MEASURE '_Measures'[Product Margin %] =
+DIVIDE([Product Gross Profit], [Product Revenue])
+
+// Native item row count. Source has no item-quantity column; each row is one sold item, reconciled to order item counts.
+MEASURE '_Measures'[Units Sold] =
+COUNTROWS('Fact_OrderItems')
+
+// Current product revenue divided by revenue across all products, retaining date and acquisition filters.
+MEASURE '_Measures'[Product Revenue Contribution %] =
+DIVIDE([Product Revenue], CALCULATE([Product Revenue], REMOVEFILTERS('Dim_Product')))
+
+// Distinct orders containing selected sold items. Totals are distinct orders, not sum of product order counts.
+MEASURE '_Measures'[Orders Containing Selected Product] =
+DISTINCTCOUNT('Fact_OrderItems'[Order ID])
+
+// Revenue from items with source is_primary_item = 1, by item product; not whole basket revenue.
+MEASURE '_Measures'[Primary Item Revenue] =
+CALCULATE([Product Revenue], KEEPFILTERS('Fact_OrderItems'[Item Role] = "Primary item"))
+
+// Revenue from items with source is_primary_item = 0.
+MEASURE '_Measures'[Cross-Sell Revenue] =
+CALCULATE([Product Revenue], KEEPFILTERS('Fact_OrderItems'[Item Role] = "Cross-sell item"))
+
+// Sold item rows designated non-primary by the source.
+MEASURE '_Measures'[Cross-Sell Units] =
+CALCULATE([Units Sold], KEEPFILTERS('Fact_OrderItems'[Item Role] = "Cross-sell item"))
+
+// Orders with more than one recorded item. This is a basket-level count on order date.
+MEASURE '_Measures'[Orders With Cross Sell] =
+SUM('Fact_Orders'[Has Cross Sell])
+
+// Orders containing more than one item / orders. Does not imply a causal recommendation effect.
+MEASURE '_Measures'[Cross-Sell Attach Rate] =
+DIVIDE([Orders With Cross Sell], [Total Orders])
+
+// Distinct observed user IDs placing an order in the selected order-date period; separate from all website visitors.
+MEASURE '_Measures'[Paying Customers] =
+DISTINCTCOUNT('Fact_Orders'[Customer ID])
+
+// Observed user IDs with at least two orders within the current order-date and acquisition filters. This is period purchase frequency, not a lifetime flag.
+MEASURE '_Measures'[Repeat Purchasing Customers] =
+COUNTROWS(FILTER(VALUES('Fact_Orders'[Customer ID]), CALCULATE(COUNTROWS('Fact_Orders')) >= 2))
+
+// Customers with at least two selected-period orders divided by customers with any selected-period order.
+MEASURE '_Measures'[Repeat Purchasing Customer %] =
+DIVIDE([Repeat Purchasing Customers], [Paying Customers])
+
+// Selected-period orders / distinct paying user IDs.
+MEASURE '_Measures'[Orders Per Paying Customer] =
+DIVIDE([Total Orders], [Paying Customers])
+
+// Selected-period recorded order sales / paying user IDs.
+MEASURE '_Measures'[Revenue Per Paying Customer] =
+DIVIDE([Gross Sales Revenue], [Paying Customers])
+
+// Orders whose user already placed a prior observed order in the complete extract. Classification is fixed at preparation, not reset by date slicers.
+MEASURE '_Measures'[Subsequent Purchase Orders] =
+CALCULATE([Total Orders], KEEPFILTERS('Fact_Orders'[Purchase Type] = "Subsequent purchase"))
+
+// Recorded sales from subsequent observed purchases, by order date. Left-censored before the extract begins.
+MEASURE '_Measures'[Subsequent Purchase Revenue] =
+CALCULATE([Gross Sales Revenue], KEEPFILTERS('Fact_Orders'[Purchase Type] = "Subsequent purchase"))
+
+// Source repeat-visitor sessions / all sessions; visitor recurrence is not buyer recurrence.
+MEASURE '_Measures'[Repeat Visitor Session Share] =
+DIVIDE([Repeat Visitor Sessions], [Total Sessions])
+
+// All observed first-purchase customers in the selected cohort. Cohort analysis ignores the report date slicer and retains its fixed original customer cohort.
+MEASURE '_Measures'[Cohort Customers] =
+CALCULATE(COUNTROWS('Dim_Customer'), KEEPFILTERS('Dim_Customer'[First Purchase Date] <> BLANK()))
+
+// Distinct customers purchasing at selected months since first observed purchase. Calendar-month cohorts; date and acquisition slicers deliberately ignored to preserve the original customer cohort denominator. Incomplete/future cohort-month cells are blank.
+MEASURE '_Measures'[Cohort Active Customers] =
+// Hide cells without a complete observation month to avoid future zero retention.
+VAR _age = SELECTEDVALUE('Dim_CohortAge'[Month After First Purchase])
+VAR _cohort = SELECTEDVALUE('Dim_Customer'[Purchase Cohort])
+VAR _start = IF(_cohort <> "No observed purchase" && NOT ISBLANK(_cohort), DATE(VALUE(LEFT(_cohort,4)), VALUE(RIGHT(_cohort,2)), 1))
+VAR _mature = NOT ISBLANK(_start) && EOMONTH(_start, _age) < DATE(2015,3,19)
+RETURN IF(NOT ISBLANK(_age) && _mature, COALESCE(CALCULATE(DISTINCTCOUNT('Fact_Orders'[Customer ID]), REMOVEFILTERS('Dim_Date'), REMOVEFILTERS('Dim_Channel'), REMOVEFILTERS('Dim_Device'), REMOVEFILTERS('Dim_Visitor'), REMOVEFILTERS('Dim_Landing'), 'Fact_Orders'[Purchase Age Month] = _age),0))
+
+// Active customers / original first-purchase cohort size at selected month age. Month zero is the acquisition month. Blank until a full month is observed; no inference about churn.
+MEASURE '_Measures'[Cohort Retention %] =
+IF(NOT ISBLANK([Cohort Active Customers]), DIVIDE([Cohort Active Customers], [Cohort Customers]))
+
+// Full-calendar-month revenue change against the preceding month. Requires one month and complete current/prior coverage; daily slice is expanded to full months. Partial extract boundary months are blank.
+MEASURE '_Measures'[MoM Revenue Growth] =
+// Compare complete calendar months only; exclude partial edge months.
+VAR _month = SELECTEDVALUE('Dim_Date'[Month Start])
+VAR _priorMonth = EDATE(_month, -1)
+VAR _ok = HASONEVALUE('Dim_Date'[Month Start]) && _month >= DATE(2012,4,1) && _month <= DATE(2015,2,1) && _priorMonth >= DATE(2012,4,1)
+VAR _current = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _month, EOMONTH(_month,0)))
+VAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorMonth, EOMONTH(_priorMonth,0)))
+RETURN IF(_ok, DIVIDE(_current - _prior, _prior))
+
+// Full-calendar-month revenue change against the same month last year. Requires one month and complete current/prior coverage; daily slice is expanded to full months. Partial extract boundary months are blank.
+MEASURE '_Measures'[YoY Revenue Growth] =
+// Compare complete calendar months only; exclude partial edge months.
+VAR _month = SELECTEDVALUE('Dim_Date'[Month Start])
+VAR _priorMonth = EDATE(_month, -12)
+VAR _ok = HASONEVALUE('Dim_Date'[Month Start]) && _month >= DATE(2012,4,1) && _month <= DATE(2015,2,1) && _priorMonth >= DATE(2012,4,1)
+VAR _current = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _month, EOMONTH(_month,0)))
+VAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorMonth, EOMONTH(_priorMonth,0)))
+RETURN IF(_ok, DIVIDE(_current - _prior, _prior))
+
+// Change vs the same-length immediately preceding calendar-day window. Requires contiguous selected dates and fully observed interior days (2012-03-20 through 2015-03-18); source boundary days are partial. Separate from complete-month MoM/YoY.
+MEASURE '_Measures'[Revenue Growth %] =
+// Compare only contiguous windows of fully observed interior calendar days.
+VAR _from = MIN('Dim_Date'[Date])
+VAR _to = MAX('Dim_Date'[Date])
+VAR _days = DATEDIFF(_from, _to, DAY) + 1
+VAR _priorFrom = _from - _days
+VAR _priorTo = _from - 1
+VAR _contiguous = COUNTROWS(VALUES('Dim_Date'[Date])) = _days
+VAR _valid = _contiguous && _from >= DATE(2012,3,20) && _to <= DATE(2015,3,18) && _priorFrom >= DATE(2012,3,20)
+VAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorFrom, _priorTo))
+RETURN IF(_valid, DIVIDE([Gross Sales Revenue] - _prior, _prior))
+
+// Dynamic selected calendar range. The underlying data coverage is separately disclosed.
+MEASURE '_Measures'[Selected Period Label] =
+VAR _min = MIN('Dim_Date'[Date])
+VAR _max = MAX('Dim_Date'[Date])
+RETURN FORMAT(_min, "dd MMM yyyy") & " – " & FORMAT(_max, "dd MMM yyyy")
+
+// Observed source bounds, not a claim of current data freshness.
+MEASURE '_Measures'[Data Coverage Note] =
+"Sales/sessions: 19 Mar 2012–19 Mar 2015 | Refunds: through 01 Apr 2015 | USD"
+
+// Dynamic chart title showing the selected calendar range.
+MEASURE '_Measures'[Revenue Trend Title] =
+"Recorded sales · " & [Selected Period Label]
+
+// Dynamic conversion chart title with selected calendar dates.
+MEASURE '_Measures'[Conversion Chart Title] =
+"Session conversion · " & [Selected Period Label]
+
+// Semantic formatting color for full-month MoM growth; blank comparison uses neutral text.
+MEASURE '_Measures'[Growth Color] =
+IF(ISBLANK([MoM Revenue Growth]), "#526074", IF([MoM Revenue Growth]>=0, "#087F80", "#A36512"))
+
+// Amber when product sale-cohort refund incidence exceeds the all-product incidence under the same remaining filters; descriptive comparison, not a risk threshold.
+MEASURE '_Measures'[Refund Risk Color] =
+IF(ISBLANK([Product Refund Rate]), "#526074", IF([Product Refund Rate] > CALCULATE([Product Refund Rate], REMOVEFILTERS('Dim_Product')), "#A36512", "#087F80"))
+
+// Filter-responsive executive narrative; reports observed values without inferring causes.
+MEASURE '_Measures'[Executive Decision Note] =
+IF(ISBLANK([Gross Sales Revenue]), "No recorded sales in the selected context. Adjust the date or acquisition filters.", "Recorded sales are " & FORMAT([Gross Sales Revenue], "$#,##0") & " at " & FORMAT([Gross Margin %], "0.0%") & " gross margin before refunds and operating expenses. Selected sessions convert at " & FORMAT([Session-to-Order Conversion Rate], "0.0%") & ". Compare acquisition efficiency on the Marketing page and journey losses on Conversion.")

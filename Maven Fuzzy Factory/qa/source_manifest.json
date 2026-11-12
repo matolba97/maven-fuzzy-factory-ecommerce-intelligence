@@ -1,0 +1,50 @@
+[
+  {
+    "file": "orders.csv",
+    "rows": 32313,
+    "bytes": 1819538,
+    "sha256": "ed9923cfbdbb9e9d8e1eaf6443d45085165bd067709c359e7189769c835deefe",
+    "min_date": "2012-03-19 10:42:46",
+    "max_date": "2015-03-19 05:38:31"
+  },
+  {
+    "file": "order_items.csv",
+    "rows": 40025,
+    "bytes": 1933914,
+    "sha256": "751514dfc2f6862dd1afe67dff7f313ec8299eae3fffbb18b1de50bfce93e903",
+    "min_date": "2012-03-19 10:42:46",
+    "max_date": "2015-03-19 05:38:31"
+  },
+  {
+    "file": "order_item_refunds.csv",
+    "rows": 1731,
+    "bytes": 73965,
+    "sha256": "50ad2b8dd1c3dffed3fb9bf0bf288d026bd19cd1032d28ddc59c2623e07a1186",
+    "min_date": "2012-04-06 11:32:43",
+    "max_date": "2015-04-01 18:11:08"
+  },
+  {
+    "file": "products.csv",
+    "rows": 4,
+    "bytes": 225,
+    "sha256": "116d5f261a5934c46232a3083b9da298cca94157826a41e87566c8c4034175a8",
+    "min_date": "2012-03-19 08:00:00",
+    "max_date": "2014-02-05 10:00:00"
+  },
+  {
+    "file": "website_sessions.csv",
+    "rows": 472871,
+    "bytes": 42106732,
+    "sha256": "dc975b8c51b4ebdc56b94863c9e1cd94e74d1a9f36ce296d45707a8df87b8204",
+    "min_date": "2012-03-19 08:04:16",
+    "max_date": "2015-03-19 07:59:08"
+  },
+  {
+    "file": "website_pageviews.csv",
+    "rows": 1188124,
+    "bytes": 56915398,
+    "sha256": "e325f5678acc76356670a7538d185613265ba26038c6a2a5a0af68cc68722c4a",
+    "min_date": "2012-03-19 08:04:16",
+    "max_date": "2015-03-19 07:59:32"
+  }
+]

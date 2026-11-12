@@ -1,0 +1,5427 @@
+{
+  "scope": "Actual DAX engine results against source-audited whole-extract, stage, month, product, device, cohort and guard references. Currency divisions allow 0.0001001 USD tolerance for fixed-decimal DAX arithmetic.",
+  "total": 903,
+  "passed": 903,
+  "failed": 0,
+  "all_measure_query_elapsed_ms": 159,
+  "checks": [
+    {
+      "check": "Whole-extract DAX: Gross Sales Revenue",
+      "pass": true,
+      "actual": 1938509.75,
+      "expected": 1938509.75
+    },
+    {
+      "check": "Whole-extract DAX: COGS",
+      "pass": true,
+      "actual": 722370.25,
+      "expected": 722370.25
+    },
+    {
+      "check": "Whole-extract DAX: Gross Profit",
+      "pass": true,
+      "actual": 1216139.5,
+      "expected": 1216139.5
+    },
+    {
+      "check": "Whole-extract DAX: Gross Margin %",
+      "pass": true,
+      "actual": 0.6273579485478471,
+      "expected": 0.6273579485478471
+    },
+    {
+      "check": "Whole-extract DAX: Total Orders",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313.0
+    },
+    {
+      "check": "Whole-extract DAX: Average Order Value",
+      "pass": true,
+      "actual": 59.9916,
+      "expected": 59.99163649305233
+    },
+    {
+      "check": "Whole-extract DAX: Average Items Per Order",
+      "pass": true,
+      "actual": 1.2386655525639836,
+      "expected": 1.2386655525639836
+    },
+    {
+      "check": "Whole-extract DAX: Total Refund Amount",
+      "pass": true,
+      "actual": 85338.69,
+      "expected": 85338.69
+    },
+    {
+      "check": "Whole-extract DAX: Net Revenue After Recorded Refunds",
+      "pass": true,
+      "actual": 1853171.06,
+      "expected": 1853171.06
+    },
+    {
+      "check": "Whole-extract DAX: Gross Profit After Refunds (No Recovery)",
+      "pass": true,
+      "actual": 1130800.81,
+      "expected": 1130800.81
+    },
+    {
+      "check": "Whole-extract DAX: Refund Amount %",
+      "pass": true,
+      "actual": 0.04402283248768803,
+      "expected": 0.044022832487688034
+    },
+    {
+      "check": "Whole-extract DAX: Refund Events",
+      "pass": true,
+      "actual": 1731,
+      "expected": 1731.0
+    },
+    {
+      "check": "Whole-extract DAX: Refunded Orders (Event Date)",
+      "pass": true,
+      "actual": 1723,
+      "expected": 1723.0
+    },
+    {
+      "check": "Whole-extract DAX: Average Refund Lag Days",
+      "pass": true,
+      "actual": 9.086655112651647,
+      "expected": 9.086655112651647
+    },
+    {
+      "check": "Whole-extract DAX: Recorded Refunds On Selected Sales",
+      "pass": true,
+      "actual": 85338.69,
+      "expected": 85338.69
+    },
+    {
+      "check": "Whole-extract DAX: Refunded Items (Sale Cohort)",
+      "pass": true,
+      "actual": 1731,
+      "expected": 1731.0
+    },
+    {
+      "check": "Whole-extract DAX: Product Refund Rate",
+      "pass": true,
+      "actual": 0.043247970018738285,
+      "expected": 0.043247970018738285
+    },
+    {
+      "check": "Whole-extract DAX: Sale Cohort Refund Amount %",
+      "pass": true,
+      "actual": 0.04402283248768803,
+      "expected": 0.044022832487688034
+    },
+    {
+      "check": "Whole-extract DAX: Total Sessions",
+      "pass": true,
+      "actual": 472871,
+      "expected": 472871.0
+    },
+    {
+      "check": "Whole-extract DAX: Unique Website Visitors",
+      "pass": true,
+      "actual": 394318,
+      "expected": 394318.0
+    },
+    {
+      "check": "Whole-extract DAX: New Visitor Sessions",
+      "pass": true,
+      "actual": 394318,
+      "expected": 394318.0
+    },
+    {
+      "check": "Whole-extract DAX: Repeat Visitor Sessions",
+      "pass": true,
+      "actual": 78553,
+      "expected": 78553.0
+    },
+    {
+      "check": "Whole-extract DAX: Converted Sessions",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313.0
+    },
+    {
+      "check": "Whole-extract DAX: Session-to-Order Conversion Rate",
+      "pass": true,
+      "actual": 0.0683336470200118,
+      "expected": 0.0683336470200118
+    },
+    {
+      "check": "Whole-extract DAX: Campaign Orders",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313.0
+    },
+    {
+      "check": "Whole-extract DAX: Campaign Revenue",
+      "pass": true,
+      "actual": 1938509.75,
+      "expected": 1938509.75
+    },
+    {
+      "check": "Whole-extract DAX: Revenue Per Session",
+      "pass": true,
+      "actual": 4.0994,
+      "expected": 4.099447312269096
+    },
+    {
+      "check": "Whole-extract DAX: Traffic Source Contribution",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Whole-extract DAX: Revenue Per Tagged Marketing Session",
+      "pass": true,
+      "actual": 4.0229,
+      "expected": 4.022859401914551
+    },
+    {
+      "check": "Whole-extract DAX: Desktop Conversion",
+      "pass": true,
+      "actual": 0.08502356074574882,
+      "expected": 0.08502356074574882
+    },
+    {
+      "check": "Whole-extract DAX: Mobile Conversion",
+      "pass": true,
+      "actual": 0.03090973917336332,
+      "expected": 0.03090973917336332
+    },
+    {
+      "check": "Whole-extract DAX: Bounced Sessions",
+      "pass": true,
+      "actual": 211640,
+      "expected": 211640.0
+    },
+    {
+      "check": "Whole-extract DAX: Landing Page Bounce Rate",
+      "pass": true,
+      "actual": 0.4475639233533035,
+      "expected": 0.4475639233533035
+    },
+    {
+      "check": "Whole-extract DAX: Total Pageviews",
+      "pass": true,
+      "actual": 1188124,
+      "expected": 1188124.0
+    },
+    {
+      "check": "Whole-extract DAX: Product Reach Sessions",
+      "pass": true,
+      "actual": 261231,
+      "expected": 261231.0
+    },
+    {
+      "check": "Whole-extract DAX: Product Page Reach Rate",
+      "pass": true,
+      "actual": 0.5524360766466965,
+      "expected": 0.5524360766466965
+    },
+    {
+      "check": "Whole-extract DAX: Cart Reach Sessions",
+      "pass": true,
+      "actual": 94953,
+      "expected": 94953.0
+    },
+    {
+      "check": "Whole-extract DAX: Cart Reach Rate",
+      "pass": true,
+      "actual": 0.20080106413799959,
+      "expected": 0.20080106413799959
+    },
+    {
+      "check": "Whole-extract DAX: Shipping Reach Sessions",
+      "pass": true,
+      "actual": 64484,
+      "expected": 64484.0
+    },
+    {
+      "check": "Whole-extract DAX: Shipping Reach Rate",
+      "pass": true,
+      "actual": 0.13636700072535637,
+      "expected": 0.13636700072535637
+    },
+    {
+      "check": "Whole-extract DAX: Billing Reach Sessions",
+      "pass": true,
+      "actual": 52058,
+      "expected": 52058.0
+    },
+    {
+      "check": "Whole-extract DAX: Billing Reach Rate",
+      "pass": true,
+      "actual": 0.1100892209503226,
+      "expected": 0.1100892209503226
+    },
+    {
+      "check": "Whole-extract DAX: Sequential Product Sessions",
+      "pass": true,
+      "actual": 261231,
+      "expected": 261231.0
+    },
+    {
+      "check": "Whole-extract DAX: Sequential Cart Sessions",
+      "pass": true,
+      "actual": 94953,
+      "expected": 94953.0
+    },
+    {
+      "check": "Whole-extract DAX: Sequential Shipping Sessions",
+      "pass": true,
+      "actual": 64484,
+      "expected": 64484.0
+    },
+    {
+      "check": "Whole-extract DAX: Sequential Billing Sessions",
+      "pass": true,
+      "actual": 52058,
+      "expected": 52058.0
+    },
+    {
+      "check": "Whole-extract DAX: Sequential Purchase Sessions",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313.0
+    },
+    {
+      "check": "Whole-extract DAX: Checkout Reach Rate",
+      "pass": true,
+      "actual": 0.13636700072535637,
+      "expected": 0.13636700072535637
+    },
+    {
+      "check": "Whole-extract DAX: Purchase Completion Rate",
+      "pass": true,
+      "actual": 0.6207115140804488,
+      "expected": 0.6207115140804488
+    },
+    {
+      "check": "Whole-extract DAX: Stage Sessions",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Previous Stage Sessions",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Stage Conversion %",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Stage Reach %",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Funnel Abandonment Sessions",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Funnel Abandonment %",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Product Revenue",
+      "pass": true,
+      "actual": 1938509.75,
+      "expected": 1938509.75
+    },
+    {
+      "check": "Whole-extract DAX: Product COGS",
+      "pass": true,
+      "actual": 722370.25,
+      "expected": 722370.25
+    },
+    {
+      "check": "Whole-extract DAX: Product Gross Profit",
+      "pass": true,
+      "actual": 1216139.5,
+      "expected": 1216139.5
+    },
+    {
+      "check": "Whole-extract DAX: Product Margin %",
+      "pass": true,
+      "actual": 0.6273579485478471,
+      "expected": 0.6273579485478471
+    },
+    {
+      "check": "Whole-extract DAX: Units Sold",
+      "pass": true,
+      "actual": 40025,
+      "expected": 40025.0
+    },
+    {
+      "check": "Whole-extract DAX: Product Revenue Contribution %",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Whole-extract DAX: Orders Containing Selected Product",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313.0
+    },
+    {
+      "check": "Whole-extract DAX: Primary Item Revenue",
+      "pass": true,
+      "actual": 1639464.87,
+      "expected": 1639464.8699999999
+    },
+    {
+      "check": "Whole-extract DAX: Cross-Sell Revenue",
+      "pass": true,
+      "actual": 299044.88,
+      "expected": 299044.88
+    },
+    {
+      "check": "Whole-extract DAX: Cross-Sell Units",
+      "pass": true,
+      "actual": 7712,
+      "expected": 7712.0
+    },
+    {
+      "check": "Whole-extract DAX: Orders With Cross Sell",
+      "pass": true,
+      "actual": 7712,
+      "expected": 7712.0
+    },
+    {
+      "check": "Whole-extract DAX: Cross-Sell Attach Rate",
+      "pass": true,
+      "actual": 0.23866555256398353,
+      "expected": 0.23866555256398353
+    },
+    {
+      "check": "Whole-extract DAX: Paying Customers",
+      "pass": true,
+      "actual": 31696,
+      "expected": 31696.0
+    },
+    {
+      "check": "Whole-extract DAX: Repeat Purchasing Customers",
+      "pass": true,
+      "actual": 591,
+      "expected": 591.0
+    },
+    {
+      "check": "Whole-extract DAX: Repeat Purchasing Customer %",
+      "pass": true,
+      "actual": 0.018645885916203937,
+      "expected": 0.018645885916203937
+    },
+    {
+      "check": "Whole-extract DAX: Orders Per Paying Customer",
+      "pass": true,
+      "actual": 1.0194661786976276,
+      "expected": 1.0194661786976276
+    },
+    {
+      "check": "Whole-extract DAX: Revenue Per Paying Customer",
+      "pass": true,
+      "actual": 61.1594,
+      "expected": 61.159444409389195
+    },
+    {
+      "check": "Whole-extract DAX: Subsequent Purchase Orders",
+      "pass": true,
+      "actual": 617,
+      "expected": 617.0
+    },
+    {
+      "check": "Whole-extract DAX: Subsequent Purchase Revenue",
+      "pass": true,
+      "actual": 38238.04,
+      "expected": 38238.03999999999
+    },
+    {
+      "check": "Whole-extract DAX: Repeat Visitor Session Share",
+      "pass": true,
+      "actual": 0.166119301035589,
+      "expected": 0.166119301035589
+    },
+    {
+      "check": "Whole-extract DAX: Cohort Customers",
+      "pass": true,
+      "actual": 31696,
+      "expected": 31696.0
+    },
+    {
+      "check": "Whole-extract DAX: Cohort Active Customers",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Cohort Retention %",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: MoM Revenue Growth",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: YoY Revenue Growth",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Revenue Growth %",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Whole-extract DAX: Selected Period Label",
+      "pass": true,
+      "actual": "01 Jan 2012 \u2013 31 Dec 2015",
+      "expected": "01 Jan 2012 \u2013 31 Dec 2015"
+    },
+    {
+      "check": "Whole-extract DAX: Data Coverage Note",
+      "pass": true,
+      "actual": "Sales/sessions: 19 Mar 2012\u201319 Mar 2015 | Refunds: through 01 Apr 2015 | USD",
+      "expected": "Sales/sessions: 19 Mar 2012\u201319 Mar 2015 | Refunds: through 01 Apr 2015 | USD"
+    },
+    {
+      "check": "Whole-extract DAX: Revenue Trend Title",
+      "pass": true,
+      "actual": "Recorded sales \u00b7 01 Jan 2012 \u2013 31 Dec 2015",
+      "expected": "Recorded sales \u00b7 01 Jan 2012 \u2013 31 Dec 2015"
+    },
+    {
+      "check": "Whole-extract DAX: Conversion Chart Title",
+      "pass": true,
+      "actual": "Session conversion \u00b7 01 Jan 2012 \u2013 31 Dec 2015",
+      "expected": "Session conversion \u00b7 01 Jan 2012 \u2013 31 Dec 2015"
+    },
+    {
+      "check": "Whole-extract DAX: Growth Color",
+      "pass": true,
+      "actual": "#526074",
+      "expected": "#526074"
+    },
+    {
+      "check": "Whole-extract DAX: Refund Risk Color",
+      "pass": true,
+      "actual": "#087F80",
+      "expected": "#087F80"
+    },
+    {
+      "check": "Whole-extract DAX: Executive Decision Note",
+      "pass": true,
+      "actual": "Recorded sales are $1,938,510 at 62.7% gross margin before refunds and operating expenses. Selected sessions convert at 6.8%. Compare acquisition efficiency on the Marketing page and journey losses on Conversion.",
+      "expected": "Recorded sales are $1,938,510 at 62.7% gross margin before refunds and operating expenses. Selected sessions convert at 6.8%. Compare acquisition efficiency on the Marketing page and journey losses on Conversion."
+    },
+    {
+      "check": "Funnel count Landing",
+      "pass": true,
+      "actual": 472871,
+      "expected": 472871
+    },
+    {
+      "check": "Funnel prior Landing",
+      "pass": true,
+      "actual": 472871,
+      "expected": 472871
+    },
+    {
+      "check": "Funnel conversion Landing",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Funnel drop Landing",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Funnel count Product",
+      "pass": true,
+      "actual": 261231,
+      "expected": 261231
+    },
+    {
+      "check": "Funnel prior Product",
+      "pass": true,
+      "actual": 472871,
+      "expected": 472871
+    },
+    {
+      "check": "Funnel conversion Product",
+      "pass": true,
+      "actual": 0.5524360766466965,
+      "expected": 0.5524360766466965
+    },
+    {
+      "check": "Funnel drop Product",
+      "pass": true,
+      "actual": 211640,
+      "expected": 211640
+    },
+    {
+      "check": "Funnel count Cart",
+      "pass": true,
+      "actual": 94953,
+      "expected": 94953
+    },
+    {
+      "check": "Funnel prior Cart",
+      "pass": true,
+      "actual": 261231,
+      "expected": 261231
+    },
+    {
+      "check": "Funnel conversion Cart",
+      "pass": true,
+      "actual": 0.3634828944497399,
+      "expected": 0.3634828944497399
+    },
+    {
+      "check": "Funnel drop Cart",
+      "pass": true,
+      "actual": 166278,
+      "expected": 166278
+    },
+    {
+      "check": "Funnel count Shipping",
+      "pass": true,
+      "actual": 64484,
+      "expected": 64484
+    },
+    {
+      "check": "Funnel prior Shipping",
+      "pass": true,
+      "actual": 94953,
+      "expected": 94953
+    },
+    {
+      "check": "Funnel conversion Shipping",
+      "pass": true,
+      "actual": 0.6791149305445853,
+      "expected": 0.6791149305445853
+    },
+    {
+      "check": "Funnel drop Shipping",
+      "pass": true,
+      "actual": 30469,
+      "expected": 30469
+    },
+    {
+      "check": "Funnel count Billing",
+      "pass": true,
+      "actual": 52058,
+      "expected": 52058
+    },
+    {
+      "check": "Funnel prior Billing",
+      "pass": true,
+      "actual": 64484,
+      "expected": 64484
+    },
+    {
+      "check": "Funnel conversion Billing",
+      "pass": true,
+      "actual": 0.8073010359158861,
+      "expected": 0.8073010359158861
+    },
+    {
+      "check": "Funnel drop Billing",
+      "pass": true,
+      "actual": 12426,
+      "expected": 12426
+    },
+    {
+      "check": "Funnel count Purchase",
+      "pass": true,
+      "actual": 32313,
+      "expected": 32313
+    },
+    {
+      "check": "Funnel prior Purchase",
+      "pass": true,
+      "actual": 52058,
+      "expected": 52058
+    },
+    {
+      "check": "Funnel conversion Purchase",
+      "pass": true,
+      "actual": 0.6207115140804488,
+      "expected": 0.6207115140804488
+    },
+    {
+      "check": "Funnel drop Purchase",
+      "pass": true,
+      "actual": 19745,
+      "expected": 19745
+    },
+    {
+      "check": "Month sales 2012-03",
+      "pass": true,
+      "actual": 2999.4,
+      "expected": 2999.4
+    },
+    {
+      "check": "Month profit 2012-03",
+      "pass": true,
+      "actual": 1830,
+      "expected": 1830.0
+    },
+    {
+      "check": "Month AOV 2012-03",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-03",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "YoY 2012-03",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-04",
+      "pass": true,
+      "actual": 4949.01,
+      "expected": 4949.01
+    },
+    {
+      "check": "Month profit 2012-04",
+      "pass": true,
+      "actual": 3019.5,
+      "expected": 3019.5000000000005
+    },
+    {
+      "check": "Month AOV 2012-04",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-04",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "YoY 2012-04",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-05",
+      "pass": true,
+      "actual": 5398.92,
+      "expected": 5398.92
+    },
+    {
+      "check": "Month profit 2012-05",
+      "pass": true,
+      "actual": 3294,
+      "expected": 3294.0000000000005
+    },
+    {
+      "check": "Month AOV 2012-05",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-05",
+      "pass": true,
+      "actual": 0.09090909090909091,
+      "expected": 0.09090909090909087
+    },
+    {
+      "check": "YoY 2012-05",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-06",
+      "pass": true,
+      "actual": 6998.6,
+      "expected": 6998.6
+    },
+    {
+      "check": "Month profit 2012-06",
+      "pass": true,
+      "actual": 4270,
+      "expected": 4270.0
+    },
+    {
+      "check": "Month AOV 2012-06",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-06",
+      "pass": true,
+      "actual": 0.2962962962962963,
+      "expected": 0.29629629629629634
+    },
+    {
+      "check": "YoY 2012-06",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-07",
+      "pass": true,
+      "actual": 8448.31,
+      "expected": 8448.31
+    },
+    {
+      "check": "Month profit 2012-07",
+      "pass": true,
+      "actual": 5154.5,
+      "expected": 5154.5
+    },
+    {
+      "check": "Month AOV 2012-07",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-07",
+      "pass": true,
+      "actual": 0.20714285714285716,
+      "expected": 0.20714285714285702
+    },
+    {
+      "check": "YoY 2012-07",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-08",
+      "pass": true,
+      "actual": 11397.72,
+      "expected": 11397.72
+    },
+    {
+      "check": "Month profit 2012-08",
+      "pass": true,
+      "actual": 6954,
+      "expected": 6954.000000000002
+    },
+    {
+      "check": "Month AOV 2012-08",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-08",
+      "pass": true,
+      "actual": 0.34911242603550297,
+      "expected": 0.34911242603550297
+    },
+    {
+      "check": "YoY 2012-08",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-09",
+      "pass": true,
+      "actual": 14347.13,
+      "expected": 14347.13
+    },
+    {
+      "check": "Month profit 2012-09",
+      "pass": true,
+      "actual": 8753.5,
+      "expected": 8753.500000000002
+    },
+    {
+      "check": "Month AOV 2012-09",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-09",
+      "pass": true,
+      "actual": 0.25877192982456143,
+      "expected": 0.25877192982456143
+    },
+    {
+      "check": "YoY 2012-09",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-10",
+      "pass": true,
+      "actual": 18546.29,
+      "expected": 18546.29
+    },
+    {
+      "check": "Month profit 2012-10",
+      "pass": true,
+      "actual": 11315.5,
+      "expected": 11315.500000000002
+    },
+    {
+      "check": "Month AOV 2012-10",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-10",
+      "pass": true,
+      "actual": 0.2926829268292683,
+      "expected": 0.29268292682926844
+    },
+    {
+      "check": "YoY 2012-10",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-11",
+      "pass": true,
+      "actual": 30893.82,
+      "expected": 30893.82
+    },
+    {
+      "check": "Month profit 2012-11",
+      "pass": true,
+      "actual": 18849,
+      "expected": 18849.0
+    },
+    {
+      "check": "Month AOV 2012-11",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-11",
+      "pass": true,
+      "actual": 0.6657681940700808,
+      "expected": 0.6657681940700808
+    },
+    {
+      "check": "YoY 2012-11",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2012-12",
+      "pass": true,
+      "actual": 25294.94,
+      "expected": 25294.94
+    },
+    {
+      "check": "Month profit 2012-12",
+      "pass": true,
+      "actual": 15433,
+      "expected": 15433.000000000004
+    },
+    {
+      "check": "Month AOV 2012-12",
+      "pass": true,
+      "actual": 49.99,
+      "expected": 49.99
+    },
+    {
+      "check": "MoM 2012-12",
+      "pass": true,
+      "actual": -0.18122977346278318,
+      "expected": -0.1812297734627832
+    },
+    {
+      "check": "YoY 2012-12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2013-01",
+      "pass": true,
+      "actual": 19966.1,
+      "expected": 19966.1
+    },
+    {
+      "check": "Month profit 2013-01",
+      "pass": true,
+      "actual": 12224,
+      "expected": 12224.000000000004
+    },
+    {
+      "check": "Month AOV 2013-01",
+      "pass": true,
+      "actual": 51.1951,
+      "expected": 51.19512820512821
+    },
+    {
+      "check": "MoM 2013-01",
+      "pass": true,
+      "actual": -0.21066822060064186,
+      "expected": -0.2106682206006419
+    },
+    {
+      "check": "YoY 2013-01",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2013-02",
+      "pass": true,
+      "actual": 26515.02,
+      "expected": 26515.02
+    },
+    {
+      "check": "Month profit 2013-02",
+      "pass": true,
+      "actual": 16323,
+      "expected": 16323.000000000002
+    },
+    {
+      "check": "Month AOV 2013-02",
+      "pass": true,
+      "actual": 53.243,
+      "expected": 53.24301204819277
+    },
+    {
+      "check": "MoM 2013-02",
+      "pass": true,
+      "actual": 0.3280019633278407,
+      "expected": 0.3280019633278408
+    },
+    {
+      "check": "YoY 2013-02",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2013-03",
+      "pass": true,
+      "actual": 19896.15,
+      "expected": 19896.15
+    },
+    {
+      "check": "Month profit 2013-03",
+      "pass": true,
+      "actual": 12197.5,
+      "expected": 12197.500000000002
+    },
+    {
+      "check": "Month AOV 2013-03",
+      "pass": true,
+      "actual": 51.6783,
+      "expected": 51.678311688311695
+    },
+    {
+      "check": "MoM 2013-03",
+      "pass": true,
+      "actual": -0.24962719243658876,
+      "expected": -0.24962719243658874
+    },
+    {
+      "check": "YoY 2013-03",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Month sales 2013-04",
+      "pass": true,
+      "actual": 28584.47,
+      "expected": 28584.47
+    },
+    {
+      "check": "Month profit 2013-04",
+      "pass": true,
+      "actual": 17524.5,
+      "expected": 17524.5
+    },
+    {
+      "check": "Month AOV 2013-04",
+      "pass": true,
+      "actual": 51.6898,
+      "expected": 51.6898191681736
+    },
+    {
+      "check": "MoM 2013-04",
+      "pass": true,
+      "actual": 0.4366834789645233,
+      "expected": 0.43668347896452325
+    },
+    {
+      "check": "YoY 2013-04",
+      "pass": true,
+      "actual": 4.775795563153035,
+      "expected": 4.775795563153034
+    },
+    {
+      "check": "Month sales 2013-05",
+      "pass": true,
+      "actual": 29364.29,
+      "expected": 29364.29
+    },
+    {
+      "check": "Month profit 2013-05",
+      "pass": true,
+      "actual": 17989.5,
+      "expected": 17989.5
+    },
+    {
+      "check": "Month AOV 2013-05",
+      "pass": true,
+      "actual": 51.4261,
+      "expected": 51.42607705779335
+    },
+    {
+      "check": "MoM 2013-05",
+      "pass": true,
+      "actual": 0.027281247474590223,
+      "expected": 0.027281247474590212
+    },
+    {
+      "check": "YoY 2013-05",
+      "pass": true,
+      "actual": 4.438919265334548,
+      "expected": 4.438919265334548
+    },
+    {
+      "check": "Month sales 2013-06",
+      "pass": true,
+      "actual": 30544.07,
+      "expected": 30544.07
+    },
+    {
+      "check": "Month profit 2013-06",
+      "pass": true,
+      "actual": 18716.5,
+      "expected": 18716.5
+    },
+    {
+      "check": "Month AOV 2013-06",
+      "pass": true,
+      "actual": 51.5077,
+      "expected": 51.5077065767285
+    },
+    {
+      "check": "MoM 2013-06",
+      "pass": true,
+      "actual": 0.040177371903083646,
+      "expected": 0.040177371903083604
+    },
+    {
+      "check": "YoY 2013-06",
+      "pass": true,
+      "actual": 3.3643114337153146,
+      "expected": 3.3643114337153146
+    },
+    {
+      "check": "Month sales 2013-07",
+      "pass": true,
+      "actual": 31143.96,
+      "expected": 31143.960000000003
+    },
+    {
+      "check": "Month profit 2013-07",
+      "pass": true,
+      "actual": 19087,
+      "expected": 19087.000000000004
+    },
+    {
+      "check": "Month AOV 2013-07",
+      "pass": true,
+      "actual": 51.5628,
+      "expected": 51.56284768211921
+    },
+    {
+      "check": "MoM 2013-07",
+      "pass": true,
+      "actual": 0.019640146188769213,
+      "expected": 0.01964014618876931
+    },
+    {
+      "check": "YoY 2013-07",
+      "pass": true,
+      "actual": 2.6864130222494205,
+      "expected": 2.6864130222494205
+    },
+    {
+      "check": "Month sales 2013-08",
+      "pass": true,
+      "actual": 31373.92,
+      "expected": 31373.92
+    },
+    {
+      "check": "Month profit 2013-08",
+      "pass": true,
+      "actual": 19230,
+      "expected": 19230.000000000004
+    },
+    {
+      "check": "Month AOV 2013-08",
+      "pass": true,
+      "actual": 51.6018,
+      "expected": 51.60184210526316
+    },
+    {
+      "check": "MoM 2013-08",
+      "pass": true,
+      "actual": 0.007383775216767553,
+      "expected": 0.007383775216767407
+    },
+    {
+      "check": "YoY 2013-08",
+      "pass": true,
+      "actual": 1.752648775369109,
+      "expected": 1.7526487753691087
+    },
+    {
+      "check": "Month sales 2013-09",
+      "pass": true,
+      "actual": 32723.65,
+      "expected": 32723.65
+    },
+    {
+      "check": "Month profit 2013-09",
+      "pass": true,
+      "actual": 20053.5,
+      "expected": 20053.5
+    },
+    {
+      "check": "Month AOV 2013-09",
+      "pass": true,
+      "actual": 52.0249,
+      "expected": 52.02488076311606
+    },
+    {
+      "check": "MoM 2013-09",
+      "pass": true,
+      "actual": 0.043020763742624445,
+      "expected": 0.04302076374262455
+    },
+    {
+      "check": "YoY 2013-09",
+      "pass": true,
+      "actual": 1.280849898202637,
+      "expected": 1.2808498982026375
+    },
+    {
+      "check": "Month sales 2013-10",
+      "pass": true,
+      "actual": 38242.62,
+      "expected": 38242.62
+    },
+    {
+      "check": "Month profit 2013-10",
+      "pass": true,
+      "actual": 23454,
+      "expected": 23454.000000000004
+    },
+    {
+      "check": "Month AOV 2013-10",
+      "pass": true,
+      "actual": 54.015,
+      "expected": 54.015
+    },
+    {
+      "check": "MoM 2013-10",
+      "pass": true,
+      "actual": 0.1686538634901669,
+      "expected": 0.16865386349016692
+    },
+    {
+      "check": "YoY 2013-10",
+      "pass": true,
+      "actual": 1.0620091673321188,
+      "expected": 1.0620091673321188
+    },
+    {
+      "check": "Month sales 2013-11",
+      "pass": true,
+      "actual": 46631.02,
+      "expected": 46631.02
+    },
+    {
+      "check": "Month profit 2013-11",
+      "pass": true,
+      "actual": 28607,
+      "expected": 28607.000000000007
+    },
+    {
+      "check": "Month AOV 2013-11",
+      "pass": true,
+      "actual": 54.1591,
+      "expected": 54.15914053426249
+    },
+    {
+      "check": "MoM 2013-11",
+      "pass": true,
+      "actual": 0.21934689621160894,
+      "expected": 0.21934689621160877
+    },
+    {
+      "check": "YoY 2013-11",
+      "pass": true,
+      "actual": 0.5093963776574085,
+      "expected": 0.5093963776574084
+    },
+    {
+      "check": "Month sales 2013-12",
+      "pass": true,
+      "actual": 58262.6,
+      "expected": 58262.600000000006
+    },
+    {
+      "check": "Month profit 2013-12",
+      "pass": true,
+      "actual": 36190,
+      "expected": 36190.00000000001
+    },
+    {
+      "check": "Month AOV 2013-12",
+      "pass": true,
+      "actual": 55.6472,
+      "expected": 55.64718242597899
+    },
+    {
+      "check": "MoM 2013-12",
+      "pass": true,
+      "actual": 0.24943867837332317,
+      "expected": 0.24943867837332337
+    },
+    {
+      "check": "YoY 2013-12",
+      "pass": true,
+      "actual": 1.3033302312636441,
+      "expected": 1.3033302312636443
+    },
+    {
+      "check": "Month sales 2014-01",
+      "pass": true,
+      "actual": 56568.89,
+      "expected": 56568.89
+    },
+    {
+      "check": "Month profit 2014-01",
+      "pass": true,
+      "actual": 35366.5,
+      "expected": 35366.5
+    },
+    {
+      "check": "Month AOV 2014-01",
+      "pass": true,
+      "actual": 57.6058,
+      "expected": 57.60579429735234
+    },
+    {
+      "check": "MoM 2014-01",
+      "pass": true,
+      "actual": -0.029070278360388998,
+      "expected": -0.029070278360389105
+    },
+    {
+      "check": "YoY 2014-01",
+      "pass": true,
+      "actual": 1.8332468534165411,
+      "expected": 1.8332468534165411
+    },
+    {
+      "check": "Month sales 2014-02",
+      "pass": true,
+      "actual": 66012.52,
+      "expected": 66012.52
+    },
+    {
+      "check": "Month profit 2014-02",
+      "pass": true,
+      "actual": 41762,
+      "expected": 41762.0
+    },
+    {
+      "check": "Month AOV 2014-02",
+      "pass": true,
+      "actual": 64.6548,
+      "expected": 64.65476983349657
+    },
+    {
+      "check": "MoM 2014-02",
+      "pass": true,
+      "actual": 0.16694034477254194,
+      "expected": 0.16694034477254202
+    },
+    {
+      "check": "YoY 2014-02",
+      "pass": true,
+      "actual": 1.4896273885518472,
+      "expected": 1.4896273885518472
+    },
+    {
+      "check": "Month sales 2014-03",
+      "pass": true,
+      "actual": 68189.73,
+      "expected": 68189.73
+    },
+    {
+      "check": "Month profit 2014-03",
+      "pass": true,
+      "actual": 43068.5,
+      "expected": 43068.5
+    },
+    {
+      "check": "Month AOV 2014-03",
+      "pass": true,
+      "actual": 63.9679,
+      "expected": 63.96785178236397
+    },
+    {
+      "check": "MoM 2014-03",
+      "pass": true,
+      "actual": 0.03298177376049271,
+      "expected": 0.03298177376049258
+    },
+    {
+      "check": "YoY 2014-03",
+      "pass": true,
+      "actual": 2.4272826652392547,
+      "expected": 2.4272826652392543
+    },
+    {
+      "check": "Month sales 2014-04",
+      "pass": true,
+      "actual": 78725.43,
+      "expected": 78725.43000000001
+    },
+    {
+      "check": "Month profit 2014-04",
+      "pass": true,
+      "actual": 49713.5,
+      "expected": 49713.50000000001
+    },
+    {
+      "check": "Month AOV 2014-04",
+      "pass": true,
+      "actual": 63.4371,
+      "expected": 63.43709105560033
+    },
+    {
+      "check": "MoM 2014-04",
+      "pass": true,
+      "actual": 0.15450567116191838,
+      "expected": 0.15450567116191855
+    },
+    {
+      "check": "YoY 2014-04",
+      "pass": true,
+      "actual": 1.7541329260259155,
+      "expected": 1.7541329260259155
+    },
+    {
+      "check": "Month sales 2014-05",
+      "pass": true,
+      "actual": 88935.27,
+      "expected": 88935.27
+    },
+    {
+      "check": "Month profit 2014-05",
+      "pass": true,
+      "actual": 56167.5,
+      "expected": 56167.50000000001
+    },
+    {
+      "check": "Month AOV 2014-05",
+      "pass": true,
+      "actual": 65.0112,
+      "expected": 65.01116228070175
+    },
+    {
+      "check": "MoM 2014-05",
+      "pass": true,
+      "actual": 0.1296892249429441,
+      "expected": 0.12968922494294405
+    },
+    {
+      "check": "YoY 2014-05",
+      "pass": true,
+      "actual": 2.0286879062970704,
+      "expected": 2.0286879062970704
+    },
+    {
+      "check": "Month sales 2014-06",
+      "pass": true,
+      "actual": 80051.25,
+      "expected": 80051.25
+    },
+    {
+      "check": "Month profit 2014-06",
+      "pass": true,
+      "actual": 50600.5,
+      "expected": 50600.5
+    },
+    {
+      "check": "Month AOV 2014-06",
+      "pass": true,
+      "actual": 64.6096,
+      "expected": 64.60956416464892
+    },
+    {
+      "check": "MoM 2014-06",
+      "pass": true,
+      "actual": -0.09989310202802555,
+      "expected": -0.0998931020280256
+    },
+    {
+      "check": "YoY 2014-06",
+      "pass": true,
+      "actual": 1.620844242433965,
+      "expected": 1.620844242433965
+    },
+    {
+      "check": "Month sales 2014-07",
+      "pass": true,
+      "actual": 83288.55,
+      "expected": 83288.55
+    },
+    {
+      "check": "Month profit 2014-07",
+      "pass": true,
+      "actual": 52566.5,
+      "expected": 52566.5
+    },
+    {
+      "check": "Month AOV 2014-07",
+      "pass": true,
+      "actual": 64.7656,
+      "expected": 64.76559097978227
+    },
+    {
+      "check": "MoM 2014-07",
+      "pass": true,
+      "actual": 0.040440342905326276,
+      "expected": 0.04044034290532631
+    },
+    {
+      "check": "YoY 2014-07",
+      "pass": true,
+      "actual": 1.6743082767894641,
+      "expected": 1.674308276789464
+    },
+    {
+      "check": "Month sales 2014-08",
+      "pass": true,
+      "actual": 84716.08,
+      "expected": 84716.08
+    },
+    {
+      "check": "Month profit 2014-08",
+      "pass": true,
+      "actual": 53579,
+      "expected": 53579.0
+    },
+    {
+      "check": "Month AOV 2014-08",
+      "pass": true,
+      "actual": 63.9367,
+      "expected": 63.9366641509434
+    },
+    {
+      "check": "MoM 2014-08",
+      "pass": true,
+      "actual": 0.017139570805350796,
+      "expected": 0.017139570805350782
+    },
+    {
+      "check": "YoY 2014-08",
+      "pass": true,
+      "actual": 1.7002070509518734,
+      "expected": 1.7002070509518736
+    },
+    {
+      "check": "Month sales 2014-09",
+      "pass": true,
+      "actual": 92232.49,
+      "expected": 92232.49
+    },
+    {
+      "check": "Month profit 2014-09",
+      "pass": true,
+      "actual": 58309.5,
+      "expected": 58309.50000000001
+    },
+    {
+      "check": "Month AOV 2014-09",
+      "pass": true,
+      "actual": 64.77,
+      "expected": 64.77000702247192
+    },
+    {
+      "check": "MoM 2014-09",
+      "pass": true,
+      "actual": 0.08872471436355413,
+      "expected": 0.08872471436355416
+    },
+    {
+      "check": "YoY 2014-09",
+      "pass": true,
+      "actual": 1.8185269674990412,
+      "expected": 1.8185269674990412
+    },
+    {
+      "check": "Month sales 2014-10",
+      "pass": true,
+      "actual": 103905.98,
+      "expected": 103905.98
+    },
+    {
+      "check": "Month profit 2014-10",
+      "pass": true,
+      "actual": 65747,
+      "expected": 65747.00000000001
+    },
+    {
+      "check": "Month AOV 2014-10",
+      "pass": true,
+      "actual": 64.578,
+      "expected": 64.57798632691113
+    },
+    {
+      "check": "MoM 2014-10",
+      "pass": true,
+      "actual": 0.12656592053407645,
+      "expected": 0.12656592053407634
+    },
+    {
+      "check": "YoY 2014-10",
+      "pass": true,
+      "actual": 1.7170204342694093,
+      "expected": 1.7170204342694089
+    },
+    {
+      "check": "Month sales 2014-11",
+      "pass": true,
+      "actual": 128162.98,
+      "expected": 128162.98
+    },
+    {
+      "check": "Month profit 2014-11",
+      "pass": true,
+      "actual": 80985,
+      "expected": 80985.00000000001
+    },
+    {
+      "check": "Month AOV 2014-11",
+      "pass": true,
+      "actual": 64.5657,
+      "expected": 64.56573299748112
+    },
+    {
+      "check": "MoM 2014-11",
+      "pass": true,
+      "actual": 0.233451433690342,
+      "expected": 0.233451433690342
+    },
+    {
+      "check": "YoY 2014-11",
+      "pass": true,
+      "actual": 1.7484489938242826,
+      "expected": 1.7484489938242826
+    },
+    {
+      "check": "Month sales 2014-12",
+      "pass": true,
+      "actual": 144823.02,
+      "expected": 144823.02000000002
+    },
+    {
+      "check": "Month profit 2014-12",
+      "pass": true,
+      "actual": 91857,
+      "expected": 91857.00000000004
+    },
+    {
+      "check": "Month AOV 2014-12",
+      "pass": true,
+      "actual": 62.5856,
+      "expected": 62.58557476231634
+    },
+    {
+      "check": "MoM 2014-12",
+      "pass": true,
+      "actual": 0.12999104733675823,
+      "expected": 0.12999104733675843
+    },
+    {
+      "check": "YoY 2014-12",
+      "pass": true,
+      "actual": 1.4856944248969322,
+      "expected": 1.4856944248969322
+    },
+    {
+      "check": "Month sales 2015-01",
+      "pass": true,
+      "actual": 132211.54,
+      "expected": 132211.54
+    },
+    {
+      "check": "Month profit 2015-01",
+      "pass": true,
+      "actual": 83911,
+      "expected": 83911.0
+    },
+    {
+      "check": "Month AOV 2015-01",
+      "pass": true,
+      "actual": 63.0179,
+      "expected": 63.0178932316492
+    },
+    {
+      "check": "MoM 2015-01",
+      "pass": true,
+      "actual": -0.08708201223810966,
+      "expected": -0.08708201223810973
+    },
+    {
+      "check": "YoY 2015-01",
+      "pass": true,
+      "actual": 1.3371775546594604,
+      "expected": 1.3371775546594604
+    },
+    {
+      "check": "Month sales 2015-02",
+      "pass": true,
+      "actual": 129212.94,
+      "expected": 129212.94
+    },
+    {
+      "check": "Month profit 2015-02",
+      "pass": true,
+      "actual": 82006,
+      "expected": 82006.0
+    },
+    {
+      "check": "Month AOV 2015-02",
+      "pass": true,
+      "actual": 62.4821,
+      "expected": 62.48207930367505
+    },
+    {
+      "check": "MoM 2015-02",
+      "pass": true,
+      "actual": -0.022680319736083553,
+      "expected": -0.022680319736083594
+    },
+    {
+      "check": "YoY 2015-02",
+      "pass": true,
+      "actual": 0.9574005052374913,
+      "expected": 0.9574005052374912
+    },
+    {
+      "check": "Month sales 2015-03",
+      "pass": true,
+      "actual": 78951.07,
+      "expected": 78951.07
+    },
+    {
+      "check": "Month profit 2015-03",
+      "pass": true,
+      "actual": 50030.5,
+      "expected": 50030.50000000001
+    },
+    {
+      "check": "Month AOV 2015-03",
+      "pass": true,
+      "actual": 62.9594,
+      "expected": 62.959385964912286
+    },
+    {
+      "check": "MoM 2015-03",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "YoY 2015-03",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Product 1 Sales",
+      "pass": true,
+      "actual": 1211057.74,
+      "expected": 1211057.74
+    },
+    {
+      "check": "Product 1 GP",
+      "pass": true,
+      "actual": 738893,
+      "expected": 738893.0
+    },
+    {
+      "check": "Product 1 Units",
+      "pass": true,
+      "actual": 24226,
+      "expected": 24226
+    },
+    {
+      "check": "Product 1 Refunded",
+      "pass": true,
+      "actual": 1237,
+      "expected": 1237
+    },
+    {
+      "check": "Product 1 Refunds",
+      "pass": true,
+      "actual": 61837.63,
+      "expected": 61837.630000000005
+    },
+    {
+      "check": "Product 1 Net",
+      "pass": true,
+      "actual": 1149220.11,
+      "expected": 1149220.1099999999
+    },
+    {
+      "check": "Product 1 Refund ratio",
+      "pass": true,
+      "actual": 0.051060843721621396,
+      "expected": 0.0510608437216214
+    },
+    {
+      "check": "Product 1 Refund rate",
+      "pass": true,
+      "actual": 0.051060843721621396,
+      "expected": 0.051060843721621396
+    },
+    {
+      "check": "Product 2 Sales",
+      "pass": true,
+      "actual": 347702.04,
+      "expected": 347702.04000000004
+    },
+    {
+      "check": "Product 2 GP",
+      "pass": true,
+      "actual": 217350,
+      "expected": 217350.00000000006
+    },
+    {
+      "check": "Product 2 Units",
+      "pass": true,
+      "actual": 5796,
+      "expected": 5796
+    },
+    {
+      "check": "Product 2 Refunded",
+      "pass": true,
+      "actual": 129,
+      "expected": 129
+    },
+    {
+      "check": "Product 2 Refunds",
+      "pass": true,
+      "actual": 7738.71,
+      "expected": 7738.71
+    },
+    {
+      "check": "Product 2 Net",
+      "pass": true,
+      "actual": 339963.33,
+      "expected": 339963.33
+    },
+    {
+      "check": "Product 2 Refund ratio",
+      "pass": true,
+      "actual": 0.022256728778467908,
+      "expected": 0.022256728778467908
+    },
+    {
+      "check": "Product 2 Refund rate",
+      "pass": true,
+      "actual": 0.022256728778467908,
+      "expected": 0.022256728778467908
+    },
+    {
+      "check": "Product 3 Sales",
+      "pass": true,
+      "actual": 229260.15,
+      "expected": 229260.15
+    },
+    {
+      "check": "Product 3 GP",
+      "pass": true,
+      "actual": 157027.5,
+      "expected": 157027.5
+    },
+    {
+      "check": "Product 3 Units",
+      "pass": true,
+      "actual": 4985,
+      "expected": 4985
+    },
+    {
+      "check": "Product 3 Refunded",
+      "pass": true,
+      "actual": 301,
+      "expected": 301
+    },
+    {
+      "check": "Product 3 Refunds",
+      "pass": true,
+      "actual": 13842.99,
+      "expected": 13842.99
+    },
+    {
+      "check": "Product 3 Net",
+      "pass": true,
+      "actual": 215417.16,
+      "expected": 215417.16
+    },
+    {
+      "check": "Product 3 Refund ratio",
+      "pass": true,
+      "actual": 0.06038114343029087,
+      "expected": 0.06038114343029087
+    },
+    {
+      "check": "Product 3 Refund rate",
+      "pass": true,
+      "actual": 0.06038114343029087,
+      "expected": 0.06038114343029087
+    },
+    {
+      "check": "Product 4 Sales",
+      "pass": true,
+      "actual": 150489.82,
+      "expected": 150489.81999999998
+    },
+    {
+      "check": "Product 4 GP",
+      "pass": true,
+      "actual": 102869,
+      "expected": 102868.99999999997
+    },
+    {
+      "check": "Product 4 Units",
+      "pass": true,
+      "actual": 5018,
+      "expected": 5018
+    },
+    {
+      "check": "Product 4 Refunded",
+      "pass": true,
+      "actual": 64,
+      "expected": 64
+    },
+    {
+      "check": "Product 4 Refunds",
+      "pass": true,
+      "actual": 1919.36,
+      "expected": 1919.36
+    },
+    {
+      "check": "Product 4 Net",
+      "pass": true,
+      "actual": 148570.46,
+      "expected": 148570.46
+    },
+    {
+      "check": "Product 4 Refund ratio",
+      "pass": true,
+      "actual": 0.012754085292945397,
+      "expected": 0.012754085292945397
+    },
+    {
+      "check": "Product 4 Refund rate",
+      "pass": true,
+      "actual": 0.012754085292945397,
+      "expected": 0.012754085292945397
+    },
+    {
+      "check": "Device desktop Sessions",
+      "pass": true,
+      "actual": 327027,
+      "expected": 327027
+    },
+    {
+      "check": "Device desktop Converted",
+      "pass": true,
+      "actual": 27805,
+      "expected": 27805
+    },
+    {
+      "check": "Device desktop Revenue",
+      "pass": true,
+      "actual": 1665757.84,
+      "expected": 1665757.84
+    },
+    {
+      "check": "Device desktop CVR",
+      "pass": true,
+      "actual": 0.08502356074574882,
+      "expected": 0.08502356074574882
+    },
+    {
+      "check": "Device mobile Sessions",
+      "pass": true,
+      "actual": 145844,
+      "expected": 145844
+    },
+    {
+      "check": "Device mobile Converted",
+      "pass": true,
+      "actual": 4508,
+      "expected": 4508
+    },
+    {
+      "check": "Device mobile Revenue",
+      "pass": true,
+      "actual": 272751.91,
+      "expected": 272751.91000000003
+    },
+    {
+      "check": "Device mobile CVR",
+      "pass": true,
+      "actual": 0.03090973917336332,
+      "expected": 0.03090973917336332
+    },
+    {
+      "check": "Cohort size 2012-03 age 0",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort active 2012-03 age 0",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort retention 2012-03 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-03 age 1",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort active 2012-03 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-03 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-03 age 3",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort active 2012-03 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-03 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-03 age 6",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort active 2012-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-03 age 12",
+      "pass": true,
+      "actual": 60,
+      "expected": 60
+    },
+    {
+      "check": "Cohort active 2012-03 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-03 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-04 age 0",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort active 2012-04 age 0",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort retention 2012-04 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-04 age 1",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort active 2012-04 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-04 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-04 age 3",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort active 2012-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-04 age 6",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort active 2012-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-04 age 12",
+      "pass": true,
+      "actual": 99,
+      "expected": 99
+    },
+    {
+      "check": "Cohort active 2012-04 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-04 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-05 age 0",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort active 2012-05 age 0",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort retention 2012-05 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-05 age 1",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort active 2012-05 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-05 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-05 age 3",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort active 2012-05 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-05 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-05 age 6",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort active 2012-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-05 age 12",
+      "pass": true,
+      "actual": 108,
+      "expected": 108
+    },
+    {
+      "check": "Cohort active 2012-05 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-05 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-06 age 0",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort active 2012-06 age 0",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort retention 2012-06 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-06 age 1",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort active 2012-06 age 1",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2012-06 age 1",
+      "pass": true,
+      "actual": 0.007194244604316547,
+      "expected": 0.007194244604316547
+    },
+    {
+      "check": "Cohort size 2012-06 age 3",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort active 2012-06 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-06 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-06 age 6",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort active 2012-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-06 age 12",
+      "pass": true,
+      "actual": 139,
+      "expected": 139
+    },
+    {
+      "check": "Cohort active 2012-06 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-06 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-07 age 0",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort active 2012-07 age 0",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort retention 2012-07 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-07 age 1",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort active 2012-07 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-07 age 1",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-07 age 3",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort active 2012-07 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-07 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-07 age 6",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort active 2012-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-07 age 12",
+      "pass": true,
+      "actual": 168,
+      "expected": 168
+    },
+    {
+      "check": "Cohort active 2012-07 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-07 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-08 age 0",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort active 2012-08 age 0",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort retention 2012-08 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-08 age 1",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort active 2012-08 age 1",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2012-08 age 1",
+      "pass": true,
+      "actual": 0.004405286343612335,
+      "expected": 0.004405286343612335
+    },
+    {
+      "check": "Cohort size 2012-08 age 3",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort active 2012-08 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-08 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-08 age 6",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort active 2012-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-08 age 12",
+      "pass": true,
+      "actual": 227,
+      "expected": 227
+    },
+    {
+      "check": "Cohort active 2012-08 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-08 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-09 age 0",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort active 2012-09 age 0",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort retention 2012-09 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-09 age 1",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort active 2012-09 age 1",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2012-09 age 1",
+      "pass": true,
+      "actual": 0.0034965034965034965,
+      "expected": 0.0034965034965034965
+    },
+    {
+      "check": "Cohort size 2012-09 age 3",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort active 2012-09 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-09 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-09 age 6",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort active 2012-09 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-09 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-09 age 12",
+      "pass": true,
+      "actual": 286,
+      "expected": 286
+    },
+    {
+      "check": "Cohort active 2012-09 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-09 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-10 age 0",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort active 2012-10 age 0",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort retention 2012-10 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-10 age 1",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort active 2012-10 age 1",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2012-10 age 1",
+      "pass": true,
+      "actual": 0.005434782608695652,
+      "expected": 0.005434782608695652
+    },
+    {
+      "check": "Cohort size 2012-10 age 3",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort active 2012-10 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-10 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-10 age 6",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort active 2012-10 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-10 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-10 age 12",
+      "pass": true,
+      "actual": 368,
+      "expected": 368
+    },
+    {
+      "check": "Cohort active 2012-10 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-10 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-11 age 0",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort active 2012-11 age 0",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort retention 2012-11 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-11 age 1",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort active 2012-11 age 1",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2012-11 age 1",
+      "pass": true,
+      "actual": 0.0032679738562091504,
+      "expected": 0.0032679738562091504
+    },
+    {
+      "check": "Cohort size 2012-11 age 3",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort active 2012-11 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-11 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-11 age 6",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort active 2012-11 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-11 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-11 age 12",
+      "pass": true,
+      "actual": 612,
+      "expected": 612
+    },
+    {
+      "check": "Cohort active 2012-11 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-11 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-12 age 0",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort active 2012-12 age 0",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort retention 2012-12 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2012-12 age 1",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort active 2012-12 age 1",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2012-12 age 1",
+      "pass": true,
+      "actual": 0.00199203187250996,
+      "expected": 0.00199203187250996
+    },
+    {
+      "check": "Cohort size 2012-12 age 3",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort active 2012-12 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-12 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-12 age 6",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort active 2012-12 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-12 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2012-12 age 12",
+      "pass": true,
+      "actual": 502,
+      "expected": 502
+    },
+    {
+      "check": "Cohort active 2012-12 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2012-12 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-01 age 0",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort active 2013-01 age 0",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort retention 2013-01 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-01 age 1",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort active 2013-01 age 1",
+      "pass": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Cohort retention 2013-01 age 1",
+      "pass": true,
+      "actual": 0.0103359173126615,
+      "expected": 0.0103359173126615
+    },
+    {
+      "check": "Cohort size 2013-01 age 3",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort active 2013-01 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-01 age 3",
+      "pass": true,
+      "actual": 0.002583979328165375,
+      "expected": 0.002583979328165375
+    },
+    {
+      "check": "Cohort size 2013-01 age 6",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort active 2013-01 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-01 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-01 age 12",
+      "pass": true,
+      "actual": 387,
+      "expected": 387
+    },
+    {
+      "check": "Cohort active 2013-01 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-01 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-02 age 0",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort active 2013-02 age 0",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort retention 2013-02 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-02 age 1",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort active 2013-02 age 1",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2013-02 age 1",
+      "pass": true,
+      "actual": 0.00408997955010225,
+      "expected": 0.00408997955010225
+    },
+    {
+      "check": "Cohort size 2013-02 age 3",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort active 2013-02 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-02 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-02 age 6",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort active 2013-02 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-02 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-02 age 12",
+      "pass": true,
+      "actual": 489,
+      "expected": 489
+    },
+    {
+      "check": "Cohort active 2013-02 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-02 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-03 age 0",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort active 2013-03 age 0",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort retention 2013-03 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-03 age 1",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort active 2013-03 age 1",
+      "pass": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Cohort retention 2013-03 age 1",
+      "pass": true,
+      "actual": 0.007853403141361256,
+      "expected": 0.007853403141361256
+    },
+    {
+      "check": "Cohort size 2013-03 age 3",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort active 2013-03 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-03 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-03 age 6",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort active 2013-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-03 age 12",
+      "pass": true,
+      "actual": 382,
+      "expected": 382
+    },
+    {
+      "check": "Cohort active 2013-03 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-03 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-04 age 0",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort active 2013-04 age 0",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort retention 2013-04 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-04 age 1",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort active 2013-04 age 1",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-04 age 1",
+      "pass": true,
+      "actual": 0.0018450184501845018,
+      "expected": 0.0018450184501845018
+    },
+    {
+      "check": "Cohort size 2013-04 age 3",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort active 2013-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-04 age 6",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort active 2013-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-04 age 12",
+      "pass": true,
+      "actual": 542,
+      "expected": 542
+    },
+    {
+      "check": "Cohort active 2013-04 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-04 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-05 age 0",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort active 2013-05 age 0",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort retention 2013-05 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-05 age 1",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort active 2013-05 age 1",
+      "pass": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Cohort retention 2013-05 age 1",
+      "pass": true,
+      "actual": 0.008865248226950355,
+      "expected": 0.008865248226950355
+    },
+    {
+      "check": "Cohort size 2013-05 age 3",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort active 2013-05 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-05 age 3",
+      "pass": true,
+      "actual": 0.0017730496453900709,
+      "expected": 0.0017730496453900709
+    },
+    {
+      "check": "Cohort size 2013-05 age 6",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort active 2013-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-05 age 12",
+      "pass": true,
+      "actual": 564,
+      "expected": 564
+    },
+    {
+      "check": "Cohort active 2013-05 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-05 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-06 age 0",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort active 2013-06 age 0",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort retention 2013-06 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-06 age 1",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort active 2013-06 age 1",
+      "pass": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Cohort retention 2013-06 age 1",
+      "pass": true,
+      "actual": 0.00684931506849315,
+      "expected": 0.00684931506849315
+    },
+    {
+      "check": "Cohort size 2013-06 age 3",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort active 2013-06 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-06 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-06 age 6",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort active 2013-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-06 age 12",
+      "pass": true,
+      "actual": 584,
+      "expected": 584
+    },
+    {
+      "check": "Cohort active 2013-06 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-06 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-07 age 0",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort active 2013-07 age 0",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort retention 2013-07 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-07 age 1",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort active 2013-07 age 1",
+      "pass": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Cohort retention 2013-07 age 1",
+      "pass": true,
+      "actual": 0.008417508417508417,
+      "expected": 0.008417508417508417
+    },
+    {
+      "check": "Cohort size 2013-07 age 3",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort active 2013-07 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-07 age 3",
+      "pass": true,
+      "actual": 0.0016835016835016834,
+      "expected": 0.0016835016835016834
+    },
+    {
+      "check": "Cohort size 2013-07 age 6",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort active 2013-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-07 age 12",
+      "pass": true,
+      "actual": 594,
+      "expected": 594
+    },
+    {
+      "check": "Cohort active 2013-07 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-07 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-08 age 0",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort active 2013-08 age 0",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort retention 2013-08 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-08 age 1",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort active 2013-08 age 1",
+      "pass": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "Cohort retention 2013-08 age 1",
+      "pass": true,
+      "actual": 0.010033444816053512,
+      "expected": 0.010033444816053512
+    },
+    {
+      "check": "Cohort size 2013-08 age 3",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort active 2013-08 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-08 age 3",
+      "pass": true,
+      "actual": 0.0016722408026755853,
+      "expected": 0.0016722408026755853
+    },
+    {
+      "check": "Cohort size 2013-08 age 6",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort active 2013-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-08 age 12",
+      "pass": true,
+      "actual": 598,
+      "expected": 598
+    },
+    {
+      "check": "Cohort active 2013-08 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-08 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-09 age 0",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort active 2013-09 age 0",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort retention 2013-09 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-09 age 1",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort active 2013-09 age 1",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Cohort retention 2013-09 age 1",
+      "pass": true,
+      "actual": 0.012987012987012988,
+      "expected": 0.012987012987012988
+    },
+    {
+      "check": "Cohort size 2013-09 age 3",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort active 2013-09 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-09 age 3",
+      "pass": true,
+      "actual": 0.0016233766233766235,
+      "expected": 0.0016233766233766235
+    },
+    {
+      "check": "Cohort size 2013-09 age 6",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort active 2013-09 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-09 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-09 age 12",
+      "pass": true,
+      "actual": 616,
+      "expected": 616
+    },
+    {
+      "check": "Cohort active 2013-09 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-09 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-10 age 0",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort active 2013-10 age 0",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort retention 2013-10 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-10 age 1",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort active 2013-10 age 1",
+      "pass": true,
+      "actual": 6,
+      "expected": 6
+    },
+    {
+      "check": "Cohort retention 2013-10 age 1",
+      "pass": true,
+      "actual": 0.008645533141210375,
+      "expected": 0.008645533141210375
+    },
+    {
+      "check": "Cohort size 2013-10 age 3",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort active 2013-10 age 3",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2013-10 age 3",
+      "pass": true,
+      "actual": 0.002881844380403458,
+      "expected": 0.002881844380403458
+    },
+    {
+      "check": "Cohort size 2013-10 age 6",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort active 2013-10 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-10 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-10 age 12",
+      "pass": true,
+      "actual": 694,
+      "expected": 694
+    },
+    {
+      "check": "Cohort active 2013-10 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-10 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-11 age 0",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort active 2013-11 age 0",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort retention 2013-11 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-11 age 1",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort active 2013-11 age 1",
+      "pass": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Cohort retention 2013-11 age 1",
+      "pass": true,
+      "actual": 0.0058823529411764705,
+      "expected": 0.0058823529411764705
+    },
+    {
+      "check": "Cohort size 2013-11 age 3",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort active 2013-11 age 3",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2013-11 age 3",
+      "pass": true,
+      "actual": 0.002352941176470588,
+      "expected": 0.002352941176470588
+    },
+    {
+      "check": "Cohort size 2013-11 age 6",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort active 2013-11 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-11 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-11 age 12",
+      "pass": true,
+      "actual": 850,
+      "expected": 850
+    },
+    {
+      "check": "Cohort active 2013-11 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-11 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-12 age 0",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort active 2013-12 age 0",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort retention 2013-12 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2013-12 age 1",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort active 2013-12 age 1",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Cohort retention 2013-12 age 1",
+      "pass": true,
+      "actual": 0.007714561234329798,
+      "expected": 0.007714561234329798
+    },
+    {
+      "check": "Cohort size 2013-12 age 3",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort active 2013-12 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2013-12 age 3",
+      "pass": true,
+      "actual": 0.0009643201542912247,
+      "expected": 0.0009643201542912247
+    },
+    {
+      "check": "Cohort size 2013-12 age 6",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort active 2013-12 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-12 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2013-12 age 12",
+      "pass": true,
+      "actual": 1037,
+      "expected": 1037
+    },
+    {
+      "check": "Cohort active 2013-12 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2013-12 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-01 age 0",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort active 2014-01 age 0",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort retention 2014-01 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-01 age 1",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort active 2014-01 age 1",
+      "pass": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Cohort retention 2014-01 age 1",
+      "pass": true,
+      "actual": 0.010395010395010396,
+      "expected": 0.010395010395010396
+    },
+    {
+      "check": "Cohort size 2014-01 age 3",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort active 2014-01 age 3",
+      "pass": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Cohort retention 2014-01 age 3",
+      "pass": true,
+      "actual": 0.004158004158004158,
+      "expected": 0.004158004158004158
+    },
+    {
+      "check": "Cohort size 2014-01 age 6",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort active 2014-01 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-01 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-01 age 12",
+      "pass": true,
+      "actual": 962,
+      "expected": 962
+    },
+    {
+      "check": "Cohort active 2014-01 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-01 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-02 age 0",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort active 2014-02 age 0",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort retention 2014-02 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-02 age 1",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort active 2014-02 age 1",
+      "pass": true,
+      "actual": 8,
+      "expected": 8
+    },
+    {
+      "check": "Cohort retention 2014-02 age 1",
+      "pass": true,
+      "actual": 0.008008008008008008,
+      "expected": 0.008008008008008008
+    },
+    {
+      "check": "Cohort size 2014-02 age 3",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort active 2014-02 age 3",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2014-02 age 3",
+      "pass": true,
+      "actual": 0.002002002002002002,
+      "expected": 0.002002002002002002
+    },
+    {
+      "check": "Cohort size 2014-02 age 6",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort active 2014-02 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-02 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-02 age 12",
+      "pass": true,
+      "actual": 999,
+      "expected": 999
+    },
+    {
+      "check": "Cohort active 2014-02 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-02 age 12",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-03 age 0",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort active 2014-03 age 0",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort retention 2014-03 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-03 age 1",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort active 2014-03 age 1",
+      "pass": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Cohort retention 2014-03 age 1",
+      "pass": true,
+      "actual": 0.01049618320610687,
+      "expected": 0.01049618320610687
+    },
+    {
+      "check": "Cohort size 2014-03 age 3",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort active 2014-03 age 3",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2014-03 age 3",
+      "pass": true,
+      "actual": 0.0019083969465648854,
+      "expected": 0.0019083969465648854
+    },
+    {
+      "check": "Cohort size 2014-03 age 6",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort active 2014-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-03 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-03 age 12",
+      "pass": true,
+      "actual": 1048,
+      "expected": 1048
+    },
+    {
+      "check": "Cohort active 2014-03 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-03 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-04 age 0",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort active 2014-04 age 0",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort retention 2014-04 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-04 age 1",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort active 2014-04 age 1",
+      "pass": true,
+      "actual": 22,
+      "expected": 22
+    },
+    {
+      "check": "Cohort retention 2014-04 age 1",
+      "pass": true,
+      "actual": 0.01810699588477366,
+      "expected": 0.01810699588477366
+    },
+    {
+      "check": "Cohort size 2014-04 age 3",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort active 2014-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-04 age 3",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-04 age 6",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort active 2014-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-04 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-04 age 12",
+      "pass": true,
+      "actual": 1215,
+      "expected": 1215
+    },
+    {
+      "check": "Cohort active 2014-04 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-04 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-05 age 0",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort active 2014-05 age 0",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort retention 2014-05 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-05 age 1",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort active 2014-05 age 1",
+      "pass": true,
+      "actual": 10,
+      "expected": 10
+    },
+    {
+      "check": "Cohort retention 2014-05 age 1",
+      "pass": true,
+      "actual": 0.0074962518740629685,
+      "expected": 0.0074962518740629685
+    },
+    {
+      "check": "Cohort size 2014-05 age 3",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort active 2014-05 age 3",
+      "pass": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Cohort retention 2014-05 age 3",
+      "pass": true,
+      "actual": 0.0022488755622188904,
+      "expected": 0.0022488755622188904
+    },
+    {
+      "check": "Cohort size 2014-05 age 6",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort active 2014-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-05 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-05 age 12",
+      "pass": true,
+      "actual": 1334,
+      "expected": 1334
+    },
+    {
+      "check": "Cohort active 2014-05 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-05 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-06 age 0",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort active 2014-06 age 0",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort retention 2014-06 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-06 age 1",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort active 2014-06 age 1",
+      "pass": true,
+      "actual": 11,
+      "expected": 11
+    },
+    {
+      "check": "Cohort retention 2014-06 age 1",
+      "pass": true,
+      "actual": 0.009023789991796555,
+      "expected": 0.009023789991796555
+    },
+    {
+      "check": "Cohort size 2014-06 age 3",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort active 2014-06 age 3",
+      "pass": true,
+      "actual": 2,
+      "expected": 2
+    },
+    {
+      "check": "Cohort retention 2014-06 age 3",
+      "pass": true,
+      "actual": 0.0016406890894175555,
+      "expected": 0.0016406890894175555
+    },
+    {
+      "check": "Cohort size 2014-06 age 6",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort active 2014-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-06 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-06 age 12",
+      "pass": true,
+      "actual": 1219,
+      "expected": 1219
+    },
+    {
+      "check": "Cohort active 2014-06 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-06 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-07 age 0",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort active 2014-07 age 0",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort retention 2014-07 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-07 age 1",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort active 2014-07 age 1",
+      "pass": true,
+      "actual": 7,
+      "expected": 7
+    },
+    {
+      "check": "Cohort retention 2014-07 age 1",
+      "pass": true,
+      "actual": 0.005555555555555556,
+      "expected": 0.005555555555555556
+    },
+    {
+      "check": "Cohort size 2014-07 age 3",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort active 2014-07 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2014-07 age 3",
+      "pass": true,
+      "actual": 0.0007936507936507937,
+      "expected": 0.0007936507936507937
+    },
+    {
+      "check": "Cohort size 2014-07 age 6",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort active 2014-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-07 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-07 age 12",
+      "pass": true,
+      "actual": 1260,
+      "expected": 1260
+    },
+    {
+      "check": "Cohort active 2014-07 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-07 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-08 age 0",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort active 2014-08 age 0",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort retention 2014-08 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-08 age 1",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort active 2014-08 age 1",
+      "pass": true,
+      "actual": 16,
+      "expected": 16
+    },
+    {
+      "check": "Cohort retention 2014-08 age 1",
+      "pass": true,
+      "actual": 0.01225114854517611,
+      "expected": 0.01225114854517611
+    },
+    {
+      "check": "Cohort size 2014-08 age 3",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort active 2014-08 age 3",
+      "pass": true,
+      "actual": 1,
+      "expected": 1
+    },
+    {
+      "check": "Cohort retention 2014-08 age 3",
+      "pass": true,
+      "actual": 0.0007656967840735069,
+      "expected": 0.0007656967840735069
+    },
+    {
+      "check": "Cohort size 2014-08 age 6",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort active 2014-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0
+    },
+    {
+      "check": "Cohort retention 2014-08 age 6",
+      "pass": true,
+      "actual": 0,
+      "expected": 0.0
+    },
+    {
+      "check": "Cohort size 2014-08 age 12",
+      "pass": true,
+      "actual": 1306,
+      "expected": 1306
+    },
+    {
+      "check": "Cohort active 2014-08 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-08 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-09 age 0",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort active 2014-09 age 0",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort retention 2014-09 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-09 age 1",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort active 2014-09 age 1",
+      "pass": true,
+      "actual": 15,
+      "expected": 15
+    },
+    {
+      "check": "Cohort retention 2014-09 age 1",
+      "pass": true,
+      "actual": 0.010830324909747292,
+      "expected": 0.010830324909747292
+    },
+    {
+      "check": "Cohort size 2014-09 age 3",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort active 2014-09 age 3",
+      "pass": true,
+      "actual": 4,
+      "expected": 4
+    },
+    {
+      "check": "Cohort retention 2014-09 age 3",
+      "pass": true,
+      "actual": 0.002888086642599278,
+      "expected": 0.002888086642599278
+    },
+    {
+      "check": "Cohort size 2014-09 age 6",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort active 2014-09 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-09 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-09 age 12",
+      "pass": true,
+      "actual": 1385,
+      "expected": 1385
+    },
+    {
+      "check": "Cohort active 2014-09 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-09 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-10 age 0",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort active 2014-10 age 0",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort retention 2014-10 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-10 age 1",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort active 2014-10 age 1",
+      "pass": true,
+      "actual": 18,
+      "expected": 18
+    },
+    {
+      "check": "Cohort retention 2014-10 age 1",
+      "pass": true,
+      "actual": 0.01139240506329114,
+      "expected": 0.01139240506329114
+    },
+    {
+      "check": "Cohort size 2014-10 age 3",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort active 2014-10 age 3",
+      "pass": true,
+      "actual": 3,
+      "expected": 3
+    },
+    {
+      "check": "Cohort retention 2014-10 age 3",
+      "pass": true,
+      "actual": 0.0018987341772151898,
+      "expected": 0.0018987341772151898
+    },
+    {
+      "check": "Cohort size 2014-10 age 6",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort active 2014-10 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-10 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-10 age 12",
+      "pass": true,
+      "actual": 1580,
+      "expected": 1580
+    },
+    {
+      "check": "Cohort active 2014-10 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-10 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-11 age 0",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort active 2014-11 age 0",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort retention 2014-11 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-11 age 1",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort active 2014-11 age 1",
+      "pass": true,
+      "actual": 23,
+      "expected": 23
+    },
+    {
+      "check": "Cohort retention 2014-11 age 1",
+      "pass": true,
+      "actual": 0.011788826242952332,
+      "expected": 0.011788826242952332
+    },
+    {
+      "check": "Cohort size 2014-11 age 3",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort active 2014-11 age 3",
+      "pass": true,
+      "actual": 5,
+      "expected": 5
+    },
+    {
+      "check": "Cohort retention 2014-11 age 3",
+      "pass": true,
+      "actual": 0.0025627883136852894,
+      "expected": 0.0025627883136852894
+    },
+    {
+      "check": "Cohort size 2014-11 age 6",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort active 2014-11 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-11 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-11 age 12",
+      "pass": true,
+      "actual": 1951,
+      "expected": 1951
+    },
+    {
+      "check": "Cohort active 2014-11 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-11 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-12 age 0",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort active 2014-12 age 0",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort retention 2014-12 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2014-12 age 1",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort active 2014-12 age 1",
+      "pass": true,
+      "actual": 25,
+      "expected": 25
+    },
+    {
+      "check": "Cohort retention 2014-12 age 1",
+      "pass": true,
+      "actual": 0.011042402826855124,
+      "expected": 0.011042402826855124
+    },
+    {
+      "check": "Cohort size 2014-12 age 3",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort active 2014-12 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-12 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-12 age 6",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort active 2014-12 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-12 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2014-12 age 12",
+      "pass": true,
+      "actual": 2264,
+      "expected": 2264
+    },
+    {
+      "check": "Cohort active 2014-12 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2014-12 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-01 age 0",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort active 2015-01 age 0",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort retention 2015-01 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2015-01 age 1",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort active 2015-01 age 1",
+      "pass": true,
+      "actual": 30,
+      "expected": 30
+    },
+    {
+      "check": "Cohort retention 2015-01 age 1",
+      "pass": true,
+      "actual": 0.014641288433382138,
+      "expected": 0.014641288433382138
+    },
+    {
+      "check": "Cohort size 2015-01 age 3",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort active 2015-01 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-01 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-01 age 6",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort active 2015-01 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-01 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-01 age 12",
+      "pass": true,
+      "actual": 2049,
+      "expected": 2049
+    },
+    {
+      "check": "Cohort active 2015-01 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-01 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-02 age 0",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort active 2015-02 age 0",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort retention 2015-02 age 0",
+      "pass": true,
+      "actual": 1,
+      "expected": 1.0
+    },
+    {
+      "check": "Cohort size 2015-02 age 1",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort active 2015-02 age 1",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-02 age 1",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-02 age 3",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort active 2015-02 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-02 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-02 age 6",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort active 2015-02 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-02 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-02 age 12",
+      "pass": true,
+      "actual": 2004,
+      "expected": 2004
+    },
+    {
+      "check": "Cohort active 2015-02 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-02 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-03 age 0",
+      "pass": true,
+      "actual": 1214,
+      "expected": 1214
+    },
+    {
+      "check": "Cohort active 2015-03 age 0",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-03 age 0",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-03 age 1",
+      "pass": true,
+      "actual": 1214,
+      "expected": 1214
+    },
+    {
+      "check": "Cohort active 2015-03 age 1",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-03 age 1",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-03 age 3",
+      "pass": true,
+      "actual": 1214,
+      "expected": 1214
+    },
+    {
+      "check": "Cohort active 2015-03 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-03 age 3",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-03 age 6",
+      "pass": true,
+      "actual": 1214,
+      "expected": 1214
+    },
+    {
+      "check": "Cohort active 2015-03 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-03 age 6",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort size 2015-03 age 12",
+      "pass": true,
+      "actual": 1214,
+      "expected": 1214
+    },
+    {
+      "check": "Cohort active 2015-03 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Cohort retention 2015-03 age 12",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Empty context Growth",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Empty context MoM",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Empty context YoY",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Empty sales",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Empty conversion",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Noncontiguous Growth",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Noncontiguous MoM",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Noncontiguous YoY",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Partial March Growth",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Partial March MoM",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    },
+    {
+      "check": "Partial March YoY",
+      "pass": true,
+      "actual": null,
+      "expected": null
+    }
+  ]
+}

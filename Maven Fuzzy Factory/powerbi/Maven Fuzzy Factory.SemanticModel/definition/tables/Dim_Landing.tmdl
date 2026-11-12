@@ -1,0 +1,21 @@
+/// Conformed dimension: Dim_Landing. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Landing
+	lineageTag: 934eaf46-40b3-427b-a0a5-e1d4ce1547c4
+
+	/// Landing Page at Dim_Landing grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Landing Page'
+		dataType: string
+		lineageTag: e7a3fc33-93d1-4a85-9e0c-62959eca4633
+		summarizeBy: none
+		sourceColumn: Landing Page
+
+	partition Dim_Landing = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Landing.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Landing Page", type text}}, "en-US")
+				in
+				    Typed
+

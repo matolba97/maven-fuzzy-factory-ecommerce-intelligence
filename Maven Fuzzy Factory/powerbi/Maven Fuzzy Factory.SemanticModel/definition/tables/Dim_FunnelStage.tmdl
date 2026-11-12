@@ -1,0 +1,29 @@
+/// Conformed dimension: Dim_FunnelStage. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_FunnelStage
+	lineageTag: 433c2163-fa4b-46b5-ba31-0464bf57005d
+
+	/// Stage at Dim_FunnelStage grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Stage
+		dataType: string
+		lineageTag: ca8522a3-4f2c-48af-aaae-b4ddf0acf70c
+		summarizeBy: none
+		sourceColumn: Stage
+		sortByColumn: 'Stage Order'
+
+	/// Stage Order at Dim_FunnelStage grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Stage Order'
+		dataType: int64
+		lineageTag: 9b50171b-d969-42d9-9363-2f8dc06675c2
+		summarizeBy: none
+		sourceColumn: Stage Order
+
+	partition Dim_FunnelStage = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_FunnelStage.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Stage", type text}, {"Stage Order", Int64.Type}}, "en-US")
+				in
+				    Typed
+

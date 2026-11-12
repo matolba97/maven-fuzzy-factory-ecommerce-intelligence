@@ -1,0 +1,2197 @@
+{
+  "name": "Maven Fuzzy Factory",
+  "id": "Maven Fuzzy Factory",
+  "compatibilityLevel": 1702,
+  "model": {
+    "culture": "en-US",
+    "sourceQueryCulture": "en-US",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "discourageImplicitMeasures": true,
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "PreparedFolder",
+        "kind": "m",
+        "expression": "\"D:\\1-st\\Maven Fuzzy Factory\\data\\prepared\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]",
+        "description": "Folder containing deterministic derived CSVs created from the unchanged supplied sources."
+      }
+    ],
+    "tables": [
+      {
+        "name": "Fact_Orders",
+        "description": "One row per recorded order. Financial measures use this grain; no fact-to-fact relationships.",
+        "columns": [
+          {
+            "name": "Order ID",
+            "dataType": "int64",
+            "sourceColumn": "Order ID",
+            "summarizeBy": "none",
+            "lineageTag": "5e1f577e-18a1-48ed-a30b-59ec2c8137e1",
+            "description": "Order ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Website Session ID",
+            "dataType": "int64",
+            "sourceColumn": "Website Session ID",
+            "summarizeBy": "none",
+            "lineageTag": "3a63aa04-dd70-4853-976b-29df1b6b6082",
+            "description": "Website Session ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Primary Product ID",
+            "dataType": "int64",
+            "sourceColumn": "Primary Product ID",
+            "summarizeBy": "none",
+            "lineageTag": "a6f3e63c-9080-422a-bfc6-63f5b272349b",
+            "description": "Primary Product ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Items Purchased",
+            "dataType": "int64",
+            "sourceColumn": "Items Purchased",
+            "summarizeBy": "none",
+            "lineageTag": "c0710462-1dda-4c3c-92b5-c2d0cfa6daff",
+            "description": "Items Purchased at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sales Amount",
+            "dataType": "decimal",
+            "sourceColumn": "Sales Amount",
+            "summarizeBy": "none",
+            "lineageTag": "3633e52f-5e79-4b44-a831-2e5570977919",
+            "description": "Sales Amount at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "COGS Amount",
+            "dataType": "decimal",
+            "sourceColumn": "COGS Amount",
+            "summarizeBy": "none",
+            "lineageTag": "03c543bc-65eb-45b6-af9a-331b9607931f",
+            "description": "COGS Amount at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date",
+            "summarizeBy": "none",
+            "lineageTag": "34030d7e-a798-4bc0-ac3f-8e2384ebd5a5",
+            "description": "Order Date at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer ID",
+            "summarizeBy": "none",
+            "lineageTag": "86e09358-ff28-4f6d-81ab-4899a69882c7",
+            "description": "Customer ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "int64",
+            "sourceColumn": "Channel ID",
+            "summarizeBy": "none",
+            "lineageTag": "4aec0ab0-1d72-4107-b9c2-821957804d77",
+            "description": "Channel ID at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Device",
+            "dataType": "string",
+            "sourceColumn": "Device",
+            "summarizeBy": "none",
+            "lineageTag": "eb932572-1303-4acf-97ae-148ed90bb519",
+            "description": "Device at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Visitor Type",
+            "dataType": "string",
+            "sourceColumn": "Visitor Type",
+            "summarizeBy": "none",
+            "lineageTag": "248f04ae-b9da-4ce9-b777-03d4eebbe7ac",
+            "description": "Visitor Type at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Landing Page",
+            "dataType": "string",
+            "sourceColumn": "Landing Page",
+            "summarizeBy": "none",
+            "lineageTag": "bf7a3dac-eacd-469b-8a2e-7bbfe6dce0ac",
+            "description": "Landing Page at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Purchase Number",
+            "dataType": "int64",
+            "sourceColumn": "Purchase Number",
+            "summarizeBy": "none",
+            "lineageTag": "953f3ea4-a976-462b-b505-71ac9c97769c",
+            "description": "Purchase Number at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Purchase Type",
+            "dataType": "string",
+            "sourceColumn": "Purchase Type",
+            "summarizeBy": "none",
+            "lineageTag": "271ed0ee-0edf-467e-8c75-4b215bb730d9",
+            "description": "Purchase Type at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Basket",
+            "dataType": "string",
+            "sourceColumn": "Basket",
+            "summarizeBy": "none",
+            "lineageTag": "858ce6c8-6bdc-4ee8-9ff4-5345b322ad5f",
+            "description": "Basket at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Has Cross Sell",
+            "dataType": "int64",
+            "sourceColumn": "Has Cross Sell",
+            "summarizeBy": "none",
+            "lineageTag": "03b9b8fa-d9fc-40c9-b9c7-82554bf20f56",
+            "description": "Has Cross Sell at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Purchase Age Month",
+            "dataType": "int64",
+            "sourceColumn": "Purchase Age Month",
+            "summarizeBy": "none",
+            "lineageTag": "19624700-784a-41c6-91d7-217738e7e22c",
+            "description": "Purchase Age Month at Fact_Orders grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Orders",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Fact_Orders.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Order ID\", Int64.Type}, {\"Website Session ID\", Int64.Type}, {\"Primary Product ID\", Int64.Type}, {\"Items Purchased\", Int64.Type}, {\"Sales Amount\", Currency.Type}, {\"COGS Amount\", Currency.Type}, {\"Order Date\", type date}, {\"Customer ID\", Int64.Type}, {\"Channel ID\", Int64.Type}, {\"Device\", type text}, {\"Visitor Type\", type text}, {\"Landing Page\", type text}, {\"Purchase Number\", Int64.Type}, {\"Purchase Type\", type text}, {\"Basket\", type text}, {\"Has Cross Sell\", Int64.Type}, {\"Purchase Age Month\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "6cea6130-eb0c-46be-b78f-fa585581e44a"
+      },
+      {
+        "name": "Fact_OrderItems",
+        "description": "One row per recorded sold item; one item per source row. Refund linkage is aggregated per item before enrichment.",
+        "columns": [
+          {
+            "name": "Order Item ID",
+            "dataType": "int64",
+            "sourceColumn": "Order Item ID",
+            "summarizeBy": "none",
+            "lineageTag": "01cc893d-f58c-4d83-b4a9-ff134a1a5a1e",
+            "description": "Order Item ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Order ID",
+            "dataType": "int64",
+            "sourceColumn": "Order ID",
+            "summarizeBy": "none",
+            "lineageTag": "19dceea5-77e3-47a7-b7de-cfff17cf814c",
+            "description": "Order ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Product ID",
+            "dataType": "int64",
+            "sourceColumn": "Product ID",
+            "summarizeBy": "none",
+            "lineageTag": "833d5aa7-9b16-467c-a86c-8b107506a4f4",
+            "description": "Product ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Item Sales Amount",
+            "dataType": "decimal",
+            "sourceColumn": "Item Sales Amount",
+            "summarizeBy": "none",
+            "lineageTag": "0668e2c3-9dde-4d41-b0ee-aeb4d0969f24",
+            "description": "Item Sales Amount at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Item COGS Amount",
+            "dataType": "decimal",
+            "sourceColumn": "Item COGS Amount",
+            "summarizeBy": "none",
+            "lineageTag": "1efb4b4f-0ae7-4419-a75b-e98c8942a260",
+            "description": "Item COGS Amount at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date",
+            "summarizeBy": "none",
+            "lineageTag": "f42ae39b-d057-4680-bed8-15014083462d",
+            "description": "Order Date at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer ID",
+            "summarizeBy": "none",
+            "lineageTag": "8c03703f-874e-4652-abca-f549901e8b58",
+            "description": "Customer ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "int64",
+            "sourceColumn": "Channel ID",
+            "summarizeBy": "none",
+            "lineageTag": "3234dde7-7b73-497c-85d3-ed2090c5e0b1",
+            "description": "Channel ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Device",
+            "dataType": "string",
+            "sourceColumn": "Device",
+            "summarizeBy": "none",
+            "lineageTag": "c5f79d7c-bc71-4edb-b7a3-436c75e6c1b9",
+            "description": "Device at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Visitor Type",
+            "dataType": "string",
+            "sourceColumn": "Visitor Type",
+            "summarizeBy": "none",
+            "lineageTag": "c29f98ed-d1d4-4abf-bb56-f6de4b64b7af",
+            "description": "Visitor Type at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Landing Page",
+            "dataType": "string",
+            "sourceColumn": "Landing Page",
+            "summarizeBy": "none",
+            "lineageTag": "63cd17ac-975c-42e4-99b6-7449d8977fa3",
+            "description": "Landing Page at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Item Role",
+            "dataType": "string",
+            "sourceColumn": "Item Role",
+            "summarizeBy": "none",
+            "lineageTag": "7ffad408-e443-4437-87ee-b4bdafc02c9e",
+            "description": "Item Role at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Recorded Refund",
+            "dataType": "decimal",
+            "sourceColumn": "Recorded Refund",
+            "summarizeBy": "none",
+            "lineageTag": "cdfb3a96-bf77-4c87-90c1-4a678cbe6238",
+            "description": "Recorded Refund at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Refunded Item",
+            "dataType": "int64",
+            "sourceColumn": "Refunded Item",
+            "summarizeBy": "none",
+            "lineageTag": "2578e87c-9b79-4dbc-8f63-819d914474d0",
+            "description": "Refunded Item at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Launch Age Month",
+            "dataType": "int64",
+            "sourceColumn": "Launch Age Month",
+            "summarizeBy": "none",
+            "lineageTag": "fade8da7-7737-4a2d-a46a-e5fafb23f98d",
+            "description": "Launch Age Month at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_OrderItems",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Fact_OrderItems.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Order Item ID\", Int64.Type}, {\"Order ID\", Int64.Type}, {\"Product ID\", Int64.Type}, {\"Item Sales Amount\", Currency.Type}, {\"Item COGS Amount\", Currency.Type}, {\"Order Date\", type date}, {\"Customer ID\", Int64.Type}, {\"Channel ID\", Int64.Type}, {\"Device\", type text}, {\"Visitor Type\", type text}, {\"Landing Page\", type text}, {\"Item Role\", type text}, {\"Recorded Refund\", Currency.Type}, {\"Refunded Item\", Int64.Type}, {\"Launch Age Month\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "4475e8e6-8ca8-459d-9f73-0b65d798770a"
+      },
+      {
+        "name": "Fact_Refunds",
+        "description": "One row per recorded refund event. Product and acquisition attributes are many-to-one lookups.",
+        "columns": [
+          {
+            "name": "Refund ID",
+            "dataType": "int64",
+            "sourceColumn": "Refund ID",
+            "summarizeBy": "none",
+            "lineageTag": "6f61d988-d338-483e-80aa-719190b5b9f8",
+            "description": "Refund ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Order Item ID",
+            "dataType": "int64",
+            "sourceColumn": "Order Item ID",
+            "summarizeBy": "none",
+            "lineageTag": "4ef51321-a13d-4832-aa16-8bc829f69e75",
+            "description": "Order Item ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Order ID",
+            "dataType": "int64",
+            "sourceColumn": "Order ID",
+            "summarizeBy": "none",
+            "lineageTag": "6c654f7d-717e-4af1-a9e9-66d1c8e16c9e",
+            "description": "Order ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Product ID",
+            "dataType": "int64",
+            "sourceColumn": "Product ID",
+            "summarizeBy": "none",
+            "lineageTag": "2d06853b-76ca-4e6a-aab3-d45ec7b70ff1",
+            "description": "Product ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Refund Amount",
+            "dataType": "decimal",
+            "sourceColumn": "Refund Amount",
+            "summarizeBy": "none",
+            "lineageTag": "a21778a0-fa41-4a81-83d3-7ea8575be77d",
+            "description": "Refund Amount at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Refund Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Refund Date",
+            "summarizeBy": "none",
+            "lineageTag": "c4e9f191-ff05-49ba-8c8a-08d47b17a851",
+            "description": "Refund Date at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Order Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Order Date",
+            "summarizeBy": "none",
+            "lineageTag": "a02eeb20-fe50-47fa-a6c3-f751af2f663d",
+            "description": "Order Date at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer ID",
+            "summarizeBy": "none",
+            "lineageTag": "4782277d-c2e5-45d0-a250-61b4a1a906d7",
+            "description": "Customer ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "int64",
+            "sourceColumn": "Channel ID",
+            "summarizeBy": "none",
+            "lineageTag": "ebd508ba-e327-42f1-9c5a-6f2aa6e45645",
+            "description": "Channel ID at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Device",
+            "dataType": "string",
+            "sourceColumn": "Device",
+            "summarizeBy": "none",
+            "lineageTag": "a4200a15-057e-4268-b40f-5ac7abeebc7d",
+            "description": "Device at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Visitor Type",
+            "dataType": "string",
+            "sourceColumn": "Visitor Type",
+            "summarizeBy": "none",
+            "lineageTag": "4293a454-d108-4aa2-baf6-15273e261a42",
+            "description": "Visitor Type at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Landing Page",
+            "dataType": "string",
+            "sourceColumn": "Landing Page",
+            "summarizeBy": "none",
+            "lineageTag": "9913a144-4fd7-4f38-941c-7801be354c11",
+            "description": "Landing Page at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Refund Lag Days",
+            "dataType": "int64",
+            "sourceColumn": "Refund Lag Days",
+            "summarizeBy": "none",
+            "lineageTag": "96699134-d223-4f1f-a77c-8089545c4677",
+            "description": "Refund Lag Days at Fact_Refunds grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Refunds",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Fact_Refunds.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Refund ID\", Int64.Type}, {\"Order Item ID\", Int64.Type}, {\"Order ID\", Int64.Type}, {\"Product ID\", Int64.Type}, {\"Refund Amount\", Currency.Type}, {\"Refund Date\", type date}, {\"Order Date\", type date}, {\"Customer ID\", Int64.Type}, {\"Channel ID\", Int64.Type}, {\"Device\", type text}, {\"Visitor Type\", type text}, {\"Landing Page\", type text}, {\"Refund Lag Days\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "2e8470e3-f7b6-4b12-9953-b1becd7bf222"
+      },
+      {
+        "name": "Fact_Sessions",
+        "description": "One row per source session with ordered journey flags and one-to-one linked order aggregates. Optimizes raw pageviews.",
+        "columns": [
+          {
+            "name": "Website Session ID",
+            "dataType": "int64",
+            "sourceColumn": "Website Session ID",
+            "summarizeBy": "none",
+            "lineageTag": "be6719e1-9283-4c70-8bb6-0e98e4b38eb0",
+            "description": "Website Session ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer ID",
+            "summarizeBy": "none",
+            "lineageTag": "0001f39c-daac-4109-8538-a4740029e164",
+            "description": "Customer ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Session Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Session Date",
+            "summarizeBy": "none",
+            "lineageTag": "ddc69007-bacf-4ee2-9483-5603efabf3ae",
+            "description": "Session Date at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Channel ID",
+            "dataType": "int64",
+            "sourceColumn": "Channel ID",
+            "summarizeBy": "none",
+            "lineageTag": "53302fdc-31a0-427f-8b0c-79f67ba318f9",
+            "description": "Channel ID at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Device",
+            "dataType": "string",
+            "sourceColumn": "Device",
+            "summarizeBy": "none",
+            "lineageTag": "091629af-4506-49a9-b0d7-3832bf0d46f9",
+            "description": "Device at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Visitor Type",
+            "dataType": "string",
+            "sourceColumn": "Visitor Type",
+            "summarizeBy": "none",
+            "lineageTag": "54cbeeed-8867-4439-9eb1-eb1f3c1f263f",
+            "description": "Visitor Type at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Landing Page",
+            "dataType": "string",
+            "sourceColumn": "Landing Page",
+            "summarizeBy": "none",
+            "lineageTag": "db6d19ca-24bc-40a5-93ba-c6aaac4741fd",
+            "description": "Landing Page at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Pageviews",
+            "dataType": "int64",
+            "sourceColumn": "Pageviews",
+            "summarizeBy": "none",
+            "lineageTag": "8b06bf96-2662-4dce-acfc-6eb9453bb954",
+            "description": "Pageviews at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Bounced",
+            "dataType": "int64",
+            "sourceColumn": "Bounced",
+            "summarizeBy": "none",
+            "lineageTag": "1b2907a4-92f4-4579-a32f-7a012a1c60a3",
+            "description": "Bounced at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Converted",
+            "dataType": "int64",
+            "sourceColumn": "Converted",
+            "summarizeBy": "none",
+            "lineageTag": "baaee7ae-6df6-4ef3-bb18-594f8a67f462",
+            "description": "Converted at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Session Orders",
+            "dataType": "int64",
+            "sourceColumn": "Session Orders",
+            "summarizeBy": "none",
+            "lineageTag": "e6f142fe-bc47-41bb-b300-92195e9d8eee",
+            "description": "Session Orders at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Session Revenue",
+            "dataType": "decimal",
+            "sourceColumn": "Session Revenue",
+            "summarizeBy": "none",
+            "lineageTag": "ad927ed5-bcbe-4b8e-8a30-4a1dece973f4",
+            "description": "Session Revenue at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "$#,##0.00;($#,##0.00);$0.00"
+          },
+          {
+            "name": "Reach Product",
+            "dataType": "int64",
+            "sourceColumn": "Reach Product",
+            "summarizeBy": "none",
+            "lineageTag": "a2d07156-e144-4c9d-b370-a8c01bc2b66c",
+            "description": "Reach Product at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Reach Cart",
+            "dataType": "int64",
+            "sourceColumn": "Reach Cart",
+            "summarizeBy": "none",
+            "lineageTag": "785eca0a-b78a-43ef-9c93-be915e9a7133",
+            "description": "Reach Cart at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Reach Shipping",
+            "dataType": "int64",
+            "sourceColumn": "Reach Shipping",
+            "summarizeBy": "none",
+            "lineageTag": "c2d07a1f-a963-447a-9b50-b1e89fc98f48",
+            "description": "Reach Shipping at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Reach Billing",
+            "dataType": "int64",
+            "sourceColumn": "Reach Billing",
+            "summarizeBy": "none",
+            "lineageTag": "721c7b27-9047-48de-a283-3a929a8be8d9",
+            "description": "Reach Billing at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Reach Confirmation",
+            "dataType": "int64",
+            "sourceColumn": "Reach Confirmation",
+            "summarizeBy": "none",
+            "lineageTag": "48b07925-32ee-4163-976b-0536fe064775",
+            "description": "Reach Confirmation at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sequential Product",
+            "dataType": "int64",
+            "sourceColumn": "Sequential Product",
+            "summarizeBy": "none",
+            "lineageTag": "1d888d3e-f622-4441-9735-53be4cfc201a",
+            "description": "Sequential Product at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sequential Cart",
+            "dataType": "int64",
+            "sourceColumn": "Sequential Cart",
+            "summarizeBy": "none",
+            "lineageTag": "672317ae-c5bf-491c-ba38-564974effa5f",
+            "description": "Sequential Cart at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sequential Shipping",
+            "dataType": "int64",
+            "sourceColumn": "Sequential Shipping",
+            "summarizeBy": "none",
+            "lineageTag": "26807865-339d-4c11-b4d0-505db5478619",
+            "description": "Sequential Shipping at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sequential Billing",
+            "dataType": "int64",
+            "sourceColumn": "Sequential Billing",
+            "summarizeBy": "none",
+            "lineageTag": "a848407e-09e7-486a-8c3e-a5b2a8483fc5",
+            "description": "Sequential Billing at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Sequential Purchase",
+            "dataType": "int64",
+            "sourceColumn": "Sequential Purchase",
+            "summarizeBy": "none",
+            "lineageTag": "ab6c7ed5-cde8-4fe3-8e05-54770fadb7b8",
+            "description": "Sequential Purchase at Fact_Sessions grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Fact_Sessions",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Fact_Sessions.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Website Session ID\", Int64.Type}, {\"Customer ID\", Int64.Type}, {\"Session Date\", type date}, {\"Channel ID\", Int64.Type}, {\"Device\", type text}, {\"Visitor Type\", type text}, {\"Landing Page\", type text}, {\"Pageviews\", Int64.Type}, {\"Bounced\", Int64.Type}, {\"Converted\", Int64.Type}, {\"Session Orders\", Int64.Type}, {\"Session Revenue\", Currency.Type}, {\"Reach Product\", Int64.Type}, {\"Reach Cart\", Int64.Type}, {\"Reach Shipping\", Int64.Type}, {\"Reach Billing\", Int64.Type}, {\"Reach Confirmation\", Int64.Type}, {\"Sequential Product\", Int64.Type}, {\"Sequential Cart\", Int64.Type}, {\"Sequential Shipping\", Int64.Type}, {\"Sequential Billing\", Int64.Type}, {\"Sequential Purchase\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "86b83972-6cc0-44d6-82b8-90beefd58883"
+      },
+      {
+        "name": "Dim_Product",
+        "description": "Conformed dimension: Dim_Product. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Product ID",
+            "dataType": "int64",
+            "sourceColumn": "Product ID",
+            "summarizeBy": "none",
+            "lineageTag": "dcf9eabf-d7ce-45e3-8a59-7d1d128d9cd8",
+            "description": "Product ID at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Launch Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Launch Date",
+            "summarizeBy": "none",
+            "lineageTag": "8b273840-10b8-4ad1-ab3f-f8435b9f2785",
+            "description": "Launch Date at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Product",
+            "dataType": "string",
+            "sourceColumn": "Product",
+            "summarizeBy": "none",
+            "lineageTag": "aec02af4-f994-452c-9185-c839840b19ae",
+            "description": "Product at Dim_Product grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Product",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Product.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Product ID\", Int64.Type}, {\"Launch Date\", type date}, {\"Product\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "c71d3147-1ce9-4104-8065-7fc3169295ff"
+      },
+      {
+        "name": "Dim_Date",
+        "description": "Conformed dimension: Dim_Date. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Date",
+            "dataType": "dateTime",
+            "sourceColumn": "Date",
+            "summarizeBy": "none",
+            "lineageTag": "6553e285-76cb-49c7-ac99-ea4523ca370b",
+            "description": "Date at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "formatString": "dd MMM yyyy",
+            "isKey": true,
+            "dataCategory": "Date"
+          },
+          {
+            "name": "Year",
+            "dataType": "int64",
+            "sourceColumn": "Year",
+            "summarizeBy": "none",
+            "lineageTag": "8c6b3b85-47dd-406d-ae1d-4c4c14f8fb49",
+            "description": "Year at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Quarter",
+            "dataType": "string",
+            "sourceColumn": "Quarter",
+            "summarizeBy": "none",
+            "lineageTag": "5c7134eb-705b-4317-a384-fbbb917b98af",
+            "description": "Quarter at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Month",
+            "dataType": "string",
+            "sourceColumn": "Month",
+            "summarizeBy": "none",
+            "lineageTag": "45304aa8-bb00-4ed0-b999-e750a1810771",
+            "description": "Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "sortByColumn": "Month Number"
+          },
+          {
+            "name": "Month Number",
+            "dataType": "int64",
+            "sourceColumn": "Month Number",
+            "summarizeBy": "none",
+            "lineageTag": "0e8bae33-7527-4bc1-b255-ababdace8dc4",
+            "description": "Month Number at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Year-Month",
+            "dataType": "string",
+            "sourceColumn": "Year-Month",
+            "summarizeBy": "none",
+            "lineageTag": "786dc510-9c91-4f81-86db-c7b4f467f819",
+            "description": "Year-Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "sortByColumn": "Year Month Sort"
+          },
+          {
+            "name": "Year Month Sort",
+            "dataType": "int64",
+            "sourceColumn": "Year Month Sort",
+            "summarizeBy": "none",
+            "lineageTag": "8a267677-2b40-4ab8-a7a6-5bb8f35ffee7",
+            "description": "Year Month Sort at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Week",
+            "dataType": "int64",
+            "sourceColumn": "Week",
+            "summarizeBy": "none",
+            "lineageTag": "03924736-3938-4d76-8651-c383019fa7dc",
+            "description": "Week at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "ISO Year",
+            "dataType": "int64",
+            "sourceColumn": "ISO Year",
+            "summarizeBy": "none",
+            "lineageTag": "272a89cf-c16d-4f18-8e6b-3421e0a5eff3",
+            "description": "ISO Year at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Month Start",
+            "dataType": "dateTime",
+            "sourceColumn": "Month Start",
+            "summarizeBy": "none",
+            "lineageTag": "95d9f23e-0921-4c8f-9219-5714480a37d6",
+            "description": "Month Start at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Day",
+            "dataType": "int64",
+            "sourceColumn": "Day",
+            "summarizeBy": "none",
+            "lineageTag": "5475f58a-615d-43a7-8c11-b042753bebe8",
+            "description": "Day at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Is Complete Sales Month",
+            "dataType": "int64",
+            "sourceColumn": "Is Complete Sales Month",
+            "summarizeBy": "none",
+            "lineageTag": "0bc89230-16d8-4a83-9f05-aa6fe3e86080",
+            "description": "Is Complete Sales Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Is In Sales Coverage",
+            "dataType": "int64",
+            "sourceColumn": "Is In Sales Coverage",
+            "summarizeBy": "none",
+            "lineageTag": "4e7a2030-4f59-4d0e-b694-045dd2a8e622",
+            "description": "Is In Sales Coverage at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Date",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Date.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Date\", type date}, {\"Year\", Int64.Type}, {\"Quarter\", type text}, {\"Month\", type text}, {\"Month Number\", Int64.Type}, {\"Year-Month\", type text}, {\"Year Month Sort\", Int64.Type}, {\"Week\", Int64.Type}, {\"ISO Year\", Int64.Type}, {\"Month Start\", type date}, {\"Day\", Int64.Type}, {\"Is Complete Sales Month\", Int64.Type}, {\"Is In Sales Coverage\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "bab64b9a-478a-41d1-b8b5-e4378adfa020",
+        "dataCategory": "Time",
+        "hierarchies": [
+          {
+            "name": "Calendar",
+            "levels": [
+              {
+                "name": "Year",
+                "ordinal": 0,
+                "column": "Year"
+              },
+              {
+                "name": "Quarter",
+                "ordinal": 1,
+                "column": "Quarter"
+              },
+              {
+                "name": "Month",
+                "ordinal": 2,
+                "column": "Month"
+              },
+              {
+                "name": "Date",
+                "ordinal": 3,
+                "column": "Date"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dim_Customer",
+        "description": "Conformed dimension: Dim_Customer. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Customer ID",
+            "dataType": "int64",
+            "sourceColumn": "Customer ID",
+            "summarizeBy": "none",
+            "lineageTag": "cc2c3ec4-5334-4266-ba17-547077f43818",
+            "description": "Customer ID at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "First Session Date",
+            "dataType": "dateTime",
+            "sourceColumn": "First Session Date",
+            "summarizeBy": "none",
+            "lineageTag": "659ca530-3b83-420e-bec0-3a933ee0d77c",
+            "description": "First Session Date at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "First Purchase Date",
+            "dataType": "dateTime",
+            "sourceColumn": "First Purchase Date",
+            "summarizeBy": "none",
+            "lineageTag": "a94fd037-a22d-4be8-82b5-06292c0d2e02",
+            "description": "First Purchase Date at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true,
+            "formatString": "dd MMM yyyy"
+          },
+          {
+            "name": "Purchase Cohort",
+            "dataType": "string",
+            "sourceColumn": "Purchase Cohort",
+            "summarizeBy": "none",
+            "lineageTag": "a58fa277-efaf-4741-b25d-fb34b46e7fd4",
+            "description": "Purchase Cohort at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Observed Lifetime Orders",
+            "dataType": "int64",
+            "sourceColumn": "Observed Lifetime Orders",
+            "summarizeBy": "none",
+            "lineageTag": "4e3e15a1-174b-4fbd-8bdf-7354823b0fae",
+            "description": "Observed Lifetime Orders at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Observed Frequency",
+            "dataType": "string",
+            "sourceColumn": "Observed Frequency",
+            "summarizeBy": "none",
+            "lineageTag": "1a1339aa-874d-42b1-92a8-6caab20fd0c0",
+            "description": "Observed Frequency at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Customer Status",
+            "dataType": "string",
+            "sourceColumn": "Customer Status",
+            "summarizeBy": "none",
+            "lineageTag": "3d72498a-9b82-4c9f-8d68-eba13a7bd4dc",
+            "description": "Customer Status at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Customer",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Customer.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Customer ID\", Int64.Type}, {\"First Session Date\", type date}, {\"First Purchase Date\", type date}, {\"Purchase Cohort\", type text}, {\"Observed Lifetime Orders\", Int64.Type}, {\"Observed Frequency\", type text}, {\"Customer Status\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "5fe805d0-339e-4f6f-ac95-1f9dfbc315ca"
+      },
+      {
+        "name": "Dim_Channel",
+        "description": "Conformed dimension: Dim_Channel. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Channel ID",
+            "dataType": "int64",
+            "sourceColumn": "Channel ID",
+            "summarizeBy": "none",
+            "lineageTag": "844e5840-912a-48e0-a787-4a48437efc06",
+            "description": "Channel ID at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "isHidden": true
+          },
+          {
+            "name": "Traffic Group",
+            "dataType": "string",
+            "sourceColumn": "Traffic Group",
+            "summarizeBy": "none",
+            "lineageTag": "c0d7e1b7-e06a-48a0-8d2d-ae7298b2621a",
+            "description": "Traffic Group at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Source",
+            "dataType": "string",
+            "sourceColumn": "Source",
+            "summarizeBy": "none",
+            "lineageTag": "8262c4d2-573b-4c4a-a676-df404ebb9e7c",
+            "description": "Source at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Campaign",
+            "dataType": "string",
+            "sourceColumn": "Campaign",
+            "summarizeBy": "none",
+            "lineageTag": "d2d3e1df-8221-48e0-8761-5e62da9ab02f",
+            "description": "Campaign at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Ad Content",
+            "dataType": "string",
+            "sourceColumn": "Ad Content",
+            "summarizeBy": "none",
+            "lineageTag": "375b66cc-4f17-4097-89cc-bfd62de430df",
+            "description": "Ad Content at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Referrer",
+            "dataType": "string",
+            "sourceColumn": "Referrer",
+            "summarizeBy": "none",
+            "lineageTag": "ade07326-b014-40ed-a554-896d733553ec",
+            "description": "Referrer at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          },
+          {
+            "name": "Channel",
+            "dataType": "string",
+            "sourceColumn": "Channel",
+            "summarizeBy": "none",
+            "lineageTag": "fb7916f2-22e2-42c9-945e-fffb721851bd",
+            "description": "Channel at Dim_Channel grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Channel",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Channel.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Channel ID\", Int64.Type}, {\"Traffic Group\", type text}, {\"Source\", type text}, {\"Campaign\", type text}, {\"Ad Content\", type text}, {\"Referrer\", type text}, {\"Channel\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "6d48fddf-2895-462b-b788-7df65621e7a6"
+      },
+      {
+        "name": "Dim_Device",
+        "description": "Conformed dimension: Dim_Device. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Device",
+            "dataType": "string",
+            "sourceColumn": "Device",
+            "summarizeBy": "none",
+            "lineageTag": "053f32bb-081d-4364-9ca4-54babb9a4f8c",
+            "description": "Device at Dim_Device grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Device",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Device.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Device\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "3671b5a9-b8d1-4213-b8cb-67cfb2e54e5e"
+      },
+      {
+        "name": "Dim_Visitor",
+        "description": "Conformed dimension: Dim_Visitor. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Visitor Type",
+            "dataType": "string",
+            "sourceColumn": "Visitor Type",
+            "summarizeBy": "none",
+            "lineageTag": "d0dbbe4b-a72a-49cf-9bec-6e6b27a2ebf1",
+            "description": "Visitor Type at Dim_Visitor grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Visitor",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Visitor.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Visitor Type\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "5aefe839-4508-4c43-8cb3-91aa803f31cb"
+      },
+      {
+        "name": "Dim_Landing",
+        "description": "Conformed dimension: Dim_Landing. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Landing Page",
+            "dataType": "string",
+            "sourceColumn": "Landing Page",
+            "summarizeBy": "none",
+            "lineageTag": "e7a3fc33-93d1-4a85-9e0c-62959eca4633",
+            "description": "Landing Page at Dim_Landing grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_Landing",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_Landing.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Landing Page\", type text}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "934eaf46-40b3-427b-a0a5-e1d4ce1547c4"
+      },
+      {
+        "name": "Dim_FunnelStage",
+        "description": "Conformed dimension: Dim_FunnelStage. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Stage",
+            "dataType": "string",
+            "sourceColumn": "Stage",
+            "summarizeBy": "none",
+            "lineageTag": "ca8522a3-4f2c-48af-aaae-b4ddf0acf70c",
+            "description": "Stage at Dim_FunnelStage grain. See docs/03-data-dictionary.csv for source lineage and meaning.",
+            "sortByColumn": "Stage Order"
+          },
+          {
+            "name": "Stage Order",
+            "dataType": "int64",
+            "sourceColumn": "Stage Order",
+            "summarizeBy": "none",
+            "lineageTag": "9b50171b-d969-42d9-9363-2f8dc06675c2",
+            "description": "Stage Order at Dim_FunnelStage grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_FunnelStage",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_FunnelStage.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Stage\", type text}, {\"Stage Order\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "433c2163-fa4b-46b5-ba31-0464bf57005d"
+      },
+      {
+        "name": "Dim_CohortAge",
+        "description": "Conformed dimension: Dim_CohortAge. Disconnected utility only for FunnelStage and CohortAge.",
+        "columns": [
+          {
+            "name": "Month After First Purchase",
+            "dataType": "int64",
+            "sourceColumn": "Month After First Purchase",
+            "summarizeBy": "none",
+            "lineageTag": "94db7e21-925e-4178-94c2-42634261f46b",
+            "description": "Month After First Purchase at Dim_CohortAge grain. See docs/03-data-dictionary.csv for source lineage and meaning."
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Dim_CohortAge",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "let\n    Raw = Csv.Document(File.Contents(PreparedFolder & \"\\Dim_CohortAge.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),\n    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),\n    Typed = Table.TransformColumnTypes(Headers, {{\"Month After First Purchase\", Int64.Type}}, \"en-US\")\nin\n    Typed"
+            }
+          }
+        ],
+        "lineageTag": "73ac6055-9e76-4df7-82c1-677dcfba6ec7"
+      },
+      {
+        "name": "_Measures",
+        "description": "Dedicated organized business measures. Financial, session, product and refund date semantics are documented per measure.",
+        "columns": [
+          {
+            "name": "Label",
+            "dataType": "string",
+            "sourceColumn": "Label",
+            "isHidden": true
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_Measures",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": "#table(type table [Label = text], {{\"Business measures\"}})"
+            }
+          }
+        ],
+        "measures": [
+          {
+            "name": "Gross Sales Revenue",
+            "expression": "SUM('Fact_Orders'[Sales Amount])",
+            "description": "Recorded order sales in USD, filtered by order date and conformed dimensions. Before recorded refunds; product selections apply to product measures instead.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "d810f370-8fe0-4fdc-aa39-4c99a964c43f"
+          },
+          {
+            "name": "COGS",
+            "expression": "SUM('Fact_Orders'[COGS Amount])",
+            "description": "Recorded cost of goods sold from orders, in USD. No refund-related COGS recovery is assumed.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "8f33353c-3814-4085-afd9-ab5836d56ab6"
+          },
+          {
+            "name": "Gross Profit",
+            "expression": "[Gross Sales Revenue] - [COGS]",
+            "description": "Recorded sales less recorded COGS. Gross profit before refunds, operating costs, tax, shipping costs and advertising expense; not net profit.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "a1f02543-11b7-4a64-8b83-99f7cf113a2e"
+          },
+          {
+            "name": "Gross Margin %",
+            "expression": "DIVIDE([Gross Profit], [Gross Sales Revenue])",
+            "description": "Gross profit divided by recorded sales; blank when sales are zero.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "01 Financial",
+            "lineageTag": "9e617a99-f1d5-4cd0-abef-015023b1ae2d"
+          },
+          {
+            "name": "Total Orders",
+            "expression": "COUNTROWS('Fact_Orders')",
+            "description": "Number of orders at native order grain, by order date. Does not multiply with items or pageviews.",
+            "formatString": "#,##0",
+            "displayFolder": "01 Financial",
+            "lineageTag": "31550529-765f-4703-8b07-303e07a454d2"
+          },
+          {
+            "name": "Average Order Value",
+            "expression": "DIVIDE([Gross Sales Revenue], [Total Orders])",
+            "description": "Recorded sales divided by orders in the selected order-date period; before refunds.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "c8d457aa-49b0-4a4d-8a68-3802aecd6f23"
+          },
+          {
+            "name": "Average Items Per Order",
+            "expression": "DIVIDE(SUM('Fact_Orders'[Items Purchased]), [Total Orders])",
+            "description": "Recorded item count from orders divided by native order count.",
+            "formatString": "0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "f71b35e4-08b9-4890-8603-11ebd0d74f23"
+          },
+          {
+            "name": "Total Refund Amount",
+            "expression": "SUM('Fact_Refunds'[Refund Amount])",
+            "description": "Recorded refund events in USD, selected by refund event date. This is cash-flow timing, not the original sale cohort.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "266ee7c5-da91-4786-9f76-c0b7906f0ab0"
+          },
+          {
+            "name": "Net Revenue After Recorded Refunds",
+            "expression": "[Product Revenue] - [Total Refund Amount]",
+            "description": "Item sales on order dates less refund events on refund dates within the selected period. Both sides share sold-product scope. Item sales reconcile to order sales when no product is selected. This is period flow, not a restated sale cohort.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "48dc3aee-5339-4c97-802a-848acd869135"
+          },
+          {
+            "name": "Gross Profit After Refunds (No Recovery)",
+            "expression": "[Product Gross Profit] - [Total Refund Amount]",
+            "description": "Item-level gross profit less recorded refunds with matching product scope, assuming no COGS recovery. Reconciles to order-level gross profit less refunds without product filters. Excludes operating costs; not net profit.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "01 Financial",
+            "lineageTag": "4212ee41-123e-4943-b946-07d90f554acb"
+          },
+          {
+            "name": "Refund Amount %",
+            "expression": "DIVIDE([Total Refund Amount], [Product Revenue])",
+            "description": "Refund event dollars divided by same-period item sales dollars with matching product scope. Item sales reconcile to orders. Event dates differ from sale dates; can exceed 100% in a narrow refund-heavy period.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "5ab0c7a1-8567-47a0-806e-e5f6044460df"
+          },
+          {
+            "name": "Refund Events",
+            "expression": "COUNTROWS('Fact_Refunds')",
+            "description": "Count of recorded refund events by refund date; distinct from refunded items or refunded orders.",
+            "formatString": "#,##0",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "fe2c175e-983b-4b0d-a5ec-9340592b86fc"
+          },
+          {
+            "name": "Refunded Orders (Event Date)",
+            "expression": "DISTINCTCOUNT('Fact_Refunds'[Order ID])",
+            "description": "Orders with at least one refund event in the selected refund-date period.",
+            "formatString": "#,##0",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "1e0cb24b-5b4a-47a7-b60c-f819b2836569"
+          },
+          {
+            "name": "Average Refund Lag Days",
+            "expression": "AVERAGE('Fact_Refunds'[Refund Lag Days])",
+            "description": "Mean calendar days from original order date to recorded refund event date for selected refund events.",
+            "formatString": "0.00",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "bb23c6e1-74fd-4cf4-8778-cf2967103c06"
+          },
+          {
+            "name": "Recorded Refunds On Selected Sales",
+            "expression": "SUM('Fact_OrderItems'[Recorded Refund])",
+            "description": "All recorded refunds attached to items sold in the selected order-date period, observed through the refund-file cutoff. Recent sales have shorter follow-up.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "a5c87b6e-c408-4176-904e-a90c63dd1acf"
+          },
+          {
+            "name": "Refunded Items (Sale Cohort)",
+            "expression": "SUM('Fact_OrderItems'[Refunded Item])",
+            "description": "Number of sold items with any recorded refund through the source cutoff, filtered by original sale date. Each item counts at most once.",
+            "formatString": "#,##0",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "ca85dbc0-9314-46d8-9617-45f8843bf3b5"
+          },
+          {
+            "name": "Product Refund Rate",
+            "expression": "DIVIDE([Refunded Items (Sale Cohort)], [Units Sold])",
+            "description": "Refunded sold items divided by units sold in the original sale cohort. Right-censored at the refund cutoff; compare equally mature cohorts.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "ac30577c-0e78-4397-8c9e-6562a690747f"
+          },
+          {
+            "name": "Sale Cohort Refund Amount %",
+            "expression": "DIVIDE([Recorded Refunds On Selected Sales], [Product Revenue])",
+            "description": "Recorded refund dollars on the selected sold-item cohort divided by that cohort\u2019s item sales dollars. Not refund event-date cash flow.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "07 Refunds",
+            "lineageTag": "5eeb3c87-e076-47a7-9f24-fe2add370dda"
+          },
+          {
+            "name": "Total Sessions",
+            "expression": "COUNTROWS('Fact_Sessions')",
+            "description": "Count of distinct native session rows by session start date. One row per source website session.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "5e29da14-ac70-449f-b7b0-d2cbfaf372d1"
+          },
+          {
+            "name": "Unique Website Visitors",
+            "expression": "DISTINCTCOUNT('Fact_Sessions'[Customer ID])",
+            "description": "Distinct observed website user IDs active in the selected session-date period. IDs are not verified people or identity-resolved customers.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "2cc6e143-4021-4e76-ad65-825e65226518"
+          },
+          {
+            "name": "New Visitor Sessions",
+            "expression": "CALCULATE([Total Sessions], KEEPFILTERS('Dim_Visitor'[Visitor Type] = \"New visitor session\"))",
+            "description": "Sessions with source is_repeat_session = 0. Source flag is preserved; no invented visitor identity logic.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "7021e958-2182-4e20-9ebf-8db14b640ce0"
+          },
+          {
+            "name": "Repeat Visitor Sessions",
+            "expression": "CALCULATE([Total Sessions], KEEPFILTERS('Dim_Visitor'[Visitor Type] = \"Repeat visitor session\"))",
+            "description": "Sessions with source is_repeat_session = 1; this does not imply a prior purchase.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "bf379f3f-71d6-45ec-9444-81d8a7c519f6"
+          },
+          {
+            "name": "Converted Sessions",
+            "expression": "SUM('Fact_Sessions'[Converted])",
+            "description": "Sessions with at least one linked recorded order, attributed to session start date. Multiple orders would still count once.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "d72d28ac-fe17-4767-8782-cf4e917666a2"
+          },
+          {
+            "name": "Session-to-Order Conversion Rate",
+            "expression": "DIVIDE([Converted Sessions], [Total Sessions])",
+            "description": "Converted sessions / total sessions, with both numerator and denominator on session date. This is not a ratio of order-date orders to session-date sessions.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "02 Website",
+            "lineageTag": "f254795f-6f5a-4fbb-b8af-299984db7468"
+          },
+          {
+            "name": "Campaign Orders",
+            "expression": "SUM('Fact_Sessions'[Session Orders])",
+            "description": "Linked recorded order count attributed to the acquiring session\u2019s date, channel and campaign. May differ from order-date counts near midnight.",
+            "formatString": "#,##0",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "d648cf42-59c4-42ed-a246-40cb116bb131"
+          },
+          {
+            "name": "Campaign Revenue",
+            "expression": "SUM('Fact_Sessions'[Session Revenue])",
+            "description": "Recorded linked order sales attributed to the acquiring session\u2019s start date and tagging. Revenue is grouped to one session before enrichment.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "f7647001-d73b-4aa8-bb7f-c699de531593"
+          },
+          {
+            "name": "Revenue Per Session",
+            "expression": "DIVIDE([Campaign Revenue], [Total Sessions])",
+            "description": "Session-attributed recorded sales / sessions in the same session-date context, in USD.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "3f1c3f0b-9c09-4c66-a6ae-df787d415011"
+          },
+          {
+            "name": "Traffic Source Contribution",
+            "expression": "DIVIDE([Total Sessions], CALCULATE([Total Sessions], REMOVEFILTERS('Dim_Channel')))",
+            "description": "Sessions for the current traffic selection divided by sessions across all channels; other conformed filters retained.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "560723ce-68b4-45ed-936f-1882b88e0f35"
+          },
+          {
+            "name": "Revenue Per Tagged Marketing Session",
+            "expression": "VAR _revenue = CALCULATE([Campaign Revenue], KEEPFILTERS('Dim_Channel'[Traffic Group] IN {\"Tagged search\", \"Tagged social\"}))\nVAR _sessions = CALCULATE([Total Sessions], KEEPFILTERS('Dim_Channel'[Traffic Group] IN {\"Tagged search\", \"Tagged social\"}))\nRETURN DIVIDE(_revenue, _sessions)",
+            "description": "Revenue per session restricted to observed tagged search/social traffic. Tagging is not proof of paid acquisition.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "bf753d92-d894-4a8a-8eff-0352b5f4cca7"
+          },
+          {
+            "name": "Desktop Conversion",
+            "expression": "CALCULATE([Session-to-Order Conversion Rate], KEEPFILTERS('Dim_Device'[Device] = \"desktop\"))",
+            "description": "Converted desktop sessions / desktop sessions on session date. Blank if an incompatible device filter is active.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "fb47d5ae-48fe-49c0-8543-4794eb4beac5"
+          },
+          {
+            "name": "Mobile Conversion",
+            "expression": "CALCULATE([Session-to-Order Conversion Rate], KEEPFILTERS('Dim_Device'[Device] = \"mobile\"))",
+            "description": "Converted mobile sessions / mobile sessions on session date. Blank if an incompatible device filter is active.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "03 Marketing",
+            "lineageTag": "9f46ac00-c2c7-4e52-99c5-d3d800c9a1df"
+          },
+          {
+            "name": "Bounced Sessions",
+            "expression": "SUM('Fact_Sessions'[Bounced])",
+            "description": "Sessions with exactly one recorded pageview. This is a pageview-count bounce definition; engagement time is unavailable.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "981453b2-c3fa-48dd-818f-bc5f358085d0"
+          },
+          {
+            "name": "Landing Page Bounce Rate",
+            "expression": "DIVIDE([Bounced Sessions], [Total Sessions])",
+            "description": "Sessions with exactly one recorded pageview divided by all sessions, grouped by the earliest (timestamp, pageview ID) URL. No engagement threshold is available.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "02 Website",
+            "lineageTag": "b1465c53-bd8d-4066-8b78-3d16f5ef51b9"
+          },
+          {
+            "name": "Total Pageviews",
+            "expression": "SUM('Fact_Sessions'[Pageviews])",
+            "description": "Total source pageviews from per-session aggregation, filtered by session start date rather than individual pageview dates.",
+            "formatString": "#,##0",
+            "displayFolder": "02 Website",
+            "lineageTag": "7a522e23-9f77-4100-8a85-3935aba6e5de"
+          },
+          {
+            "name": "Product Reach Sessions",
+            "expression": "SUM('Fact_Sessions'[Reach Product])",
+            "description": "Sessions with any observed product stage URL. Repeat views count once; this measure does not impose prior-stage ordering.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "4e8f39a0-5889-45ba-85c3-3eed92775f2d"
+          },
+          {
+            "name": "Product Page Reach Rate",
+            "expression": "DIVIDE([Product Reach Sessions], [Total Sessions])",
+            "description": "Any-reach product sessions / all sessions. For ordered progression use the sequential funnel measures.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "5647976a-51d3-4332-9064-1888172448b7"
+          },
+          {
+            "name": "Cart Reach Sessions",
+            "expression": "SUM('Fact_Sessions'[Reach Cart])",
+            "description": "Sessions with any observed cart stage URL. Repeat views count once; this measure does not impose prior-stage ordering.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "a8114385-dc37-41fb-82ac-0bfa799e81fd"
+          },
+          {
+            "name": "Cart Reach Rate",
+            "expression": "DIVIDE([Cart Reach Sessions], [Total Sessions])",
+            "description": "Any-reach cart sessions / all sessions. For ordered progression use the sequential funnel measures.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "bacd87c6-af59-470f-9ebf-a3ae10a2e6b7"
+          },
+          {
+            "name": "Shipping Reach Sessions",
+            "expression": "SUM('Fact_Sessions'[Reach Shipping])",
+            "description": "Sessions with any observed shipping stage URL. Repeat views count once; this measure does not impose prior-stage ordering.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "4733d303-16f9-4eba-983e-f0fe90dc21cd"
+          },
+          {
+            "name": "Shipping Reach Rate",
+            "expression": "DIVIDE([Shipping Reach Sessions], [Total Sessions])",
+            "description": "Any-reach shipping sessions / all sessions. For ordered progression use the sequential funnel measures.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "227f740e-d1c8-4a7f-bd0c-a955bf1b69c2"
+          },
+          {
+            "name": "Billing Reach Sessions",
+            "expression": "SUM('Fact_Sessions'[Reach Billing])",
+            "description": "Sessions with any observed billing stage URL. Repeat views count once; this measure does not impose prior-stage ordering.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "6d63901a-082f-49ec-a713-336906f35931"
+          },
+          {
+            "name": "Billing Reach Rate",
+            "expression": "DIVIDE([Billing Reach Sessions], [Total Sessions])",
+            "description": "Any-reach billing sessions / all sessions. For ordered progression use the sequential funnel measures.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "2449e7a5-c7f3-479d-bc4d-70cec6da434c"
+          },
+          {
+            "name": "Sequential Product Sessions",
+            "expression": "SUM('Fact_Sessions'[Sequential Product])",
+            "description": "Sessions completing every stage through product in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "5c7e0475-3a04-43de-bb49-be625e91a6e2"
+          },
+          {
+            "name": "Sequential Cart Sessions",
+            "expression": "SUM('Fact_Sessions'[Sequential Cart])",
+            "description": "Sessions completing every stage through cart in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "6329890b-530f-4c3c-82b3-8e2c92dd30f0"
+          },
+          {
+            "name": "Sequential Shipping Sessions",
+            "expression": "SUM('Fact_Sessions'[Sequential Shipping])",
+            "description": "Sessions completing every stage through shipping in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "738db7fa-1822-442f-97f5-7dcb3068c728"
+          },
+          {
+            "name": "Sequential Billing Sessions",
+            "expression": "SUM('Fact_Sessions'[Sequential Billing])",
+            "description": "Sessions completing every stage through billing in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "e9bdfe2c-93a4-4bf3-b101-9ba248382066"
+          },
+          {
+            "name": "Sequential Purchase Sessions",
+            "expression": "SUM('Fact_Sessions'[Sequential Purchase])",
+            "description": "Sessions completing every stage through purchase in strict (timestamp, pageview ID) order. Purchase additionally requires a linked order at/after billing. Count once per session.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "f5864a51-7d20-4590-bb65-2d0df1ab0655"
+          },
+          {
+            "name": "Checkout Reach Rate",
+            "expression": "DIVIDE([Shipping Reach Sessions], [Total Sessions])",
+            "description": "Sessions reaching /shipping at any point divided by sessions. Shipping is the first observed checkout step.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "51ec7f3a-d8b4-4069-b486-e5e9c5bde5d0"
+          },
+          {
+            "name": "Purchase Completion Rate",
+            "expression": "DIVIDE([Sequential Purchase Sessions], [Sequential Billing Sessions])",
+            "description": "Strict sequential purchases divided by strict sequential billing sessions. Both use the session-start cohort.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "ee7d1389-8886-4d7e-a0e4-6f2cfa08a718"
+          },
+          {
+            "name": "Stage Sessions",
+            "expression": "// Disconnected stage axis selects distinct session flags; never count pageview rows.\nVAR _stage = SELECTEDVALUE('Dim_FunnelStage'[Stage Order])\nRETURN SWITCH(_stage, 1, [Total Sessions], 2, [Sequential Product Sessions], 3, [Sequential Cart Sessions], 4, [Sequential Shipping Sessions], 5, [Sequential Billing Sessions], 6, [Sequential Purchase Sessions])",
+            "description": "Distinct sessions completing every stage up to the selected ordered stage. Blank for a total spanning multiple stages.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "4539680b-0a6c-4891-9a5f-c3176dccebaa"
+          },
+          {
+            "name": "Previous Stage Sessions",
+            "expression": "VAR _stage = SELECTEDVALUE('Dim_FunnelStage'[Stage Order])\nRETURN SWITCH(_stage, 1, [Total Sessions], 2, [Total Sessions], 3, [Sequential Product Sessions], 4, [Sequential Cart Sessions], 5, [Sequential Shipping Sessions], 6, [Sequential Billing Sessions])",
+            "description": "Distinct sessions at the preceding sequential stage; landing uses all sessions as its baseline.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "298a6486-a1e4-4c54-b80f-679bba61f617"
+          },
+          {
+            "name": "Stage Conversion %",
+            "expression": "DIVIDE([Stage Sessions], [Previous Stage Sessions])",
+            "description": "Current ordered stage sessions / previous stage sessions. Landing is 100% when sessions exist.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "9ba0b88a-aa6e-4c78-b5e6-bfabaa92ddf2"
+          },
+          {
+            "name": "Stage Reach %",
+            "expression": "DIVIDE([Stage Sessions], [Total Sessions])",
+            "description": "Current ordered stage sessions / all selected sessions.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "08103b4a-a2fd-4840-91a2-30a2312c81fc"
+          },
+          {
+            "name": "Funnel Abandonment Sessions",
+            "expression": "[Previous Stage Sessions] - [Stage Sessions]",
+            "description": "Previous-stage sessions less current-stage sessions. These are observed stage drop-offs, not inferred causes.",
+            "formatString": "#,##0",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "7e1a3edd-3c02-42de-8453-93ad4009ebfc"
+          },
+          {
+            "name": "Funnel Abandonment %",
+            "expression": "DIVIDE([Funnel Abandonment Sessions], [Previous Stage Sessions])",
+            "description": "Drop-off sessions / preceding ordered-stage sessions; zero at landing.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "04 Funnel",
+            "lineageTag": "8da3216d-59ba-47d1-a5d2-96d95460ee4a"
+          },
+          {
+            "name": "Product Revenue",
+            "expression": "SUM('Fact_OrderItems'[Item Sales Amount])",
+            "description": "Recorded item sales by product and original order date. Additive across sold products; includes primary and cross-sell items.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "05 Product",
+            "lineageTag": "a40b6ab8-85e8-4367-b992-4bcc180b922e"
+          },
+          {
+            "name": "Product COGS",
+            "expression": "SUM('Fact_OrderItems'[Item COGS Amount])",
+            "description": "Recorded item-level cost by product and original order date, before any assumed recovery.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "05 Product",
+            "lineageTag": "f9cc412a-0f36-4ca0-8561-7f2c99f3c664"
+          },
+          {
+            "name": "Product Gross Profit",
+            "expression": "[Product Revenue] - [Product COGS]",
+            "description": "Item sales less item COGS; product-level estimated gross profit before refunds and operating costs.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "05 Product",
+            "lineageTag": "799b4d3a-d8c0-4e83-b999-92a127de07cd"
+          },
+          {
+            "name": "Product Margin %",
+            "expression": "DIVIDE([Product Gross Profit], [Product Revenue])",
+            "description": "Product gross profit / recorded product revenue.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "05 Product",
+            "lineageTag": "8b65ca06-a78c-4fde-8cc0-db19d7a16274"
+          },
+          {
+            "name": "Units Sold",
+            "expression": "COUNTROWS('Fact_OrderItems')",
+            "description": "Native item row count. Source has no item-quantity column; each row is one sold item, reconciled to order item counts.",
+            "formatString": "#,##0",
+            "displayFolder": "05 Product",
+            "lineageTag": "6d1bafe9-473d-4b5d-9cc3-9653537b0e53"
+          },
+          {
+            "name": "Product Revenue Contribution %",
+            "expression": "DIVIDE([Product Revenue], CALCULATE([Product Revenue], REMOVEFILTERS('Dim_Product')))",
+            "description": "Current product revenue divided by revenue across all products, retaining date and acquisition filters.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "05 Product",
+            "lineageTag": "171461bb-4e8a-4fda-8fe6-9f671325be1a"
+          },
+          {
+            "name": "Orders Containing Selected Product",
+            "expression": "DISTINCTCOUNT('Fact_OrderItems'[Order ID])",
+            "description": "Distinct orders containing selected sold items. Totals are distinct orders, not sum of product order counts.",
+            "formatString": "#,##0",
+            "displayFolder": "05 Product",
+            "lineageTag": "a2949fef-92f7-4f19-b272-42b5fe688b0c"
+          },
+          {
+            "name": "Primary Item Revenue",
+            "expression": "CALCULATE([Product Revenue], KEEPFILTERS('Fact_OrderItems'[Item Role] = \"Primary item\"))",
+            "description": "Revenue from items with source is_primary_item = 1, by item product; not whole basket revenue.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "05 Product",
+            "lineageTag": "56b770f5-92ed-45cc-b826-161e16e09458"
+          },
+          {
+            "name": "Cross-Sell Revenue",
+            "expression": "CALCULATE([Product Revenue], KEEPFILTERS('Fact_OrderItems'[Item Role] = \"Cross-sell item\"))",
+            "description": "Revenue from items with source is_primary_item = 0.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "05 Product",
+            "lineageTag": "6f87875a-84d4-4da9-a639-d0360eb8a6cc"
+          },
+          {
+            "name": "Cross-Sell Units",
+            "expression": "CALCULATE([Units Sold], KEEPFILTERS('Fact_OrderItems'[Item Role] = \"Cross-sell item\"))",
+            "description": "Sold item rows designated non-primary by the source.",
+            "formatString": "#,##0",
+            "displayFolder": "05 Product",
+            "lineageTag": "c57fe80c-0f61-4e9e-98a7-b54bc9acb256"
+          },
+          {
+            "name": "Orders With Cross Sell",
+            "expression": "SUM('Fact_Orders'[Has Cross Sell])",
+            "description": "Orders with more than one recorded item. This is a basket-level count on order date.",
+            "formatString": "#,##0",
+            "displayFolder": "05 Product",
+            "lineageTag": "509a4d5d-f2d8-493b-9c3b-f594c199f256"
+          },
+          {
+            "name": "Cross-Sell Attach Rate",
+            "expression": "DIVIDE([Orders With Cross Sell], [Total Orders])",
+            "description": "Orders containing more than one item / orders. Does not imply a causal recommendation effect.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "05 Product",
+            "lineageTag": "8efa4f3c-cb36-4f7f-9326-46948a7e7309"
+          },
+          {
+            "name": "Paying Customers",
+            "expression": "DISTINCTCOUNT('Fact_Orders'[Customer ID])",
+            "description": "Distinct observed user IDs placing an order in the selected order-date period; separate from all website visitors.",
+            "formatString": "#,##0",
+            "displayFolder": "06 Customers",
+            "lineageTag": "19826438-0f25-4ac8-b587-9d7af3987f70"
+          },
+          {
+            "name": "Repeat Purchasing Customers",
+            "expression": "COUNTROWS(FILTER(VALUES('Fact_Orders'[Customer ID]), CALCULATE(COUNTROWS('Fact_Orders')) >= 2))",
+            "description": "Observed user IDs with at least two orders within the current order-date and acquisition filters. This is period purchase frequency, not a lifetime flag.",
+            "formatString": "#,##0",
+            "displayFolder": "06 Customers",
+            "lineageTag": "8b109f5c-638b-4041-8cd5-dfd6aa785817"
+          },
+          {
+            "name": "Repeat Purchasing Customer %",
+            "expression": "DIVIDE([Repeat Purchasing Customers], [Paying Customers])",
+            "description": "Customers with at least two selected-period orders divided by customers with any selected-period order.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "06 Customers",
+            "lineageTag": "cec80064-6860-4860-8762-62784883558a"
+          },
+          {
+            "name": "Orders Per Paying Customer",
+            "expression": "DIVIDE([Total Orders], [Paying Customers])",
+            "description": "Selected-period orders / distinct paying user IDs.",
+            "formatString": "0.00",
+            "displayFolder": "06 Customers",
+            "lineageTag": "8ad8d86e-9ae4-4d11-9b35-28be15ac527e"
+          },
+          {
+            "name": "Revenue Per Paying Customer",
+            "expression": "DIVIDE([Gross Sales Revenue], [Paying Customers])",
+            "description": "Selected-period recorded order sales / paying user IDs.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "06 Customers",
+            "lineageTag": "8eae925a-eae0-4e1b-8b88-b1b8d7429182"
+          },
+          {
+            "name": "Subsequent Purchase Orders",
+            "expression": "CALCULATE([Total Orders], KEEPFILTERS('Fact_Orders'[Purchase Type] = \"Subsequent purchase\"))",
+            "description": "Orders whose user already placed a prior observed order in the complete extract. Classification is fixed at preparation, not reset by date slicers.",
+            "formatString": "#,##0",
+            "displayFolder": "06 Customers",
+            "lineageTag": "98b047f4-bb74-4c07-a51d-82af2adc9947"
+          },
+          {
+            "name": "Subsequent Purchase Revenue",
+            "expression": "CALCULATE([Gross Sales Revenue], KEEPFILTERS('Fact_Orders'[Purchase Type] = \"Subsequent purchase\"))",
+            "description": "Recorded sales from subsequent observed purchases, by order date. Left-censored before the extract begins.",
+            "formatString": "$#,##0.00;($#,##0.00);$0.00",
+            "displayFolder": "06 Customers",
+            "lineageTag": "fba0a5f0-c500-494d-87c8-426d500f49ad"
+          },
+          {
+            "name": "Repeat Visitor Session Share",
+            "expression": "DIVIDE([Repeat Visitor Sessions], [Total Sessions])",
+            "description": "Source repeat-visitor sessions / all sessions; visitor recurrence is not buyer recurrence.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "06 Customers",
+            "lineageTag": "d5b926c5-c382-4dd1-969d-e1fad33ae9be"
+          },
+          {
+            "name": "Cohort Customers",
+            "expression": "CALCULATE(COUNTROWS('Dim_Customer'), KEEPFILTERS('Dim_Customer'[First Purchase Date] <> BLANK()))",
+            "description": "All observed first-purchase customers in the selected cohort. Cohort analysis ignores the report date slicer and retains its fixed original customer cohort.",
+            "formatString": "#,##0",
+            "displayFolder": "06 Customers",
+            "lineageTag": "77329c13-b022-4fca-bab1-2fa9ec6d3a11"
+          },
+          {
+            "name": "Cohort Active Customers",
+            "expression": "// Hide cells without a complete observation month to avoid future zero retention.\nVAR _age = SELECTEDVALUE('Dim_CohortAge'[Month After First Purchase])\nVAR _cohort = SELECTEDVALUE('Dim_Customer'[Purchase Cohort])\nVAR _start = IF(_cohort <> \"No observed purchase\" && NOT ISBLANK(_cohort), DATE(VALUE(LEFT(_cohort,4)), VALUE(RIGHT(_cohort,2)), 1))\nVAR _mature = NOT ISBLANK(_start) && EOMONTH(_start, _age) < DATE(2015,3,19)\nRETURN IF(NOT ISBLANK(_age) && _mature, COALESCE(CALCULATE(DISTINCTCOUNT('Fact_Orders'[Customer ID]), REMOVEFILTERS('Dim_Date'), REMOVEFILTERS('Dim_Channel'), REMOVEFILTERS('Dim_Device'), REMOVEFILTERS('Dim_Visitor'), REMOVEFILTERS('Dim_Landing'), 'Fact_Orders'[Purchase Age Month] = _age),0))",
+            "description": "Distinct customers purchasing at selected months since first observed purchase. Calendar-month cohorts; date and acquisition slicers deliberately ignored to preserve the original customer cohort denominator. Incomplete/future cohort-month cells are blank.",
+            "formatString": "#,##0",
+            "displayFolder": "06 Customers",
+            "lineageTag": "d54751eb-b286-426c-ac5d-f2970d6e0ce1"
+          },
+          {
+            "name": "Cohort Retention %",
+            "expression": "IF(NOT ISBLANK([Cohort Active Customers]), DIVIDE([Cohort Active Customers], [Cohort Customers]))",
+            "description": "Active customers / original first-purchase cohort size at selected month age. Month zero is the acquisition month. Blank until a full month is observed; no inference about churn.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "06 Customers",
+            "lineageTag": "d77b2d2d-139d-4d9a-b39c-220458352914"
+          },
+          {
+            "name": "MoM Revenue Growth",
+            "expression": "// Compare complete calendar months only; exclude partial edge months.\nVAR _month = SELECTEDVALUE('Dim_Date'[Month Start])\nVAR _priorMonth = EDATE(_month, -1)\nVAR _ok = HASONEVALUE('Dim_Date'[Month Start]) && _month >= DATE(2012,4,1) && _month <= DATE(2015,2,1) && _priorMonth >= DATE(2012,4,1)\nVAR _current = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _month, EOMONTH(_month,0)))\nVAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorMonth, EOMONTH(_priorMonth,0)))\nRETURN IF(_ok, DIVIDE(_current - _prior, _prior))",
+            "description": "Full-calendar-month revenue change against the preceding month. Requires one month and complete current/prior coverage; daily slice is expanded to full months. Partial extract boundary months are blank.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "08 Comparisons",
+            "lineageTag": "fd73c23b-41ca-4d41-8455-6b2ff9db38d3"
+          },
+          {
+            "name": "YoY Revenue Growth",
+            "expression": "// Compare complete calendar months only; exclude partial edge months.\nVAR _month = SELECTEDVALUE('Dim_Date'[Month Start])\nVAR _priorMonth = EDATE(_month, -12)\nVAR _ok = HASONEVALUE('Dim_Date'[Month Start]) && _month >= DATE(2012,4,1) && _month <= DATE(2015,2,1) && _priorMonth >= DATE(2012,4,1)\nVAR _current = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _month, EOMONTH(_month,0)))\nVAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorMonth, EOMONTH(_priorMonth,0)))\nRETURN IF(_ok, DIVIDE(_current - _prior, _prior))",
+            "description": "Full-calendar-month revenue change against the same month last year. Requires one month and complete current/prior coverage; daily slice is expanded to full months. Partial extract boundary months are blank.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "08 Comparisons",
+            "lineageTag": "155a6134-2761-4c34-9679-6578e28eb6c5"
+          },
+          {
+            "name": "Revenue Growth %",
+            "expression": "// Compare only contiguous windows of fully observed interior calendar days.\nVAR _from = MIN('Dim_Date'[Date])\nVAR _to = MAX('Dim_Date'[Date])\nVAR _days = DATEDIFF(_from, _to, DAY) + 1\nVAR _priorFrom = _from - _days\nVAR _priorTo = _from - 1\nVAR _contiguous = COUNTROWS(VALUES('Dim_Date'[Date])) = _days\nVAR _valid = _contiguous && _from >= DATE(2012,3,20) && _to <= DATE(2015,3,18) && _priorFrom >= DATE(2012,3,20)\nVAR _prior = CALCULATE([Gross Sales Revenue], REMOVEFILTERS('Dim_Date'), DATESBETWEEN('Dim_Date'[Date], _priorFrom, _priorTo))\nRETURN IF(_valid, DIVIDE([Gross Sales Revenue] - _prior, _prior))",
+            "description": "Change vs the same-length immediately preceding calendar-day window. Requires contiguous selected dates and fully observed interior days (2012-03-20 through 2015-03-18); source boundary days are partial. Separate from complete-month MoM/YoY.",
+            "formatString": "0.0%;(0.0%);0.0%",
+            "displayFolder": "08 Comparisons",
+            "lineageTag": "95113e4a-f614-4a2c-ba72-6371c9aa0c0b"
+          },
+          {
+            "name": "Selected Period Label",
+            "expression": "VAR _min = MIN('Dim_Date'[Date])\nVAR _max = MAX('Dim_Date'[Date])\nRETURN FORMAT(_min, \"dd MMM yyyy\") & \" \u2013 \" & FORMAT(_max, \"dd MMM yyyy\")",
+            "description": "Dynamic selected calendar range. The underlying data coverage is separately disclosed.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "91f399c4-ddcd-48da-b8ef-e17b071b0bb9"
+          },
+          {
+            "name": "Data Coverage Note",
+            "expression": "\"Sales/sessions: 19 Mar 2012\u201319 Mar 2015 | Refunds: through 01 Apr 2015 | USD\"",
+            "description": "Observed source bounds, not a claim of current data freshness.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "afaa622f-a473-4e0b-b382-e5da95872f66"
+          },
+          {
+            "name": "Revenue Trend Title",
+            "expression": "\"Recorded sales \u00b7 \" & [Selected Period Label]",
+            "description": "Dynamic chart title showing the selected calendar range.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "8b793528-ad09-4443-92c1-bdb1d75462f1"
+          },
+          {
+            "name": "Conversion Chart Title",
+            "expression": "\"Session conversion \u00b7 \" & [Selected Period Label]",
+            "description": "Dynamic conversion chart title with selected calendar dates.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "d6769668-a24b-4825-88f0-dadaf7fa895e"
+          },
+          {
+            "name": "Growth Color",
+            "expression": "IF(ISBLANK([MoM Revenue Growth]), \"#526074\", IF([MoM Revenue Growth]>=0, \"#087F80\", \"#A36512\"))",
+            "description": "Semantic formatting color for full-month MoM growth; blank comparison uses neutral text.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "ff2cff89-8780-4285-821b-c86d83ae1a49"
+          },
+          {
+            "name": "Refund Risk Color",
+            "expression": "IF(ISBLANK([Product Refund Rate]), \"#526074\", IF([Product Refund Rate] > CALCULATE([Product Refund Rate], REMOVEFILTERS('Dim_Product')), \"#A36512\", \"#087F80\"))",
+            "description": "Amber when product sale-cohort refund incidence exceeds the all-product incidence under the same remaining filters; descriptive comparison, not a risk threshold.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "a4fba5b4-43ed-4776-8a0c-dee067aed51a"
+          },
+          {
+            "name": "Executive Decision Note",
+            "expression": "IF(ISBLANK([Gross Sales Revenue]), \"No recorded sales in the selected context. Adjust the date or acquisition filters.\", \"Recorded sales are \" & FORMAT([Gross Sales Revenue], \"$#,##0\") & \" at \" & FORMAT([Gross Margin %], \"0.0%\") & \" gross margin before refunds and operating expenses. Selected sessions convert at \" & FORMAT([Session-to-Order Conversion Rate], \"0.0%\") & \". Compare acquisition efficiency on the Marketing page and journey losses on Conversion.\")",
+            "description": "Filter-responsive executive narrative; reports observed values without inferring causes.",
+            "formatString": "@",
+            "displayFolder": "09 Report UX",
+            "lineageTag": "262f98aa-e96f-4c93-9c50-cb53a936a9c2"
+          }
+        ],
+        "lineageTag": "c2e13869-ff04-4d53-b9e9-d6634e613a23"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "b3a3e106-f488-4439-96c1-7f5969b6cc04",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Order Date",
+        "toTable": "Dim_Date",
+        "toColumn": "Date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "ceeaebe9-54ce-4bc1-bc28-5c3d55492c46",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Customer ID",
+        "toTable": "Dim_Customer",
+        "toColumn": "Customer ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "184da7dc-d4f0-439d-9bfb-fd706503eb08",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Channel ID",
+        "toTable": "Dim_Channel",
+        "toColumn": "Channel ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "81b0cca1-a195-4a6e-ba4e-e8006b791557",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Device",
+        "toTable": "Dim_Device",
+        "toColumn": "Device",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "a9e29a28-31ed-4535-8275-1ef27c3aa302",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Visitor Type",
+        "toTable": "Dim_Visitor",
+        "toColumn": "Visitor Type",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "5e519a14-73a0-44d3-8a40-81df552488a1",
+        "fromTable": "Fact_Orders",
+        "fromColumn": "Landing Page",
+        "toTable": "Dim_Landing",
+        "toColumn": "Landing Page",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "245c3906-06a3-4cce-b24d-b414e2619ae4",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Order Date",
+        "toTable": "Dim_Date",
+        "toColumn": "Date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "76923f45-3d29-4ac3-8a58-25b5e5b38545",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Customer ID",
+        "toTable": "Dim_Customer",
+        "toColumn": "Customer ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "49f90767-72df-4129-855a-dae1ebd59baf",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Channel ID",
+        "toTable": "Dim_Channel",
+        "toColumn": "Channel ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "96fc8cd1-ef31-4591-8ba9-d4f5e9bfa388",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Device",
+        "toTable": "Dim_Device",
+        "toColumn": "Device",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "2f4ba346-b31f-47a2-b923-a3675e629e02",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Visitor Type",
+        "toTable": "Dim_Visitor",
+        "toColumn": "Visitor Type",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "cf6bf810-1d06-4361-9de9-1961db027c99",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Landing Page",
+        "toTable": "Dim_Landing",
+        "toColumn": "Landing Page",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "384a04a0-ef23-41e1-99b4-dac52592214d",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Refund Date",
+        "toTable": "Dim_Date",
+        "toColumn": "Date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "9c109407-79a0-4de6-8e7b-436ab5847494",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Customer ID",
+        "toTable": "Dim_Customer",
+        "toColumn": "Customer ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "ae5fbd66-a612-4f7c-824e-94bd139bc4c0",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Channel ID",
+        "toTable": "Dim_Channel",
+        "toColumn": "Channel ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "dc8de72c-064d-40b6-883f-46f941c5ef3f",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Device",
+        "toTable": "Dim_Device",
+        "toColumn": "Device",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "ba3e84bd-5096-49cb-99a8-e7cd33109ff5",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Visitor Type",
+        "toTable": "Dim_Visitor",
+        "toColumn": "Visitor Type",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "b6bf1270-16c1-46ee-bdd6-719f6ef39736",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Landing Page",
+        "toTable": "Dim_Landing",
+        "toColumn": "Landing Page",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "a6cc44b2-438e-42e0-a6f7-e6135c8180d7",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Session Date",
+        "toTable": "Dim_Date",
+        "toColumn": "Date",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "089185b5-93ab-42c0-8c24-b47e40e6ee3a",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Customer ID",
+        "toTable": "Dim_Customer",
+        "toColumn": "Customer ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "514a5dec-0b37-42da-8ddb-d3d90b504aac",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Channel ID",
+        "toTable": "Dim_Channel",
+        "toColumn": "Channel ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "18c8eb24-2e62-497e-96b9-19401a0a70bb",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Device",
+        "toTable": "Dim_Device",
+        "toColumn": "Device",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "7b8e113c-ffd5-45c3-ae94-217fd3e2b50c",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Visitor Type",
+        "toTable": "Dim_Visitor",
+        "toColumn": "Visitor Type",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "efb33a03-bd88-4ce6-b786-3287581d0d13",
+        "fromTable": "Fact_Sessions",
+        "fromColumn": "Landing Page",
+        "toTable": "Dim_Landing",
+        "toColumn": "Landing Page",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "9e70547f-5f61-4f2d-aaac-7c41580a9cca",
+        "fromTable": "Fact_OrderItems",
+        "fromColumn": "Product ID",
+        "toTable": "Dim_Product",
+        "toColumn": "Product ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      },
+      {
+        "name": "8a19a7e1-5837-4615-92f0-d1c321963f07",
+        "fromTable": "Fact_Refunds",
+        "fromColumn": "Product ID",
+        "toTable": "Dim_Product",
+        "toColumn": "Product ID",
+        "fromCardinality": "many",
+        "toCardinality": "one",
+        "crossFilteringBehavior": "oneDirection",
+        "isActive": true
+      }
+    ]
+  }
+}

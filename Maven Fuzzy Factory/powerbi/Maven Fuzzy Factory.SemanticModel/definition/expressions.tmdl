@@ -1,0 +1,8 @@
+/// Folder containing deterministic derived CSVs created from the unchanged supplied sources.
+expression PreparedFolder = "C:\Data\MavenPortfolio\Maven Fuzzy Factory\data\prepared" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+	lineageTag: a43baa3b-7e5f-498b-8142-38400a55ec85
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Text
+

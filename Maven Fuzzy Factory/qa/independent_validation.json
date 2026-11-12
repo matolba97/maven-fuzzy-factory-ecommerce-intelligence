@@ -1,0 +1,1196 @@
+{
+  "method": "Independent builtin csv reader, Decimal to integer cents, SQLite sorted pageviews and single-pass state machine; preparation script not imported.",
+  "source_baseline": {
+    "orders": 32313,
+    "items": 40025,
+    "refund_events": 1731,
+    "sessions": 472871,
+    "products": 4,
+    "sales_cents": 193850975,
+    "cogs_cents": 72237025,
+    "refund_cents": 8533869,
+    "buyers": 31696,
+    "users": 394318,
+    "converted_sessions": 32313,
+    "repeat_buyers": 591,
+    "gross_profit_cents": 121613950,
+    "net_revenue_cents": 185317106,
+    "pageviews": 1188124,
+    "funnel": {
+      "Landing": 472871,
+      "Product": 261231,
+      "Cart": 94953,
+      "Shipping": 64484,
+      "Billing": 52058,
+      "Purchase": 32313
+    },
+    "bounced": 211640
+  },
+  "checks": [
+    {
+      "check": "orders unique keys",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "order_items unique keys",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "order_item_refunds unique keys",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "website_sessions unique keys",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "products unique keys",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Order and item revenue reconciles in integer cents",
+      "actual": 193850975,
+      "expected": 193850975,
+      "status": "PASS"
+    },
+    {
+      "check": "Order and item COGS reconciles in integer cents",
+      "actual": 72237025,
+      "expected": 72237025,
+      "status": "PASS"
+    },
+    {
+      "check": "Every order has exact item revenue, COGS and quantity",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "One computed pageview summary per source session",
+      "actual": 472871,
+      "expected": 472871,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared native row count orders",
+      "actual": 32313,
+      "expected": 32313,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key unique orders",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared native row count items",
+      "actual": 40025,
+      "expected": 40025,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key unique items",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared native row count refund_events",
+      "actual": 1731,
+      "expected": 1731,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key unique refund_events",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared native row count sessions",
+      "actual": 472871,
+      "expected": 472871,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key unique sessions",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key set matches source orders",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key set matches source items",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key set matches source refund_events",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared primary key set matches source sessions",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared financial total sales_cents",
+      "actual": 193850975,
+      "expected": 193850975,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared financial total cogs_cents",
+      "actual": 72237025,
+      "expected": 72237025,
+      "status": "PASS"
+    },
+    {
+      "check": "Prepared financial total refund_cents",
+      "actual": 8533869,
+      "expected": 8533869,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: order row financials/date/sequence",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: order attribution/customer/primary product",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: item row financials/date/refund/product",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: refund row financials/date/original sale date",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session Pageviews",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session Bounced",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session Converted",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session Session Orders",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session Session Revenue",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session date/landing/customer/device",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: session channel/source flag",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: reach Product",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: sequential Product",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: reach Cart",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: sequential Cart",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: reach Shipping",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: sequential Shipping",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: reach Billing",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: sequential Billing",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: reach Confirmation",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "All rows: sequential Purchase",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Every month/device/product/refund-month cell reconciles",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Every customer observed purchase/cohort/frequency input",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Complete-month flag excludes partial and uncovered months",
+      "actual": 0,
+      "expected": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint orders.csv",
+      "actual": "ed9923cfbdbb9e9d8e1eaf6443d45085165bd067709c359e7189769c835deefe",
+      "expected": "ed9923cfbdbb9e9d8e1eaf6443d45085165bd067709c359e7189769c835deefe",
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint order_items.csv",
+      "actual": "751514dfc2f6862dd1afe67dff7f313ec8299eae3fffbb18b1de50bfce93e903",
+      "expected": "751514dfc2f6862dd1afe67dff7f313ec8299eae3fffbb18b1de50bfce93e903",
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint order_item_refunds.csv",
+      "actual": "50ad2b8dd1c3dffed3fb9bf0bf288d026bd19cd1032d28ddc59c2623e07a1186",
+      "expected": "50ad2b8dd1c3dffed3fb9bf0bf288d026bd19cd1032d28ddc59c2623e07a1186",
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint products.csv",
+      "actual": "116d5f261a5934c46232a3083b9da298cca94157826a41e87566c8c4034175a8",
+      "expected": "116d5f261a5934c46232a3083b9da298cca94157826a41e87566c8c4034175a8",
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint website_sessions.csv",
+      "actual": "dc975b8c51b4ebdc56b94863c9e1cd94e74d1a9f36ce296d45707a8df87b8204",
+      "expected": "dc975b8c51b4ebdc56b94863c9e1cd94e74d1a9f36ce296d45707a8df87b8204",
+      "status": "PASS"
+    },
+    {
+      "check": "Source preservation fingerprint website_pageviews.csv",
+      "actual": "e325f5678acc76356670a7538d185613265ba26038c6a2a5a0af68cc68722c4a",
+      "expected": "e325f5678acc76356670a7538d185613265ba26038c6a2a5a0af68cc68722c4a",
+      "status": "PASS"
+    }
+  ],
+  "group_cells_compared": 299,
+  "filter_samples": [
+    {
+      "filter": "order_month_device|2014-11|desktop",
+      "source": {
+        "orders": 1737,
+        "sales_cents": 11229829,
+        "cogs_cents": 4134379
+      },
+      "prepared": {
+        "orders": 1737,
+        "sales_cents": 11229829,
+        "cogs_cents": 4134379
+      }
+    },
+    {
+      "filter": "order_month_device|2014-11|mobile",
+      "source": {
+        "orders": 248,
+        "sales_cents": 1586469,
+        "cogs_cents": 583419
+      },
+      "prepared": {
+        "orders": 248,
+        "sales_cents": 1586469,
+        "cogs_cents": 583419
+      }
+    },
+    {
+      "filter": "order_month_device|2015-03|desktop",
+      "source": {
+        "orders": 1105,
+        "sales_cents": 7005101,
+        "cogs_cents": 2568051
+      },
+      "prepared": {
+        "orders": 1105,
+        "sales_cents": 7005101,
+        "cogs_cents": 2568051
+      }
+    },
+    {
+      "filter": "order_month_device|2015-03|mobile",
+      "source": {
+        "orders": 149,
+        "sales_cents": 890006,
+        "cogs_cents": 324006
+      },
+      "prepared": {
+        "orders": 149,
+        "sales_cents": 890006,
+        "cogs_cents": 324006
+      }
+    },
+    {
+      "filter": "refund_month|2015-01",
+      "source": {
+        "events": 100,
+        "refund_cents": 486100
+      },
+      "prepared": {
+        "events": 100,
+        "refund_cents": 486100
+      }
+    },
+    {
+      "filter": "refund_month|2015-02",
+      "source": {
+        "events": 79,
+        "refund_cents": 387121
+      },
+      "prepared": {
+        "events": 79,
+        "refund_cents": 387121
+      }
+    },
+    {
+      "filter": "refund_month|2015-03",
+      "source": {
+        "events": 82,
+        "refund_cents": 389718
+      },
+      "prepared": {
+        "events": 82,
+        "refund_cents": 389718
+      }
+    },
+    {
+      "filter": "refund_month|2015-04",
+      "source": {
+        "events": 2,
+        "refund_cents": 10598
+      },
+      "prepared": {
+        "events": 2,
+        "refund_cents": 10598
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|desktop|1",
+      "source": {
+        "units": 1277,
+        "sales_cents": 6383723,
+        "cogs_cents": 2488873,
+        "refund_cents": 219956
+      },
+      "prepared": {
+        "units": 1277,
+        "sales_cents": 6383723,
+        "cogs_cents": 2488873,
+        "refund_cents": 219956
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|desktop|2",
+      "source": {
+        "units": 326,
+        "sales_cents": 1955674,
+        "cogs_cents": 733174,
+        "refund_cents": 41993
+      },
+      "prepared": {
+        "units": 326,
+        "sales_cents": 1955674,
+        "cogs_cents": 733174,
+        "refund_cents": 41993
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|desktop|3",
+      "source": {
+        "units": 367,
+        "sales_cents": 1687833,
+        "cogs_cents": 531783,
+        "refund_cents": 91980
+      },
+      "prepared": {
+        "units": 367,
+        "sales_cents": 1687833,
+        "cogs_cents": 531783,
+        "refund_cents": 91980
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|desktop|4",
+      "source": {
+        "units": 401,
+        "sales_cents": 1202599,
+        "cogs_cents": 380549,
+        "refund_cents": 17994
+      },
+      "prepared": {
+        "units": 401,
+        "sales_cents": 1202599,
+        "cogs_cents": 380549,
+        "refund_cents": 17994
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|mobile|1",
+      "source": {
+        "units": 174,
+        "sales_cents": 869826,
+        "cogs_cents": 339126,
+        "refund_cents": 29994
+      },
+      "prepared": {
+        "units": 174,
+        "sales_cents": 869826,
+        "cogs_cents": 339126,
+        "refund_cents": 29994
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|mobile|2",
+      "source": {
+        "units": 51,
+        "sales_cents": 305949,
+        "cogs_cents": 114699,
+        "refund_cents": 5999
+      },
+      "prepared": {
+        "units": 51,
+        "sales_cents": 305949,
+        "cogs_cents": 114699,
+        "refund_cents": 5999
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|mobile|3",
+      "source": {
+        "units": 58,
+        "sales_cents": 266742,
+        "cogs_cents": 84042,
+        "refund_cents": 13797
+      },
+      "prepared": {
+        "units": 58,
+        "sales_cents": 266742,
+        "cogs_cents": 84042,
+        "refund_cents": 13797
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2014-11|mobile|4",
+      "source": {
+        "units": 48,
+        "sales_cents": 143952,
+        "cogs_cents": 45552,
+        "refund_cents": 0
+      },
+      "prepared": {
+        "units": 48,
+        "sales_cents": 143952,
+        "cogs_cents": 45552,
+        "refund_cents": 0
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|desktop|1",
+      "source": {
+        "units": 770,
+        "sales_cents": 3849230,
+        "cogs_cents": 1500730,
+        "refund_cents": 129974
+      },
+      "prepared": {
+        "units": 770,
+        "sales_cents": 3849230,
+        "cogs_cents": 1500730,
+        "refund_cents": 129974
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|desktop|2",
+      "source": {
+        "units": 200,
+        "sales_cents": 1199800,
+        "cogs_cents": 449800,
+        "refund_cents": 35994
+      },
+      "prepared": {
+        "units": 200,
+        "sales_cents": 1199800,
+        "cogs_cents": 449800,
+        "refund_cents": 35994
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|desktop|3",
+      "source": {
+        "units": 231,
+        "sales_cents": 1062369,
+        "cogs_cents": 334719,
+        "refund_cents": 87381
+      },
+      "prepared": {
+        "units": 231,
+        "sales_cents": 1062369,
+        "cogs_cents": 334719,
+        "refund_cents": 87381
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|desktop|4",
+      "source": {
+        "units": 298,
+        "sales_cents": 893702,
+        "cogs_cents": 282802,
+        "refund_cents": 5998
+      },
+      "prepared": {
+        "units": 298,
+        "sales_cents": 893702,
+        "cogs_cents": 282802,
+        "refund_cents": 5998
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|mobile|1",
+      "source": {
+        "units": 94,
+        "sales_cents": 469906,
+        "cogs_cents": 183206,
+        "refund_cents": 9998
+      },
+      "prepared": {
+        "units": 94,
+        "sales_cents": 469906,
+        "cogs_cents": 183206,
+        "refund_cents": 9998
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|mobile|2",
+      "source": {
+        "units": 23,
+        "sales_cents": 137977,
+        "cogs_cents": 51727,
+        "refund_cents": 0
+      },
+      "prepared": {
+        "units": 23,
+        "sales_cents": 137977,
+        "cogs_cents": 51727,
+        "refund_cents": 0
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|mobile|3",
+      "source": {
+        "units": 32,
+        "sales_cents": 147168,
+        "cogs_cents": 46368,
+        "refund_cents": 0
+      },
+      "prepared": {
+        "units": 32,
+        "sales_cents": 147168,
+        "cogs_cents": 46368,
+        "refund_cents": 0
+      }
+    },
+    {
+      "filter": "sale_month_device_product|2015-03|mobile|4",
+      "source": {
+        "units": 45,
+        "sales_cents": 134955,
+        "cogs_cents": 42705,
+        "refund_cents": 0
+      },
+      "prepared": {
+        "units": 45,
+        "sales_cents": 134955,
+        "cogs_cents": 42705,
+        "refund_cents": 0
+      }
+    }
+  ],
+  "strict_timestamp_stage_counts": {
+    "Product": 261231,
+    "Cart": 94953,
+    "Shipping": 64484,
+    "Billing": 52058,
+    "Confirmation": 32313
+  },
+  "confirmation_relative_to_order": {
+    "same_second": 32313
+  },
+  "complete_month_mismatched_dates": [],
+  "coverage": {
+    "first_order": "2012-03-19 10:42:46",
+    "last_order": "2015-03-19 05:38:31",
+    "last_refund": "2015-04-01 18:11:08",
+    "refund_lag_days_min": 2.0,
+    "refund_lag_days_median": 9.25,
+    "refund_lag_days_p95": 15.25,
+    "refund_lag_days_max": 16.0
+  },
+  "recorded_item_refund_incidence_by_sale_month": [
+    {
+      "sale_month": "2012-03",
+      "items": 60,
+      "refunded_items": 1,
+      "incidence": 0.016666666666666666
+    },
+    {
+      "sale_month": "2012-04",
+      "items": 99,
+      "refunded_items": 5,
+      "incidence": 0.050505050505050504
+    },
+    {
+      "sale_month": "2012-05",
+      "items": 108,
+      "refunded_items": 4,
+      "incidence": 0.037037037037037035
+    },
+    {
+      "sale_month": "2012-06",
+      "items": 140,
+      "refunded_items": 8,
+      "incidence": 0.05714285714285714
+    },
+    {
+      "sale_month": "2012-07",
+      "items": 169,
+      "refunded_items": 14,
+      "incidence": 0.08284023668639054
+    },
+    {
+      "sale_month": "2012-08",
+      "items": 228,
+      "refunded_items": 17,
+      "incidence": 0.07456140350877193
+    },
+    {
+      "sale_month": "2012-09",
+      "items": 287,
+      "refunded_items": 26,
+      "incidence": 0.09059233449477352
+    },
+    {
+      "sale_month": "2012-10",
+      "items": 371,
+      "refunded_items": 27,
+      "incidence": 0.07277628032345014
+    },
+    {
+      "sale_month": "2012-11",
+      "items": 618,
+      "refunded_items": 46,
+      "incidence": 0.0744336569579288
+    },
+    {
+      "sale_month": "2012-12",
+      "items": 506,
+      "refunded_items": 30,
+      "incidence": 0.05928853754940711
+    },
+    {
+      "sale_month": "2013-01",
+      "items": 390,
+      "refunded_items": 18,
+      "incidence": 0.046153846153846156
+    },
+    {
+      "sale_month": "2013-02",
+      "items": 498,
+      "refunded_items": 26,
+      "incidence": 0.05220883534136546
+    },
+    {
+      "sale_month": "2013-03",
+      "items": 385,
+      "refunded_items": 21,
+      "incidence": 0.05454545454545454
+    },
+    {
+      "sale_month": "2013-04",
+      "items": 553,
+      "refunded_items": 20,
+      "incidence": 0.03616636528028933
+    },
+    {
+      "sale_month": "2013-05",
+      "items": 571,
+      "refunded_items": 33,
+      "incidence": 0.05779334500875657
+    },
+    {
+      "sale_month": "2013-06",
+      "items": 593,
+      "refunded_items": 44,
+      "incidence": 0.07419898819561552
+    },
+    {
+      "sale_month": "2013-07",
+      "items": 604,
+      "refunded_items": 40,
+      "incidence": 0.06622516556291391
+    },
+    {
+      "sale_month": "2013-08",
+      "items": 608,
+      "refunded_items": 29,
+      "incidence": 0.047697368421052634
+    },
+    {
+      "sale_month": "2013-09",
+      "items": 635,
+      "refunded_items": 24,
+      "incidence": 0.03779527559055118
+    },
+    {
+      "sale_month": "2013-10",
+      "items": 738,
+      "refunded_items": 19,
+      "incidence": 0.025745257452574527
+    },
+    {
+      "sale_month": "2013-11",
+      "items": 898,
+      "refunded_items": 29,
+      "incidence": 0.03229398663697105
+    },
+    {
+      "sale_month": "2013-12",
+      "items": 1140,
+      "refunded_items": 33,
+      "incidence": 0.02894736842105263
+    },
+    {
+      "sale_month": "2014-01",
+      "items": 1111,
+      "refunded_items": 48,
+      "incidence": 0.043204320432043204
+    },
+    {
+      "sale_month": "2014-02",
+      "items": 1348,
+      "refunded_items": 45,
+      "incidence": 0.03338278931750742
+    },
+    {
+      "sale_month": "2014-03",
+      "items": 1427,
+      "refunded_items": 45,
+      "incidence": 0.03153468815697267
+    },
+    {
+      "sale_month": "2014-04",
+      "items": 1657,
+      "refunded_items": 58,
+      "incidence": 0.03500301750150875
+    },
+    {
+      "sale_month": "2014-05",
+      "items": 1873,
+      "refunded_items": 53,
+      "incidence": 0.02829684997330486
+    },
+    {
+      "sale_month": "2014-06",
+      "items": 1675,
+      "refunded_items": 82,
+      "incidence": 0.04895522388059702
+    },
+    {
+      "sale_month": "2014-07",
+      "items": 1745,
+      "refunded_items": 66,
+      "incidence": 0.03782234957020057
+    },
+    {
+      "sale_month": "2014-08",
+      "items": 1792,
+      "refunded_items": 158,
+      "incidence": 0.08816964285714286
+    },
+    {
+      "sale_month": "2014-09",
+      "items": 1951,
+      "refunded_items": 173,
+      "incidence": 0.08867247565351102
+    },
+    {
+      "sale_month": "2014-10",
+      "items": 2202,
+      "refunded_items": 59,
+      "incidence": 0.026793823796548592
+    },
+    {
+      "sale_month": "2014-11",
+      "items": 2702,
+      "refunded_items": 87,
+      "incidence": 0.032198371576609916
+    },
+    {
+      "sale_month": "2014-12",
+      "items": 3098,
+      "refunded_items": 111,
+      "incidence": 0.035829567462879276
+    },
+    {
+      "sale_month": "2015-01",
+      "items": 2846,
+      "refunded_items": 99,
+      "incidence": 0.03478566408995081
+    },
+    {
+      "sale_month": "2015-02",
+      "items": 2706,
+      "refunded_items": 78,
+      "incidence": 0.028824833702882482
+    },
+    {
+      "sale_month": "2015-03",
+      "items": 1693,
+      "refunded_items": 55,
+      "incidence": 0.032486709982279975
+    }
+  ],
+  "channel_inventory": [
+    {
+      "utm_source": "gsearch",
+      "utm_campaign": "nonbrand",
+      "http_referer": "https://www.gsearch.com",
+      "sessions": 282706
+    },
+    {
+      "utm_source": "bsearch",
+      "utm_campaign": "nonbrand",
+      "http_referer": "https://www.bsearch.com",
+      "sessions": 54909
+    },
+    {
+      "utm_source": "NULL",
+      "utm_campaign": "NULL",
+      "http_referer": "NULL",
+      "sessions": 39917
+    },
+    {
+      "utm_source": "NULL",
+      "utm_campaign": "NULL",
+      "http_referer": "https://www.gsearch.com",
+      "sessions": 35202
+    },
+    {
+      "utm_source": "gsearch",
+      "utm_campaign": "brand",
+      "http_referer": "https://www.gsearch.com",
+      "sessions": 33329
+    },
+    {
+      "utm_source": "NULL",
+      "utm_campaign": "NULL",
+      "http_referer": "https://www.bsearch.com",
+      "sessions": 8209
+    },
+    {
+      "utm_source": "bsearch",
+      "utm_campaign": "brand",
+      "http_referer": "https://www.bsearch.com",
+      "sessions": 7914
+    },
+    {
+      "utm_source": "socialbook",
+      "utm_campaign": "desktop_targeted",
+      "http_referer": "https://www.socialbook.com",
+      "sessions": 5590
+    },
+    {
+      "utm_source": "socialbook",
+      "utm_campaign": "pilot",
+      "http_referer": "https://www.socialbook.com",
+      "sessions": 5095
+    }
+  ],
+  "source_device_results": {
+    "mobile": {
+      "sessions": 145844,
+      "converted_sessions": 4508,
+      "revenue_cents": 27275191
+    },
+    "desktop": {
+      "sessions": 327027,
+      "converted_sessions": 27805,
+      "revenue_cents": 166575784
+    }
+  },
+  "source_product_results": {
+    "1": {
+      "units": 24226,
+      "revenue_cents": 121105774,
+      "cogs_cents": 47216474,
+      "refunded_items": 1237,
+      "refund_cents": 6183763
+    },
+    "2": {
+      "units": 5796,
+      "revenue_cents": 34770204,
+      "cogs_cents": 13035204,
+      "refunded_items": 129,
+      "refund_cents": 773871
+    },
+    "3": {
+      "units": 4985,
+      "revenue_cents": 22926015,
+      "cogs_cents": 7223265,
+      "refunded_items": 301,
+      "refund_cents": 1384299
+    },
+    "4": {
+      "units": 5018,
+      "revenue_cents": 15048982,
+      "cogs_cents": 4762082,
+      "refunded_items": 64,
+      "refund_cents": 191936
+    }
+  },
+  "source_order_month_results": {
+    "2012-03": {
+      "orders": 60,
+      "sales_cents": 299940
+    },
+    "2012-04": {
+      "orders": 99,
+      "sales_cents": 494901
+    },
+    "2012-05": {
+      "orders": 108,
+      "sales_cents": 539892
+    },
+    "2012-06": {
+      "orders": 140,
+      "sales_cents": 699860
+    },
+    "2012-07": {
+      "orders": 169,
+      "sales_cents": 844831
+    },
+    "2012-08": {
+      "orders": 228,
+      "sales_cents": 1139772
+    },
+    "2012-09": {
+      "orders": 287,
+      "sales_cents": 1434713
+    },
+    "2012-10": {
+      "orders": 371,
+      "sales_cents": 1854629
+    },
+    "2012-11": {
+      "orders": 618,
+      "sales_cents": 3089382
+    },
+    "2012-12": {
+      "orders": 506,
+      "sales_cents": 2529494
+    },
+    "2013-01": {
+      "orders": 390,
+      "sales_cents": 1996610
+    },
+    "2013-02": {
+      "orders": 498,
+      "sales_cents": 2651502
+    },
+    "2013-03": {
+      "orders": 385,
+      "sales_cents": 1989615
+    },
+    "2013-04": {
+      "orders": 553,
+      "sales_cents": 2858447
+    },
+    "2013-05": {
+      "orders": 571,
+      "sales_cents": 2936429
+    },
+    "2013-06": {
+      "orders": 593,
+      "sales_cents": 3054407
+    },
+    "2013-07": {
+      "orders": 604,
+      "sales_cents": 3114396
+    },
+    "2013-08": {
+      "orders": 608,
+      "sales_cents": 3137392
+    },
+    "2013-09": {
+      "orders": 629,
+      "sales_cents": 3272365
+    },
+    "2013-10": {
+      "orders": 708,
+      "sales_cents": 3824262
+    },
+    "2013-11": {
+      "orders": 861,
+      "sales_cents": 4663102
+    },
+    "2013-12": {
+      "orders": 1047,
+      "sales_cents": 5826260
+    },
+    "2014-01": {
+      "orders": 982,
+      "sales_cents": 5656889
+    },
+    "2014-02": {
+      "orders": 1021,
+      "sales_cents": 6601252
+    },
+    "2014-03": {
+      "orders": 1066,
+      "sales_cents": 6818973
+    },
+    "2014-04": {
+      "orders": 1241,
+      "sales_cents": 7872543
+    },
+    "2014-05": {
+      "orders": 1368,
+      "sales_cents": 8893527
+    },
+    "2014-06": {
+      "orders": 1239,
+      "sales_cents": 8005125
+    },
+    "2014-07": {
+      "orders": 1286,
+      "sales_cents": 8328855
+    },
+    "2014-08": {
+      "orders": 1325,
+      "sales_cents": 8471608
+    },
+    "2014-09": {
+      "orders": 1424,
+      "sales_cents": 9223249
+    },
+    "2014-10": {
+      "orders": 1609,
+      "sales_cents": 10390598
+    },
+    "2014-11": {
+      "orders": 1985,
+      "sales_cents": 12816298
+    },
+    "2014-12": {
+      "orders": 2314,
+      "sales_cents": 14482302
+    },
+    "2015-01": {
+      "orders": 2098,
+      "sales_cents": 13221154
+    },
+    "2015-02": {
+      "orders": 2068,
+      "sales_cents": 12921294
+    },
+    "2015-03": {
+      "orders": 1254,
+      "sales_cents": 7895107
+    }
+  },
+  "orders_on_different_date_than_session": 237,
+  "source_sha256": {
+    "maven_fuzzy_factory_data_dictionary.csv": "200877f159ad9ea59780c9a9083a7161423b58225a23db4ffb9fc419ae61c199",
+    "orders.csv": "ed9923cfbdbb9e9d8e1eaf6443d45085165bd067709c359e7189769c835deefe",
+    "order_items.csv": "751514dfc2f6862dd1afe67dff7f313ec8299eae3fffbb18b1de50bfce93e903",
+    "order_item_refunds.csv": "50ad2b8dd1c3dffed3fb9bf0bf288d026bd19cd1032d28ddc59c2623e07a1186",
+    "products.csv": "116d5f261a5934c46232a3083b9da298cca94157826a41e87566c8c4034175a8",
+    "website_pageviews.csv": "e325f5678acc76356670a7538d185613265ba26038c6a2a5a0af68cc68722c4a",
+    "website_sessions.csv": "dc975b8c51b4ebdc56b94863c9e1cd94e74d1a9f36ce296d45707a8df87b8204"
+  }
+}

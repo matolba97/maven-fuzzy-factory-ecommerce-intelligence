@@ -1,0 +1,12 @@
+EVALUATE
+ROW(
+  "Gross Sales Revenue", [Gross Sales Revenue],
+  "COGS", [COGS],
+  "Gross Profit", [Gross Profit],
+  "Gross Margin %", [Gross Margin %],
+  "Total Refund Amount", [Total Refund Amount],
+  "Net Revenue After Recorded Refunds", [Net Revenue After Recorded Refunds],
+  "Total Orders", [Total Orders],
+  "Total Sessions", [Total Sessions],
+  "Session-to-Order Conversion Rate", [Session-to-Order Conversion Rate]
+)

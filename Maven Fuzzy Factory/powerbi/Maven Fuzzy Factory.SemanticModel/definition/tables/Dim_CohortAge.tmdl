@@ -1,0 +1,21 @@
+/// Conformed dimension: Dim_CohortAge. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_CohortAge
+	lineageTag: 73ac6055-9e76-4df7-82c1-677dcfba6ec7
+
+	/// Month After First Purchase at Dim_CohortAge grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Month After First Purchase'
+		dataType: int64
+		lineageTag: 94db7e21-925e-4178-94c2-42634261f46b
+		summarizeBy: none
+		sourceColumn: Month After First Purchase
+
+	partition Dim_CohortAge = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_CohortAge.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Month After First Purchase", Int64.Type}}, "en-US")
+				in
+				    Typed
+

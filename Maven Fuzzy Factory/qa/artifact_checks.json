@@ -1,0 +1,264 @@
+{
+  "scope": "Static metadata, bindings, geometry and source integrity; does not establish live DAX or rendering correctness.",
+  "checks": [
+    {
+      "check": "Model has 88 documented explicit measures",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Four native fact tables",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "26 one-direction many-to-one relationships",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "No fact-to-fact relationships",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Marked contiguous date dimension",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Automatic dates disabled",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Power Query parameter uses M string escaping",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "All DAX references resolve statically",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Relationship type Fact_Orders.Order Date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Orders.Customer ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Orders.Channel ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Orders.Device",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Orders.Visitor Type",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Orders.Landing Page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Order Date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Customer ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Channel ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Device",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Visitor Type",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Landing Page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Refund Date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Customer ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Channel ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Device",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Visitor Type",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Landing Page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Session Date",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Customer ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Channel ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Device",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Visitor Type",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Sessions.Landing Page",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_OrderItems.Product ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Relationship type Fact_Refunds.Product ID",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Exactly seven visible 16:9 pages",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Seven hidden explanatory tooltip pages",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Configured product drillthrough",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "All visual identifiers unique",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Every report field resolves",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "No out-of-canvas visuals",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "No visual overlaps",
+      "pass": true,
+      "detail": "[]"
+    },
+    {
+      "check": "Financial product comparison is clustered",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Refund-adjusted calculations share product scope",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Noncontiguous/partial-day growth guarded",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Cohort acquisition/date filters intentionally removed",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source orders.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source order_items.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source order_item_refunds.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source products.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source website_sessions.csv",
+      "pass": true,
+      "detail": ""
+    },
+    {
+      "check": "Unchanged source website_pageviews.csv",
+      "pass": true,
+      "detail": ""
+    }
+  ],
+  "passed": 51,
+  "failed": 0,
+  "pages": 15,
+  "visuals": 302
+}

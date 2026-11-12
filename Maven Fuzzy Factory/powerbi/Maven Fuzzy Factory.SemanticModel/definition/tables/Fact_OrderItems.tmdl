@@ -1,0 +1,133 @@
+/// One row per recorded sold item; one item per source row. Refund linkage is aggregated per item before enrichment.
+table Fact_OrderItems
+	lineageTag: 4475e8e6-8ca8-459d-9f73-0b65d798770a
+
+	/// Order Item ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Order Item ID'
+		dataType: int64
+		isHidden
+		lineageTag: 01cc893d-f58c-4d83-b4a9-ff134a1a5a1e
+		summarizeBy: none
+		sourceColumn: Order Item ID
+
+	/// Order ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Order ID'
+		dataType: int64
+		isHidden
+		lineageTag: 19dceea5-77e3-47a7-b7de-cfff17cf814c
+		summarizeBy: none
+		sourceColumn: Order ID
+
+	/// Product ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Product ID'
+		dataType: int64
+		isHidden
+		lineageTag: 833d5aa7-9b16-467c-a86c-8b107506a4f4
+		summarizeBy: none
+		sourceColumn: Product ID
+
+	/// Item Sales Amount at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Item Sales Amount'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: 0668e2c3-9dde-4d41-b0ee-aeb4d0969f24
+		summarizeBy: none
+		sourceColumn: Item Sales Amount
+
+	/// Item COGS Amount at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Item COGS Amount'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: 1efb4b4f-0ae7-4419-a75b-e98c8942a260
+		summarizeBy: none
+		sourceColumn: Item COGS Amount
+
+	/// Order Date at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Order Date'
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: f42ae39b-d057-4680-bed8-15014083462d
+		summarizeBy: none
+		sourceColumn: Order Date
+
+	/// Customer ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Customer ID'
+		dataType: int64
+		isHidden
+		lineageTag: 8c03703f-874e-4652-abca-f549901e8b58
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+	/// Channel ID at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Channel ID'
+		dataType: int64
+		isHidden
+		lineageTag: 3234dde7-7b73-497c-85d3-ed2090c5e0b1
+		summarizeBy: none
+		sourceColumn: Channel ID
+
+	/// Device at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Device
+		dataType: string
+		lineageTag: c5f79d7c-bc71-4edb-b7a3-436c75e6c1b9
+		summarizeBy: none
+		sourceColumn: Device
+
+	/// Visitor Type at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Visitor Type'
+		dataType: string
+		lineageTag: c29f98ed-d1d4-4abf-bb56-f6de4b64b7af
+		summarizeBy: none
+		sourceColumn: Visitor Type
+
+	/// Landing Page at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Landing Page'
+		dataType: string
+		lineageTag: 63cd17ac-975c-42e4-99b6-7449d8977fa3
+		summarizeBy: none
+		sourceColumn: Landing Page
+
+	/// Item Role at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Item Role'
+		dataType: string
+		lineageTag: 7ffad408-e443-4437-87ee-b4bdafc02c9e
+		summarizeBy: none
+		sourceColumn: Item Role
+
+	/// Recorded Refund at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Recorded Refund'
+		dataType: decimal
+		isHidden
+		formatString: $#,##0.00;($#,##0.00);$0.00
+		lineageTag: cdfb3a96-bf77-4c87-90c1-4a678cbe6238
+		summarizeBy: none
+		sourceColumn: Recorded Refund
+
+	/// Refunded Item at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Refunded Item'
+		dataType: int64
+		isHidden
+		lineageTag: 2578e87c-9b79-4dbc-8f63-819d914474d0
+		summarizeBy: none
+		sourceColumn: Refunded Item
+
+	/// Launch Age Month at Fact_OrderItems grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Launch Age Month'
+		dataType: int64
+		lineageTag: fade8da7-7737-4a2d-a46a-e5fafb23f98d
+		summarizeBy: none
+		sourceColumn: Launch Age Month
+
+	partition Fact_OrderItems = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Fact_OrderItems.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Order Item ID", Int64.Type}, {"Order ID", Int64.Type}, {"Product ID", Int64.Type}, {"Item Sales Amount", Currency.Type}, {"Item COGS Amount", Currency.Type}, {"Order Date", type date}, {"Customer ID", Int64.Type}, {"Channel ID", Int64.Type}, {"Device", type text}, {"Visitor Type", type text}, {"Landing Page", type text}, {"Item Role", type text}, {"Recorded Refund", Currency.Type}, {"Refunded Item", Int64.Type}, {"Launch Age Month", Int64.Type}}, "en-US")
+				in
+				    Typed
+

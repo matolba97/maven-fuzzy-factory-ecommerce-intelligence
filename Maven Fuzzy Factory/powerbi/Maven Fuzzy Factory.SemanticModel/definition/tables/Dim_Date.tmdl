@@ -1,0 +1,134 @@
+/// Conformed dimension: Dim_Date. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Date
+	lineageTag: bab64b9a-478a-41d1-b8b5-e4378adfa020
+	dataCategory: Time
+
+	/// Date at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Date
+		dataType: dateTime
+		isKey
+		formatString: dd MMM yyyy
+		lineageTag: 6553e285-76cb-49c7-ac99-ea4523ca370b
+		dataCategory: Date
+		summarizeBy: none
+		sourceColumn: Date
+
+	/// Year at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Year
+		dataType: int64
+		lineageTag: 8c6b3b85-47dd-406d-ae1d-4c4c14f8fb49
+		summarizeBy: none
+		sourceColumn: Year
+
+	/// Quarter at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Quarter
+		dataType: string
+		lineageTag: 5c7134eb-705b-4317-a384-fbbb917b98af
+		summarizeBy: none
+		sourceColumn: Quarter
+
+	/// Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Month
+		dataType: string
+		lineageTag: 45304aa8-bb00-4ed0-b999-e750a1810771
+		summarizeBy: none
+		sourceColumn: Month
+		sortByColumn: 'Month Number'
+
+	/// Month Number at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Month Number'
+		dataType: int64
+		lineageTag: 0e8bae33-7527-4bc1-b255-ababdace8dc4
+		summarizeBy: none
+		sourceColumn: Month Number
+
+	/// Year-Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Year-Month
+		dataType: string
+		lineageTag: 786dc510-9c91-4f81-86db-c7b4f467f819
+		summarizeBy: none
+		sourceColumn: Year-Month
+		sortByColumn: 'Year Month Sort'
+
+	/// Year Month Sort at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Year Month Sort'
+		dataType: int64
+		isHidden
+		lineageTag: 8a267677-2b40-4ab8-a7a6-5bb8f35ffee7
+		summarizeBy: none
+		sourceColumn: Year Month Sort
+
+	/// Week at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Week
+		dataType: int64
+		lineageTag: 03924736-3938-4d76-8651-c383019fa7dc
+		summarizeBy: none
+		sourceColumn: Week
+
+	/// ISO Year at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'ISO Year'
+		dataType: int64
+		lineageTag: 272a89cf-c16d-4f18-8e6b-3421e0a5eff3
+		summarizeBy: none
+		sourceColumn: ISO Year
+
+	/// Month Start at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Month Start'
+		dataType: dateTime
+		formatString: dd MMM yyyy
+		lineageTag: 95d9f23e-0921-4c8f-9219-5714480a37d6
+		summarizeBy: none
+		sourceColumn: Month Start
+
+	/// Day at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Day
+		dataType: int64
+		lineageTag: 5475f58a-615d-43a7-8c11-b042753bebe8
+		summarizeBy: none
+		sourceColumn: Day
+
+	/// Is Complete Sales Month at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Is Complete Sales Month'
+		dataType: int64
+		isHidden
+		lineageTag: 0bc89230-16d8-4a83-9f05-aa6fe3e86080
+		summarizeBy: none
+		sourceColumn: Is Complete Sales Month
+
+	/// Is In Sales Coverage at Dim_Date grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Is In Sales Coverage'
+		dataType: int64
+		isHidden
+		lineageTag: 4e7a2030-4f59-4d0e-b694-045dd2a8e622
+		summarizeBy: none
+		sourceColumn: Is In Sales Coverage
+
+	hierarchy Calendar
+		lineageTag: 2462b829-aa40-437a-8c6a-d4e9ee1b6b9a
+
+		level Year
+			lineageTag: 1784b5ec-3e83-497a-8971-08d8e39e7788
+			column: Year
+
+		level Quarter
+			lineageTag: a23f9178-2909-4b03-8bca-a5ce4d016d5b
+			column: Quarter
+
+		level Month
+			lineageTag: fc0b9685-6985-4d3a-88a1-07541e6234b3
+			column: Month
+
+		level Date
+			lineageTag: 0cb05925-7284-4d43-a5c8-563c48250ef8
+			column: Date
+
+	partition Dim_Date = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Date.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Date", type date}, {"Year", Int64.Type}, {"Quarter", type text}, {"Month", type text}, {"Month Number", Int64.Type}, {"Year-Month", type text}, {"Year Month Sort", Int64.Type}, {"Week", Int64.Type}, {"ISO Year", Int64.Type}, {"Month Start", type date}, {"Day", Int64.Type}, {"Is Complete Sales Month", Int64.Type}, {"Is In Sales Coverage", Int64.Type}}, "en-US")
+				in
+				    Typed
+

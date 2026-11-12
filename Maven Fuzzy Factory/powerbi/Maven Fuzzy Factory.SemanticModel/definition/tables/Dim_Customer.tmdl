@@ -1,0 +1,68 @@
+/// Conformed dimension: Dim_Customer. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Customer
+	lineageTag: 5fe805d0-339e-4f6f-ac95-1f9dfbc315ca
+
+	/// Customer ID at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Customer ID'
+		dataType: int64
+		isHidden
+		lineageTag: cc2c3ec4-5334-4266-ba17-547077f43818
+		summarizeBy: none
+		sourceColumn: Customer ID
+
+	/// First Session Date at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'First Session Date'
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: 659ca530-3b83-420e-bec0-3a933ee0d77c
+		summarizeBy: none
+		sourceColumn: First Session Date
+
+	/// First Purchase Date at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'First Purchase Date'
+		dataType: dateTime
+		isHidden
+		formatString: dd MMM yyyy
+		lineageTag: a94fd037-a22d-4be8-82b5-06292c0d2e02
+		summarizeBy: none
+		sourceColumn: First Purchase Date
+
+	/// Purchase Cohort at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Purchase Cohort'
+		dataType: string
+		lineageTag: a58fa277-efaf-4741-b25d-fb34b46e7fd4
+		summarizeBy: none
+		sourceColumn: Purchase Cohort
+
+	/// Observed Lifetime Orders at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Observed Lifetime Orders'
+		dataType: int64
+		lineageTag: 4e3e15a1-174b-4fbd-8bdf-7354823b0fae
+		summarizeBy: none
+		sourceColumn: Observed Lifetime Orders
+
+	/// Observed Frequency at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Observed Frequency'
+		dataType: string
+		lineageTag: 1a1339aa-874d-42b1-92a8-6caab20fd0c0
+		summarizeBy: none
+		sourceColumn: Observed Frequency
+
+	/// Customer Status at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Customer Status'
+		dataType: string
+		lineageTag: 3d72498a-9b82-4c9f-8d68-eba13a7bd4dc
+		summarizeBy: none
+		sourceColumn: Customer Status
+
+	partition Dim_Customer = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Customer.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Customer ID", Int64.Type}, {"First Session Date", type date}, {"First Purchase Date", type date}, {"Purchase Cohort", type text}, {"Observed Lifetime Orders", Int64.Type}, {"Observed Frequency", type text}, {"Customer Status", type text}}, "en-US")
+				in
+				    Typed
+

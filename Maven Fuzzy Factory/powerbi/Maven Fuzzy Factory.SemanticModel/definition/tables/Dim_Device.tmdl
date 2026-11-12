@@ -1,0 +1,21 @@
+/// Conformed dimension: Dim_Device. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Device
+	lineageTag: 3671b5a9-b8d1-4213-b8cb-67cfb2e54e5e
+
+	/// Device at Dim_Device grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column Device
+		dataType: string
+		lineageTag: 053f32bb-081d-4364-9ca4-54babb9a4f8c
+		summarizeBy: none
+		sourceColumn: Device
+
+	partition Dim_Device = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Device.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Device", type text}}, "en-US")
+				in
+				    Typed
+

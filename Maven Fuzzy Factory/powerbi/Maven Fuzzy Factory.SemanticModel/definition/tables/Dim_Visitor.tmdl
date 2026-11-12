@@ -1,0 +1,21 @@
+/// Conformed dimension: Dim_Visitor. Disconnected utility only for FunnelStage and CohortAge.
+table Dim_Visitor
+	lineageTag: 5aefe839-4508-4c43-8cb3-91aa803f31cb
+
+	/// Visitor Type at Dim_Visitor grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+	column 'Visitor Type'
+		dataType: string
+		lineageTag: d0dbbe4b-a72a-49cf-9bec-6e6b27a2ebf1
+		summarizeBy: none
+		sourceColumn: Visitor Type
+
+	partition Dim_Visitor = m
+		mode: import
+		source =
+				let
+				    Raw = Csv.Document(File.Contents(PreparedFolder & "\Dim_Visitor.csv"), [Delimiter=",", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Headers = Table.PromoteHeaders(Raw, [PromoteAllScalars=true]),
+				    Typed = Table.TransformColumnTypes(Headers, {{"Visitor Type", type text}}, "en-US")
+				in
+				    Typed
+

@@ -1,0 +1,2031 @@
+{
+  "funnel": {
+    "message": "DAX query executed successfully, returned 6 rows in 14ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 6,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "Dim_FunnelStage[Stage]",
+          "dataType": "String",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "Dim_FunnelStage[Stage Order]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[Sessions]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[Prior]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[Conversion]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 4
+        },
+        {
+          "name": "[Dropoff]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 5
+        }
+      ],
+      "rows": [
+        {
+          "Dim_FunnelStage[Stage]": "Landing",
+          "Dim_FunnelStage[Stage Order]": 1,
+          "[Sessions]": 472871,
+          "[Prior]": 472871,
+          "[Conversion]": 1,
+          "[Dropoff]": 0
+        },
+        {
+          "Dim_FunnelStage[Stage]": "Product",
+          "Dim_FunnelStage[Stage Order]": 2,
+          "[Sessions]": 261231,
+          "[Prior]": 472871,
+          "[Conversion]": 0.5524360766466965,
+          "[Dropoff]": 211640
+        },
+        {
+          "Dim_FunnelStage[Stage]": "Cart",
+          "Dim_FunnelStage[Stage Order]": 3,
+          "[Sessions]": 94953,
+          "[Prior]": 261231,
+          "[Conversion]": 0.3634828944497399,
+          "[Dropoff]": 166278
+        },
+        {
+          "Dim_FunnelStage[Stage]": "Shipping",
+          "Dim_FunnelStage[Stage Order]": 4,
+          "[Sessions]": 64484,
+          "[Prior]": 94953,
+          "[Conversion]": 0.6791149305445853,
+          "[Dropoff]": 30469
+        },
+        {
+          "Dim_FunnelStage[Stage]": "Billing",
+          "Dim_FunnelStage[Stage Order]": 5,
+          "[Sessions]": 52058,
+          "[Prior]": 64484,
+          "[Conversion]": 0.8073010359158861,
+          "[Dropoff]": 12426
+        },
+        {
+          "Dim_FunnelStage[Stage]": "Purchase",
+          "Dim_FunnelStage[Stage Order]": 6,
+          "[Sessions]": 32313,
+          "[Prior]": 52058,
+          "[Conversion]": 0.6207115140804488,
+          "[Dropoff]": 19745
+        }
+      ],
+      "executionTimeMs": 14
+    }
+  },
+  "monthly": {
+    "message": "DAX query executed successfully, returned 37 rows in 34ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 37,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "Dim_Date[Year-Month]",
+          "dataType": "String",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "[Sales]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[Profit]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[AOV]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[MoM]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 4
+        },
+        {
+          "name": "[YoY]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 5
+        }
+      ],
+      "rows": [
+        {
+          "Dim_Date[Year-Month]": "2012-03",
+          "[Sales]": 2999.4,
+          "[Profit]": 1830,
+          "[AOV]": 49.99,
+          "[MoM]": null,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-04",
+          "[Sales]": 4949.01,
+          "[Profit]": 3019.5,
+          "[AOV]": 49.99,
+          "[MoM]": null,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-05",
+          "[Sales]": 5398.92,
+          "[Profit]": 3294,
+          "[AOV]": 49.99,
+          "[MoM]": 0.09090909090909091,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-06",
+          "[Sales]": 6998.6,
+          "[Profit]": 4270,
+          "[AOV]": 49.99,
+          "[MoM]": 0.2962962962962963,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-07",
+          "[Sales]": 8448.31,
+          "[Profit]": 5154.5,
+          "[AOV]": 49.99,
+          "[MoM]": 0.20714285714285716,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-08",
+          "[Sales]": 11397.72,
+          "[Profit]": 6954,
+          "[AOV]": 49.99,
+          "[MoM]": 0.34911242603550297,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-09",
+          "[Sales]": 14347.13,
+          "[Profit]": 8753.5,
+          "[AOV]": 49.99,
+          "[MoM]": 0.25877192982456143,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-10",
+          "[Sales]": 18546.29,
+          "[Profit]": 11315.5,
+          "[AOV]": 49.99,
+          "[MoM]": 0.2926829268292683,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-11",
+          "[Sales]": 30893.82,
+          "[Profit]": 18849,
+          "[AOV]": 49.99,
+          "[MoM]": 0.6657681940700808,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2012-12",
+          "[Sales]": 25294.94,
+          "[Profit]": 15433,
+          "[AOV]": 49.99,
+          "[MoM]": -0.18122977346278318,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-01",
+          "[Sales]": 19966.1,
+          "[Profit]": 12224,
+          "[AOV]": 51.1951,
+          "[MoM]": -0.21066822060064186,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-02",
+          "[Sales]": 26515.02,
+          "[Profit]": 16323,
+          "[AOV]": 53.243,
+          "[MoM]": 0.3280019633278407,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-03",
+          "[Sales]": 19896.15,
+          "[Profit]": 12197.5,
+          "[AOV]": 51.6783,
+          "[MoM]": -0.24962719243658876,
+          "[YoY]": null
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-04",
+          "[Sales]": 28584.47,
+          "[Profit]": 17524.5,
+          "[AOV]": 51.6898,
+          "[MoM]": 0.4366834789645233,
+          "[YoY]": 4.775795563153035
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-05",
+          "[Sales]": 29364.29,
+          "[Profit]": 17989.5,
+          "[AOV]": 51.4261,
+          "[MoM]": 0.027281247474590223,
+          "[YoY]": 4.438919265334548
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-06",
+          "[Sales]": 30544.07,
+          "[Profit]": 18716.5,
+          "[AOV]": 51.5077,
+          "[MoM]": 0.040177371903083646,
+          "[YoY]": 3.3643114337153146
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-07",
+          "[Sales]": 31143.96,
+          "[Profit]": 19087,
+          "[AOV]": 51.5628,
+          "[MoM]": 0.019640146188769213,
+          "[YoY]": 2.6864130222494205
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-08",
+          "[Sales]": 31373.92,
+          "[Profit]": 19230,
+          "[AOV]": 51.6018,
+          "[MoM]": 0.007383775216767553,
+          "[YoY]": 1.752648775369109
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-09",
+          "[Sales]": 32723.65,
+          "[Profit]": 20053.5,
+          "[AOV]": 52.0249,
+          "[MoM]": 0.043020763742624445,
+          "[YoY]": 1.280849898202637
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-10",
+          "[Sales]": 38242.62,
+          "[Profit]": 23454,
+          "[AOV]": 54.015,
+          "[MoM]": 0.1686538634901669,
+          "[YoY]": 1.0620091673321188
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-11",
+          "[Sales]": 46631.02,
+          "[Profit]": 28607,
+          "[AOV]": 54.1591,
+          "[MoM]": 0.21934689621160894,
+          "[YoY]": 0.5093963776574085
+        },
+        {
+          "Dim_Date[Year-Month]": "2013-12",
+          "[Sales]": 58262.6,
+          "[Profit]": 36190,
+          "[AOV]": 55.6472,
+          "[MoM]": 0.24943867837332317,
+          "[YoY]": 1.3033302312636441
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-01",
+          "[Sales]": 56568.89,
+          "[Profit]": 35366.5,
+          "[AOV]": 57.6058,
+          "[MoM]": -0.029070278360388998,
+          "[YoY]": 1.8332468534165411
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-02",
+          "[Sales]": 66012.52,
+          "[Profit]": 41762,
+          "[AOV]": 64.6548,
+          "[MoM]": 0.16694034477254194,
+          "[YoY]": 1.4896273885518472
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-03",
+          "[Sales]": 68189.73,
+          "[Profit]": 43068.5,
+          "[AOV]": 63.9679,
+          "[MoM]": 0.03298177376049271,
+          "[YoY]": 2.4272826652392547
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-04",
+          "[Sales]": 78725.43,
+          "[Profit]": 49713.5,
+          "[AOV]": 63.4371,
+          "[MoM]": 0.15450567116191838,
+          "[YoY]": 1.7541329260259155
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-05",
+          "[Sales]": 88935.27,
+          "[Profit]": 56167.5,
+          "[AOV]": 65.0112,
+          "[MoM]": 0.1296892249429441,
+          "[YoY]": 2.0286879062970704
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-06",
+          "[Sales]": 80051.25,
+          "[Profit]": 50600.5,
+          "[AOV]": 64.6096,
+          "[MoM]": -0.09989310202802555,
+          "[YoY]": 1.620844242433965
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-07",
+          "[Sales]": 83288.55,
+          "[Profit]": 52566.5,
+          "[AOV]": 64.7656,
+          "[MoM]": 0.040440342905326276,
+          "[YoY]": 1.6743082767894641
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-08",
+          "[Sales]": 84716.08,
+          "[Profit]": 53579,
+          "[AOV]": 63.9367,
+          "[MoM]": 0.017139570805350796,
+          "[YoY]": 1.7002070509518734
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-09",
+          "[Sales]": 92232.49,
+          "[Profit]": 58309.5,
+          "[AOV]": 64.77,
+          "[MoM]": 0.08872471436355413,
+          "[YoY]": 1.8185269674990412
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-10",
+          "[Sales]": 103905.98,
+          "[Profit]": 65747,
+          "[AOV]": 64.578,
+          "[MoM]": 0.12656592053407645,
+          "[YoY]": 1.7170204342694093
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-11",
+          "[Sales]": 128162.98,
+          "[Profit]": 80985,
+          "[AOV]": 64.5657,
+          "[MoM]": 0.233451433690342,
+          "[YoY]": 1.7484489938242826
+        },
+        {
+          "Dim_Date[Year-Month]": "2014-12",
+          "[Sales]": 144823.02,
+          "[Profit]": 91857,
+          "[AOV]": 62.5856,
+          "[MoM]": 0.12999104733675823,
+          "[YoY]": 1.4856944248969322
+        },
+        {
+          "Dim_Date[Year-Month]": "2015-01",
+          "[Sales]": 132211.54,
+          "[Profit]": 83911,
+          "[AOV]": 63.0179,
+          "[MoM]": -0.08708201223810966,
+          "[YoY]": 1.3371775546594604
+        },
+        {
+          "Dim_Date[Year-Month]": "2015-02",
+          "[Sales]": 129212.94,
+          "[Profit]": 82006,
+          "[AOV]": 62.4821,
+          "[MoM]": -0.022680319736083553,
+          "[YoY]": 0.9574005052374913
+        },
+        {
+          "Dim_Date[Year-Month]": "2015-03",
+          "[Sales]": 78951.07,
+          "[Profit]": 50030.5,
+          "[AOV]": 62.9594,
+          "[MoM]": null,
+          "[YoY]": null
+        }
+      ],
+      "executionTimeMs": 34
+    }
+  },
+  "product": {
+    "message": "DAX query executed successfully, returned 4 rows in 5ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 4,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "Dim_Product[Product ID]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "[Sales]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[GP]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[Units]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[Refunded]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 4
+        },
+        {
+          "name": "[Refunds]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 5
+        },
+        {
+          "name": "[Net]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 6
+        },
+        {
+          "name": "[Refund ratio]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 7
+        },
+        {
+          "name": "[Refund rate]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 8
+        }
+      ],
+      "rows": [
+        {
+          "Dim_Product[Product ID]": 1,
+          "[Sales]": 1211057.74,
+          "[GP]": 738893,
+          "[Units]": 24226,
+          "[Refunded]": 1237,
+          "[Refunds]": 61837.63,
+          "[Net]": 1149220.11,
+          "[Refund ratio]": 0.051060843721621396,
+          "[Refund rate]": 0.051060843721621396
+        },
+        {
+          "Dim_Product[Product ID]": 2,
+          "[Sales]": 347702.04,
+          "[GP]": 217350,
+          "[Units]": 5796,
+          "[Refunded]": 129,
+          "[Refunds]": 7738.71,
+          "[Net]": 339963.33,
+          "[Refund ratio]": 0.022256728778467908,
+          "[Refund rate]": 0.022256728778467908
+        },
+        {
+          "Dim_Product[Product ID]": 3,
+          "[Sales]": 229260.15,
+          "[GP]": 157027.5,
+          "[Units]": 4985,
+          "[Refunded]": 301,
+          "[Refunds]": 13842.99,
+          "[Net]": 215417.16,
+          "[Refund ratio]": 0.06038114343029087,
+          "[Refund rate]": 0.06038114343029087
+        },
+        {
+          "Dim_Product[Product ID]": 4,
+          "[Sales]": 150489.82,
+          "[GP]": 102869,
+          "[Units]": 5018,
+          "[Refunded]": 64,
+          "[Refunds]": 1919.36,
+          "[Net]": 148570.46,
+          "[Refund ratio]": 0.012754085292945397,
+          "[Refund rate]": 0.012754085292945397
+        }
+      ],
+      "executionTimeMs": 5
+    }
+  },
+  "device": {
+    "message": "DAX query executed successfully, returned 2 rows in 3ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 2,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "Dim_Device[Device]",
+          "dataType": "String",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "[Sessions]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[Converted]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[Revenue]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[CVR]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 4
+        }
+      ],
+      "rows": [
+        {
+          "Dim_Device[Device]": "desktop",
+          "[Sessions]": 327027,
+          "[Converted]": 27805,
+          "[Revenue]": 1665757.84,
+          "[CVR]": 0.08502356074574882
+        },
+        {
+          "Dim_Device[Device]": "mobile",
+          "[Sessions]": 145844,
+          "[Converted]": 4508,
+          "[Revenue]": 272751.91,
+          "[CVR]": 0.03090973917336332
+        }
+      ],
+      "executionTimeMs": 3
+    }
+  },
+  "cohort": {
+    "message": "DAX query executed successfully, returned 185 rows in 44ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 185,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "Dim_Customer[Purchase Cohort]",
+          "dataType": "String",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "Dim_CohortAge[Month After First Purchase]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[CohortSize]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[Active]",
+          "dataType": "Int64",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[Retention]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 4
+        }
+      ],
+      "rows": [
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-03",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 60,
+          "[Active]": 60,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-03",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 60,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-03",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 60,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-03",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 60,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-03",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 60,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-04",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 99,
+          "[Active]": 99,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-04",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 99,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-04",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 99,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-04",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 99,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-04",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 99,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-05",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 108,
+          "[Active]": 108,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-05",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 108,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-05",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 108,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-05",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 108,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-05",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 108,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-06",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 139,
+          "[Active]": 139,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-06",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 139,
+          "[Active]": 1,
+          "[Retention]": 0.007194244604316547
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-06",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 139,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-06",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 139,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-06",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 139,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-07",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 168,
+          "[Active]": 168,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-07",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 168,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-07",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 168,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-07",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 168,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-07",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 168,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-08",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 227,
+          "[Active]": 227,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-08",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 227,
+          "[Active]": 1,
+          "[Retention]": 0.004405286343612335
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-08",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 227,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-08",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 227,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-08",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 227,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-09",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 286,
+          "[Active]": 286,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-09",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 286,
+          "[Active]": 1,
+          "[Retention]": 0.0034965034965034965
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-09",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 286,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-09",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 286,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-09",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 286,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-10",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 368,
+          "[Active]": 368,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-10",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 368,
+          "[Active]": 2,
+          "[Retention]": 0.005434782608695652
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-10",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 368,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-10",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 368,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-10",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 368,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-11",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 612,
+          "[Active]": 612,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-11",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 612,
+          "[Active]": 2,
+          "[Retention]": 0.0032679738562091504
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-11",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 612,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-11",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 612,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-11",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 612,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-12",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 502,
+          "[Active]": 502,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-12",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 502,
+          "[Active]": 1,
+          "[Retention]": 0.00199203187250996
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-12",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 502,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-12",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 502,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2012-12",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 502,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-01",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 387,
+          "[Active]": 387,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-01",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 387,
+          "[Active]": 4,
+          "[Retention]": 0.0103359173126615
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-01",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 387,
+          "[Active]": 1,
+          "[Retention]": 0.002583979328165375
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-01",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 387,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-01",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 387,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-02",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 489,
+          "[Active]": 489,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-02",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 489,
+          "[Active]": 2,
+          "[Retention]": 0.00408997955010225
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-02",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 489,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-02",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 489,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-02",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 489,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-03",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 382,
+          "[Active]": 382,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-03",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 382,
+          "[Active]": 3,
+          "[Retention]": 0.007853403141361256
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-03",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 382,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-03",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 382,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-03",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 382,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-04",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 542,
+          "[Active]": 542,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-04",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 542,
+          "[Active]": 1,
+          "[Retention]": 0.0018450184501845018
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-04",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 542,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-04",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 542,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-04",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 542,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-05",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 564,
+          "[Active]": 564,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-05",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 564,
+          "[Active]": 5,
+          "[Retention]": 0.008865248226950355
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-05",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 564,
+          "[Active]": 1,
+          "[Retention]": 0.0017730496453900709
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-05",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 564,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-05",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 564,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-06",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 584,
+          "[Active]": 584,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-06",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 584,
+          "[Active]": 4,
+          "[Retention]": 0.00684931506849315
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-06",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 584,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-06",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 584,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-06",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 584,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-07",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 594,
+          "[Active]": 594,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-07",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 594,
+          "[Active]": 5,
+          "[Retention]": 0.008417508417508417
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-07",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 594,
+          "[Active]": 1,
+          "[Retention]": 0.0016835016835016834
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-07",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 594,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-07",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 594,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-08",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 598,
+          "[Active]": 598,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-08",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 598,
+          "[Active]": 6,
+          "[Retention]": 0.010033444816053512
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-08",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 598,
+          "[Active]": 1,
+          "[Retention]": 0.0016722408026755853
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-08",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 598,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-08",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 598,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-09",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 616,
+          "[Active]": 616,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-09",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 616,
+          "[Active]": 8,
+          "[Retention]": 0.012987012987012988
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-09",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 616,
+          "[Active]": 1,
+          "[Retention]": 0.0016233766233766235
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-09",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 616,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-09",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 616,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-10",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 694,
+          "[Active]": 694,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-10",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 694,
+          "[Active]": 6,
+          "[Retention]": 0.008645533141210375
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-10",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 694,
+          "[Active]": 2,
+          "[Retention]": 0.002881844380403458
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-10",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 694,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-10",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 694,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-11",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 850,
+          "[Active]": 850,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-11",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 850,
+          "[Active]": 5,
+          "[Retention]": 0.0058823529411764705
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-11",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 850,
+          "[Active]": 2,
+          "[Retention]": 0.002352941176470588
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-11",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 850,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-11",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 850,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-12",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1037,
+          "[Active]": 1037,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-12",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1037,
+          "[Active]": 8,
+          "[Retention]": 0.007714561234329798
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-12",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1037,
+          "[Active]": 1,
+          "[Retention]": 0.0009643201542912247
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-12",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1037,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2013-12",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1037,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-01",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 962,
+          "[Active]": 962,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-01",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 962,
+          "[Active]": 10,
+          "[Retention]": 0.010395010395010396
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-01",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 962,
+          "[Active]": 4,
+          "[Retention]": 0.004158004158004158
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-01",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 962,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-01",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 962,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-02",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 999,
+          "[Active]": 999,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-02",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 999,
+          "[Active]": 8,
+          "[Retention]": 0.008008008008008008
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-02",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 999,
+          "[Active]": 2,
+          "[Retention]": 0.002002002002002002
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-02",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 999,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-02",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 999,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-03",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1048,
+          "[Active]": 1048,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-03",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1048,
+          "[Active]": 11,
+          "[Retention]": 0.01049618320610687
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-03",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1048,
+          "[Active]": 2,
+          "[Retention]": 0.0019083969465648854
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-03",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1048,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-03",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1048,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-04",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1215,
+          "[Active]": 1215,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-04",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1215,
+          "[Active]": 22,
+          "[Retention]": 0.01810699588477366
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-04",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1215,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-04",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1215,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-04",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1215,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-05",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1334,
+          "[Active]": 1334,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-05",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1334,
+          "[Active]": 10,
+          "[Retention]": 0.0074962518740629685
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-05",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1334,
+          "[Active]": 3,
+          "[Retention]": 0.0022488755622188904
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-05",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1334,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-05",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1334,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-06",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1219,
+          "[Active]": 1219,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-06",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1219,
+          "[Active]": 11,
+          "[Retention]": 0.009023789991796555
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-06",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1219,
+          "[Active]": 2,
+          "[Retention]": 0.0016406890894175555
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-06",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1219,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-06",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1219,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-07",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1260,
+          "[Active]": 1260,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-07",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1260,
+          "[Active]": 7,
+          "[Retention]": 0.005555555555555556
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-07",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1260,
+          "[Active]": 1,
+          "[Retention]": 0.0007936507936507937
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-07",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1260,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-07",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1260,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-08",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1306,
+          "[Active]": 1306,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-08",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1306,
+          "[Active]": 16,
+          "[Retention]": 0.01225114854517611
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-08",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1306,
+          "[Active]": 1,
+          "[Retention]": 0.0007656967840735069
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-08",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1306,
+          "[Active]": 0,
+          "[Retention]": 0
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-08",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1306,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-09",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1385,
+          "[Active]": 1385,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-09",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1385,
+          "[Active]": 15,
+          "[Retention]": 0.010830324909747292
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-09",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1385,
+          "[Active]": 4,
+          "[Retention]": 0.002888086642599278
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-09",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1385,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-09",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1385,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-10",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1580,
+          "[Active]": 1580,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-10",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1580,
+          "[Active]": 18,
+          "[Retention]": 0.01139240506329114
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-10",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1580,
+          "[Active]": 3,
+          "[Retention]": 0.0018987341772151898
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-10",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1580,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-10",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1580,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-11",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1951,
+          "[Active]": 1951,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-11",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1951,
+          "[Active]": 23,
+          "[Retention]": 0.011788826242952332
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-11",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1951,
+          "[Active]": 5,
+          "[Retention]": 0.0025627883136852894
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-11",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1951,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-11",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1951,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-12",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 2264,
+          "[Active]": 2264,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-12",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 2264,
+          "[Active]": 25,
+          "[Retention]": 0.011042402826855124
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-12",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 2264,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-12",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 2264,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2014-12",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 2264,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-01",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 2049,
+          "[Active]": 2049,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-01",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 2049,
+          "[Active]": 30,
+          "[Retention]": 0.014641288433382138
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-01",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 2049,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-01",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 2049,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-01",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 2049,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-02",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 2004,
+          "[Active]": 2004,
+          "[Retention]": 1
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-02",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 2004,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-02",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 2004,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-02",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 2004,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-02",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 2004,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-03",
+          "Dim_CohortAge[Month After First Purchase]": 0,
+          "[CohortSize]": 1214,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-03",
+          "Dim_CohortAge[Month After First Purchase]": 1,
+          "[CohortSize]": 1214,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-03",
+          "Dim_CohortAge[Month After First Purchase]": 3,
+          "[CohortSize]": 1214,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-03",
+          "Dim_CohortAge[Month After First Purchase]": 6,
+          "[CohortSize]": 1214,
+          "[Active]": null,
+          "[Retention]": null
+        },
+        {
+          "Dim_Customer[Purchase Cohort]": "2015-03",
+          "Dim_CohortAge[Month After First Purchase]": 12,
+          "[CohortSize]": 1214,
+          "[Active]": null,
+          "[Retention]": null
+        }
+      ],
+      "executionTimeMs": 44
+    }
+  },
+  "guards": {
+    "message": "DAX query executed successfully, returned 4 rows in 57ms",
+    "operation": "Execute",
+    "data": {
+      "rowCount": 4,
+      "isTruncated": false,
+      "columns": [
+        {
+          "name": "[Case]",
+          "dataType": "String",
+          "isNullable": true,
+          "ordinal": 0
+        },
+        {
+          "name": "[Growth]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 1
+        },
+        {
+          "name": "[MoM]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 2
+        },
+        {
+          "name": "[YoY]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 3
+        },
+        {
+          "name": "[Sales]",
+          "dataType": "Decimal",
+          "isNullable": true,
+          "ordinal": 4
+        },
+        {
+          "name": "[CVR]",
+          "dataType": "Double",
+          "isNullable": true,
+          "ordinal": 5
+        }
+      ],
+      "rows": [
+        {
+          "[Case]": "Empty context",
+          "[Growth]": null,
+          "[MoM]": null,
+          "[YoY]": null,
+          "[Sales]": null,
+          "[CVR]": null
+        },
+        {
+          "[Case]": "Noncontiguous",
+          "[Growth]": null,
+          "[MoM]": null,
+          "[YoY]": null,
+          "[Sales]": 124758.62,
+          "[CVR]": 0.0671607529350036
+        },
+        {
+          "[Case]": "November 2014",
+          "[Growth]": 0.27985374695535004,
+          "[MoM]": 0.233451433690342,
+          "[YoY]": 1.7484489938242826,
+          "[Sales]": 128162.98,
+          "[CVR]": 0.07900497512437811
+        },
+        {
+          "[Case]": "Partial March",
+          "[Growth]": null,
+          "[MoM]": null,
+          "[YoY]": null,
+          "[Sales]": 78951.07,
+          "[CVR]": 0.08313995889411921
+        }
+      ],
+      "executionTimeMs": 57
+    }
+  }
+}

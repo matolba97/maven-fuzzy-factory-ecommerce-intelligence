@@ -1,0 +1,3647 @@
+{
+  "visible_pages": {
+    "70090af74c92c1cdc22d": "Executive Command Center",
+    "b6ccc81daf35c8b5412e": "Revenue & Profitability",
+    "ee2a51d7f21484f3e0c2": "Marketing Acquisition",
+    "b47640f0e86a8dca37f9": "Conversion Funnel",
+    "a7e0d3b7cd3b27311030": "Product & Basket",
+    "624d96ee22805dc7e681": "Customer Behavior",
+    "9fd79fdfa9475d66e23c": "Refunds & Business Risks"
+  },
+  "tooltip_pages": [
+    "ddd39246e2835dcdfd87",
+    "9d0e692e33fb7276ef98",
+    "9382c5fdc8d83227b494",
+    "24a74e5bf96f7ae2061f",
+    "c402c4a6432cd40fee5f",
+    "c886a4123e684e9850fb",
+    "c9141d2188848a634553"
+  ],
+  "drillthrough_page": "bd210129dc95b372a66c",
+  "visuals": [
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ddd39246e2835dcdfd87",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "revenue-trend",
+      "type": "lineChart",
+      "rectangle": [
+        40,
+        408,
+        1000,
+        320
+      ],
+      "title": "Sales and gross profit"
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "channel-performance",
+      "type": "barChart",
+      "rectangle": [
+        1064,
+        408,
+        816,
+        320
+      ],
+      "title": "Acquisition value by traffic group"
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "products",
+      "type": "barChart",
+      "rectangle": [
+        40,
+        752,
+        1000,
+        264
+      ],
+      "title": "Leading products by recorded item sales"
+    },
+    {
+      "page": "70090af74c92c1cdc22d",
+      "key": "insight",
+      "type": "cardVisual",
+      "rectangle": [
+        1064,
+        752,
+        816,
+        264
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9d0e692e33fb7276ef98",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "financial-trend",
+      "type": "lineChart",
+      "rectangle": [
+        40,
+        408,
+        1184,
+        320
+      ],
+      "title": "Sales and gross profit by month"
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "contribution",
+      "type": "barChart",
+      "rectangle": [
+        1248,
+        408,
+        632,
+        320
+      ],
+      "title": "Product share of recorded sales"
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "monthly",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        752,
+        1184,
+        264
+      ],
+      "title": "Complete-month comparisons and basket value"
+    },
+    {
+      "page": "b6ccc81daf35c8b5412e",
+      "key": "product-profit",
+      "type": "pivotTable",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": "Product economics"
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9382c5fdc8d83227b494",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "source-value",
+      "type": "barChart",
+      "rectangle": [
+        40,
+        408,
+        1000,
+        320
+      ],
+      "title": "Revenue per session by source"
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "channel-trend",
+      "type": "lineChart",
+      "rectangle": [
+        1064,
+        408,
+        816,
+        320
+      ],
+      "title": "Sessions over time by traffic group"
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "campaigns",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        752,
+        1184,
+        264
+      ],
+      "title": "Campaign reach and value"
+    },
+    {
+      "page": "ee2a51d7f21484f3e0c2",
+      "key": "device-conversion",
+      "type": "barChart",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": "Device conversion, same session cohort"
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "24a74e5bf96f7ae2061f",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "funnel",
+      "type": "funnel",
+      "rectangle": [
+        40,
+        408,
+        920,
+        320
+      ],
+      "title": "Ordered journey · unique sessions"
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "dropoff",
+      "type": "pivotTable",
+      "rectangle": [
+        984,
+        408,
+        896,
+        320
+      ],
+      "title": "Stage conversion and observed drop-off"
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "landing",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        752,
+        1184,
+        264
+      ],
+      "title": "Landing page comparisons · observational"
+    },
+    {
+      "page": "b47640f0e86a8dca37f9",
+      "key": "cvr-trend",
+      "type": "lineChart",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": "Session conversion over time"
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c402c4a6432cd40fee5f",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "product-sales",
+      "type": "clusteredBarChart",
+      "rectangle": [
+        40,
+        408,
+        1000,
+        320
+      ],
+      "title": "Product sales and gross profit"
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "item-roles",
+      "type": "pivotTable",
+      "rectangle": [
+        1064,
+        408,
+        816,
+        320
+      ],
+      "title": "Primary and additional item economics"
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "baskets",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        752,
+        1184,
+        264
+      ],
+      "title": "Observed product combinations"
+    },
+    {
+      "page": "a7e0d3b7cd3b27311030",
+      "key": "launch",
+      "type": "lineChart",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": "Units by calendar month since launch"
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c886a4123e684e9850fb",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "cohorts",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        408,
+        1184,
+        608
+      ],
+      "title": "First-purchase cohort retention · complete months only"
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "visitor-trend",
+      "type": "lineChart",
+      "rectangle": [
+        1248,
+        408,
+        632,
+        320
+      ],
+      "title": "New and repeat visitor sessions"
+    },
+    {
+      "page": "624d96ee22805dc7e681",
+      "key": "customer-frequency",
+      "type": "barChart",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": "Revenue by observed lifetime frequency"
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-0",
+      "type": "actionButton",
+      "rectangle": [
+        40,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-1",
+      "type": "actionButton",
+      "rectangle": [
+        304,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-2",
+      "type": "actionButton",
+      "rectangle": [
+        568,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-3",
+      "type": "actionButton",
+      "rectangle": [
+        832,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-4",
+      "type": "actionButton",
+      "rectangle": [
+        1096,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-5",
+      "type": "actionButton",
+      "rectangle": [
+        1360,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "nav-6",
+      "type": "actionButton",
+      "rectangle": [
+        1624,
+        16,
+        256,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "heading",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        80,
+        1280,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "brand",
+      "type": "textbox",
+      "rectangle": [
+        1416,
+        88,
+        464,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "date",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        160,
+        420,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "year",
+      "type": "slicer",
+      "rectangle": [
+        484,
+        160,
+        160,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "device",
+      "type": "slicer",
+      "rectangle": [
+        668,
+        160,
+        180,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "visitor",
+      "type": "slicer",
+      "rectangle": [
+        872,
+        160,
+        280,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "channel",
+      "type": "slicer",
+      "rectangle": [
+        1176,
+        160,
+        480,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "reset",
+      "type": "actionButton",
+      "rectangle": [
+        1680,
+        184,
+        200,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "footnote",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        1032,
+        1840,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-1",
+      "type": "cardVisual",
+      "rectangle": [
+        350,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-2",
+      "type": "cardVisual",
+      "rectangle": [
+        660,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-3",
+      "type": "cardVisual",
+      "rectangle": [
+        970,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-4",
+      "type": "cardVisual",
+      "rectangle": [
+        1280,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "kpi-5",
+      "type": "cardVisual",
+      "rectangle": [
+        1590,
+        280,
+        286,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "tip-title",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        24,
+        1056,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        88,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-0",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        124,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        192,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-1",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        228,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        296,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-2",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        332,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        400,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-3",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        436,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        504,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-4",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        540,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "metric-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        608,
+        1056,
+        32
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "definition-5",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        644,
+        1056,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "context-0",
+      "type": "cardVisual",
+      "rectangle": [
+        32,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "context-1",
+      "type": "cardVisual",
+      "rectangle": [
+        568,
+        728,
+        520,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "c9141d2188848a634553",
+      "key": "tip-footer",
+      "type": "textbox",
+      "rectangle": [
+        32,
+        856,
+        1056,
+        24
+      ],
+      "title": null
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "refund-trend",
+      "type": "lineChart",
+      "rectangle": [
+        40,
+        408,
+        1000,
+        320
+      ],
+      "title": "Recorded refund amount by event month"
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "refund-product",
+      "type": "barChart",
+      "rectangle": [
+        1064,
+        408,
+        816,
+        320
+      ],
+      "title": "Recorded refund cash flow by product"
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "refund-incidence",
+      "type": "pivotTable",
+      "rectangle": [
+        40,
+        752,
+        1184,
+        264
+      ],
+      "title": "Refund incidence on selected sold-item cohorts"
+    },
+    {
+      "page": "9fd79fdfa9475d66e23c",
+      "key": "risk-notes",
+      "type": "textbox",
+      "rectangle": [
+        1248,
+        752,
+        632,
+        264
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "title",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        40,
+        1400,
+        64
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "back",
+      "type": "actionButton",
+      "rectangle": [
+        1640,
+        48,
+        240,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "note",
+      "type": "textbox",
+      "rectangle": [
+        40,
+        120,
+        1840,
+        48
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "product",
+      "type": "slicer",
+      "rectangle": [
+        40,
+        184,
+        800,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "metric0",
+      "type": "cardVisual",
+      "rectangle": [
+        40,
+        320,
+        448,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "metric1",
+      "type": "cardVisual",
+      "rectangle": [
+        512,
+        320,
+        448,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "metric2",
+      "type": "cardVisual",
+      "rectangle": [
+        984,
+        320,
+        448,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "metric3",
+      "type": "cardVisual",
+      "rectangle": [
+        1456,
+        320,
+        448,
+        104
+      ],
+      "title": null
+    },
+    {
+      "page": "bd210129dc95b372a66c",
+      "key": "product-monthly",
+      "type": "lineChart",
+      "rectangle": [
+        40,
+        456,
+        1840,
+        512
+      ],
+      "title": "Selected product sales and gross profit"
+    }
+  ]
+}

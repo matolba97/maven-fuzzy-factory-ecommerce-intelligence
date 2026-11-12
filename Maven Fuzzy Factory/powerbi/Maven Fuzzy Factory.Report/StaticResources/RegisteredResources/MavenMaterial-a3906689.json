@@ -1,0 +1,129 @@
+{
+  "name": "MavenMaterial-a3906689.json",
+  "dataColors": [
+    "#4F46A5",
+    "#087F80",
+    "#A36512",
+    "#647DA8",
+    "#7C679A",
+    "#5B8567"
+  ],
+  "background": "#FFFFFF",
+  "foreground": "#172337",
+  "foregroundNeutralSecondary": "#526074",
+  "foregroundNeutralTertiary": "#7B8490",
+  "backgroundLight": "#E8EBEF",
+  "backgroundNeutral": "#F4F5F7",
+  "tableAccent": "#4F46A5",
+  "good": "#087F80",
+  "neutral": "#A36512",
+  "bad": "#A34648",
+  "maximum": "#087F80",
+  "center": "#B3D8D1",
+  "minimum": "#F3F8F6",
+  "textClasses": {
+    "callout": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 28,
+      "color": "#172337"
+    },
+    "title": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 14,
+      "color": "#172337"
+    },
+    "header": {
+      "fontFace": "Segoe UI Semibold",
+      "fontSize": 12,
+      "color": "#526074"
+    },
+    "label": {
+      "fontFace": "Segoe UI",
+      "fontSize": 11,
+      "color": "#526074"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "visualHeader": [
+          {
+            "show": false
+          }
+        ],
+        "title": [
+          {
+            "fontSize": 14,
+            "fontFamily": "Segoe UI Semibold",
+            "fontColor": {
+              "solid": {
+                "color": "#172337"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "textbox": {
+      "*": {
+        "padding": [
+          {
+            "top": 0,
+            "bottom": 0,
+            "left": 0,
+            "right": 0
+          }
+        ],
+        "background": [
+          {
+            "show": false
+          }
+        ],
+        "border": [
+          {
+            "show": false
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "layout": [
+          {
+            "paddingUniform": 0
+          }
+        ],
+        "padding": [
+          {
+            "paddingUniform": 8
+          }
+        ],
+        "spacing": [
+          {
+            "verticalSpacing": 2
+          }
+        ]
+      }
+    },
+    "tableEx": {
+      "*": {
+        "columnHeaders": [
+          {
+            "autoSizeColumnWidth": true,
+            "columnAdjustment": "growToFit"
+          }
+        ]
+      }
+    },
+    "pivotTable": {
+      "*": {
+        "columnHeaders": [
+          {
+            "autoSizeColumnWidth": true,
+            "columnAdjustment": "growToFit"
+          }
+        ]
+      }
+    }
+  }
+}

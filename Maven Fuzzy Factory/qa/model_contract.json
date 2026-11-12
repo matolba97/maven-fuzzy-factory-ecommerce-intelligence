@@ -1,0 +1,293 @@
+{
+  "tables": 14,
+  "measures": 88,
+  "relationships": 26,
+  "relationships_detail": [
+    {
+      "name": "b3a3e106-f488-4439-96c1-7f5969b6cc04",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Order Date",
+      "toTable": "Dim_Date",
+      "toColumn": "Date",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "ceeaebe9-54ce-4bc1-bc28-5c3d55492c46",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Customer ID",
+      "toTable": "Dim_Customer",
+      "toColumn": "Customer ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "184da7dc-d4f0-439d-9bfb-fd706503eb08",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Channel ID",
+      "toTable": "Dim_Channel",
+      "toColumn": "Channel ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "81b0cca1-a195-4a6e-ba4e-e8006b791557",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Device",
+      "toTable": "Dim_Device",
+      "toColumn": "Device",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "a9e29a28-31ed-4535-8275-1ef27c3aa302",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Visitor Type",
+      "toTable": "Dim_Visitor",
+      "toColumn": "Visitor Type",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "5e519a14-73a0-44d3-8a40-81df552488a1",
+      "fromTable": "Fact_Orders",
+      "fromColumn": "Landing Page",
+      "toTable": "Dim_Landing",
+      "toColumn": "Landing Page",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "245c3906-06a3-4cce-b24d-b414e2619ae4",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Order Date",
+      "toTable": "Dim_Date",
+      "toColumn": "Date",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "76923f45-3d29-4ac3-8a58-25b5e5b38545",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Customer ID",
+      "toTable": "Dim_Customer",
+      "toColumn": "Customer ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "49f90767-72df-4129-855a-dae1ebd59baf",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Channel ID",
+      "toTable": "Dim_Channel",
+      "toColumn": "Channel ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "96fc8cd1-ef31-4591-8ba9-d4f5e9bfa388",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Device",
+      "toTable": "Dim_Device",
+      "toColumn": "Device",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "2f4ba346-b31f-47a2-b923-a3675e629e02",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Visitor Type",
+      "toTable": "Dim_Visitor",
+      "toColumn": "Visitor Type",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "cf6bf810-1d06-4361-9de9-1961db027c99",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Landing Page",
+      "toTable": "Dim_Landing",
+      "toColumn": "Landing Page",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "384a04a0-ef23-41e1-99b4-dac52592214d",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Refund Date",
+      "toTable": "Dim_Date",
+      "toColumn": "Date",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "9c109407-79a0-4de6-8e7b-436ab5847494",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Customer ID",
+      "toTable": "Dim_Customer",
+      "toColumn": "Customer ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "ae5fbd66-a612-4f7c-824e-94bd139bc4c0",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Channel ID",
+      "toTable": "Dim_Channel",
+      "toColumn": "Channel ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "dc8de72c-064d-40b6-883f-46f941c5ef3f",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Device",
+      "toTable": "Dim_Device",
+      "toColumn": "Device",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "ba3e84bd-5096-49cb-99a8-e7cd33109ff5",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Visitor Type",
+      "toTable": "Dim_Visitor",
+      "toColumn": "Visitor Type",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "b6bf1270-16c1-46ee-bdd6-719f6ef39736",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Landing Page",
+      "toTable": "Dim_Landing",
+      "toColumn": "Landing Page",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "a6cc44b2-438e-42e0-a6f7-e6135c8180d7",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Session Date",
+      "toTable": "Dim_Date",
+      "toColumn": "Date",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "089185b5-93ab-42c0-8c24-b47e40e6ee3a",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Customer ID",
+      "toTable": "Dim_Customer",
+      "toColumn": "Customer ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "514a5dec-0b37-42da-8ddb-d3d90b504aac",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Channel ID",
+      "toTable": "Dim_Channel",
+      "toColumn": "Channel ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "18c8eb24-2e62-497e-96b9-19401a0a70bb",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Device",
+      "toTable": "Dim_Device",
+      "toColumn": "Device",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "7b8e113c-ffd5-45c3-ae94-217fd3e2b50c",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Visitor Type",
+      "toTable": "Dim_Visitor",
+      "toColumn": "Visitor Type",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "efb33a03-bd88-4ce6-b786-3287581d0d13",
+      "fromTable": "Fact_Sessions",
+      "fromColumn": "Landing Page",
+      "toTable": "Dim_Landing",
+      "toColumn": "Landing Page",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "9e70547f-5f61-4f2d-aaac-7c41580a9cca",
+      "fromTable": "Fact_OrderItems",
+      "fromColumn": "Product ID",
+      "toTable": "Dim_Product",
+      "toColumn": "Product ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    },
+    {
+      "name": "8a19a7e1-5837-4615-92f0-d1c321963f07",
+      "fromTable": "Fact_Refunds",
+      "fromColumn": "Product ID",
+      "toTable": "Dim_Product",
+      "toColumn": "Product ID",
+      "fromCardinality": "many",
+      "toCardinality": "one",
+      "crossFilteringBehavior": "oneDirection",
+      "isActive": true
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+﻿Table,Column,Model type,Hidden,Lineage,Meaning
+Fact_Orders,Order ID,int64,True,orders.order_id,Unique identifier for each order (PK)
+Fact_Orders,Website Session ID,int64,True,orders.website_session_id,Unique identifier for the website session (FK)
+Fact_Orders,Primary Product ID,int64,True,orders.primary_product_id,Unique identifier for the primary product in the order if part of a bundle (FK)
+Fact_Orders,Items Purchased,int64,True,orders.items_purchased,Number of items in the order
+Fact_Orders,Sales Amount,decimal,True,orders.price_usd,Total price for the items in the order
+Fact_Orders,COGS Amount,decimal,True,orders.cogs_usd,Cost of goods sold for the items in the order
+Fact_Orders,Order Date,dateTime,True,orders.created_at,Recorded order timestamp reduced to calendar date.
+Fact_Orders,Customer ID,int64,True,orders.user_id,Unique identifier for the user (FK)
+Fact_Orders,Channel ID,int64,True,website_sessions UTM fields + http_referer,Deterministic surrogate for observed source/campaign/content/referrer tuple; classifications do not prove paid status.
+Fact_Orders,Device,string,False,orders.device_type,Conformed source attribute looked up through a validated many-to-one key.
+Fact_Orders,Visitor Type,string,False,website_sessions.is_repeat_session,Source flag 0 = new visitor session; 1 = repeat visitor session. Not purchase recurrence.
+Fact_Orders,Landing Page,string,False,website_pageviews.pageview_url + created_at + website_pageview_id,"URL of the first pageview in deterministic (timestamp, pageview ID) order within session."
+Fact_Orders,Purchase Number,int64,True,"orders sorted by created_at, order_id within user_id",One-based order sequence in the extract; not a lifetime claim.
+Fact_Orders,Purchase Type,string,False,Purchase Number,First observed purchase for sequence one; subsequent purchase otherwise.
+Fact_Orders,Basket,string,False,order_items.product_id + products.product_name,Sorted multiset of product names in one order. One signature per order; order values never duplicated.
+Fact_Orders,Has Cross Sell,int64,True,orders.items_purchased,One when more than one item was purchased in the order.
+Fact_Orders,Purchase Age Month,int64,False,order date - first observed purchase month,"Calendar month difference, not rolling 30-day windows."
+Fact_OrderItems,Order Item ID,int64,True,order_items.order_item_id,Unique identifier for each order item (PK)
+Fact_OrderItems,Order ID,int64,True,order_items.order_id,Unique identifier for the order the item belongs to (FK)
+Fact_OrderItems,Product ID,int64,True,order_items.product_id,Unique identifier for the product (FK)
+Fact_OrderItems,Item Sales Amount,decimal,True,order_items.price_usd,Price of the product
+Fact_OrderItems,Item COGS Amount,decimal,True,order_items.cogs_usd,Cost of goods sold of the product
+Fact_OrderItems,Order Date,dateTime,True,orders.created_at,Recorded order timestamp reduced to calendar date.
+Fact_OrderItems,Customer ID,int64,True,order_items.user_id,Conformed source attribute looked up through a validated many-to-one key.
+Fact_OrderItems,Channel ID,int64,True,website_sessions UTM fields + http_referer,Deterministic surrogate for observed source/campaign/content/referrer tuple; classifications do not prove paid status.
+Fact_OrderItems,Device,string,False,order_items.device_type,Conformed source attribute looked up through a validated many-to-one key.
+Fact_OrderItems,Visitor Type,string,False,website_sessions.is_repeat_session,Source flag 0 = new visitor session; 1 = repeat visitor session. Not purchase recurrence.
+Fact_OrderItems,Landing Page,string,False,website_pageviews.pageview_url + created_at + website_pageview_id,"URL of the first pageview in deterministic (timestamp, pageview ID) order within session."
+Fact_OrderItems,Item Role,string,False,order_items.is_primary_item,"Primary item for 1, cross-sell item for 0."
+Fact_OrderItems,Recorded Refund,decimal,True,order_item_refunds.refund_amount_usd grouped by order_item_id,All recorded refunds for the sold item through source cutoff; original-sale cohort selection.
+Fact_OrderItems,Refunded Item,int64,True,order_item_refunds.order_item_id,"One if any recorded refund links to the item, regardless of number of events."
+Fact_OrderItems,Launch Age Month,int64,False,order item date - product launch month,Calendar month difference; launch month may be partially observed.
+Fact_Refunds,Refund ID,int64,True,order_item_refunds.order_item_refund_id,Unique identifier for each refund (PK)
+Fact_Refunds,Order Item ID,int64,True,order_item_refunds.order_item_id,Unique identifier for the order item that was refunded (FK)
+Fact_Refunds,Order ID,int64,True,order_item_refunds.order_id,Unique identifier for the order the refunded item belonged to (FK)
+Fact_Refunds,Product ID,int64,True,order_item_refunds.product_id,Conformed source attribute looked up through a validated many-to-one key.
+Fact_Refunds,Refund Amount,decimal,True,order_item_refunds.refund_amount_usd,Refund amount
+Fact_Refunds,Refund Date,dateTime,True,order_item_refunds.created_at,Recorded refund timestamp reduced to calendar date; role-playing refund cash-flow date.
+Fact_Refunds,Order Date,dateTime,True,orders.created_at,Recorded order timestamp reduced to calendar date.
+Fact_Refunds,Customer ID,int64,True,order_item_refunds.user_id,Conformed source attribute looked up through a validated many-to-one key.
+Fact_Refunds,Channel ID,int64,True,website_sessions UTM fields + http_referer,Deterministic surrogate for observed source/campaign/content/referrer tuple; classifications do not prove paid status.
+Fact_Refunds,Device,string,False,order_item_refunds.device_type,Conformed source attribute looked up through a validated many-to-one key.
+Fact_Refunds,Visitor Type,string,False,website_sessions.is_repeat_session,Source flag 0 = new visitor session; 1 = repeat visitor session. Not purchase recurrence.
+Fact_Refunds,Landing Page,string,False,website_pageviews.pageview_url + created_at + website_pageview_id,"URL of the first pageview in deterministic (timestamp, pageview ID) order within session."
+Fact_Refunds,Refund Lag Days,int64,True,refund created_at date - original order created_at date,Calendar-day difference; distinct from fractional elapsed days.
+Fact_Sessions,Website Session ID,int64,True,website_sessions.website_session_id,Unique identifier for the website session (PK)
+Fact_Sessions,Customer ID,int64,True,website_sessions.user_id,Unique identifier for the user (FK)
+Fact_Sessions,Session Date,dateTime,True,website_sessions.created_at,Recorded timestamp reduced to calendar date; timestamps are timezone-naive.
+Fact_Sessions,Channel ID,int64,True,website_sessions UTM fields + http_referer,Deterministic surrogate for observed source/campaign/content/referrer tuple; classifications do not prove paid status.
+Fact_Sessions,Device,string,False,website_sessions.device_type,Device category (mobile or desktop)
+Fact_Sessions,Visitor Type,string,False,website_sessions.is_repeat_session,Source flag 0 = new visitor session; 1 = repeat visitor session. Not purchase recurrence.
+Fact_Sessions,Landing Page,string,False,website_pageviews.pageview_url + created_at + website_pageview_id,"URL of the first pageview in deterministic (timestamp, pageview ID) order within session."
+Fact_Sessions,Pageviews,int64,True,website_pageviews,Native pageview count per session.
+Fact_Sessions,Bounced,int64,True,website_pageviews,One when the session has exactly one recorded pageview; no engagement-time rule.
+Fact_Sessions,Converted,int64,True,orders.website_session_id,One if a session has at least one linked order; prevents multiple orders inflating conversion.
+Fact_Sessions,Session Orders,int64,True,orders grouped by website_session_id,"Number of linked orders, attributed to session start date."
+Fact_Sessions,Session Revenue,decimal,True,orders.price_usd grouped by website_session_id,Order revenue aggregated per session before joining; session-date attribution.
+Fact_Sessions,Reach Product,int64,True,website_pageviews.pageview_url,"One if any matching stage URL is observed in session, repeated views deduplicated; no ordering requirement."
+Fact_Sessions,Reach Cart,int64,True,website_pageviews.pageview_url,"One if any matching stage URL is observed in session, repeated views deduplicated; no ordering requirement."
+Fact_Sessions,Reach Shipping,int64,True,website_pageviews.pageview_url,"One if any matching stage URL is observed in session, repeated views deduplicated; no ordering requirement."
+Fact_Sessions,Reach Billing,int64,True,website_pageviews.pageview_url,"One if any matching stage URL is observed in session, repeated views deduplicated; no ordering requirement."
+Fact_Sessions,Reach Confirmation,int64,True,website_pageviews.pageview_url,"One if any matching stage URL is observed in session, repeated views deduplicated; no ordering requirement."
+Fact_Sessions,Sequential Product,int64,True,"website_pageviews ordered by timestamp/pageview ID, with orders linkage for purchase",One only after all preceding stages were completed in order. Purchase also requires linked order at/after billing.
+Fact_Sessions,Sequential Cart,int64,True,"website_pageviews ordered by timestamp/pageview ID, with orders linkage for purchase",One only after all preceding stages were completed in order. Purchase also requires linked order at/after billing.
+Fact_Sessions,Sequential Shipping,int64,True,"website_pageviews ordered by timestamp/pageview ID, with orders linkage for purchase",One only after all preceding stages were completed in order. Purchase also requires linked order at/after billing.
+Fact_Sessions,Sequential Billing,int64,True,"website_pageviews ordered by timestamp/pageview ID, with orders linkage for purchase",One only after all preceding stages were completed in order. Purchase also requires linked order at/after billing.
+Fact_Sessions,Sequential Purchase,int64,True,"website_pageviews ordered by timestamp/pageview ID, with orders linkage for purchase",One only after all preceding stages were completed in order. Purchase also requires linked order at/after billing.
+Dim_Product,Product ID,int64,True,products.product_id,Unique identifier for the product (PK)
+Dim_Product,Launch Date,dateTime,False,products.created_at,Timestamp for when the product was launched
+Dim_Product,Product,string,False,products.product_name,Name of the product
+Dim_Date,Date,dateTime,False,contiguous calendar derived from source coverage years,Calendar attribute: Date. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Year,int64,False,contiguous calendar derived from source coverage years,Calendar attribute: Year. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Quarter,string,False,contiguous calendar derived from source coverage years,Calendar attribute: Quarter. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Month,string,False,contiguous calendar derived from source coverage years,Calendar attribute: Month. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Month Number,int64,False,contiguous calendar derived from source coverage years,Calendar attribute: Month Number. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Year-Month,string,False,contiguous calendar derived from source coverage years,Calendar attribute: Year-Month. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Year Month Sort,int64,True,contiguous calendar derived from source coverage years,Calendar attribute: Year Month Sort. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Week,int64,False,calendar date,"ISO week number; pair with ISO Year, not necessarily calendar Year."
+Dim_Date,ISO Year,int64,False,calendar date,"ISO week-numbering year, paired with ISO week number."
+Dim_Date,Month Start,dateTime,False,contiguous calendar derived from source coverage years,Calendar attribute: Month Start. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Day,int64,False,contiguous calendar derived from source coverage years,Calendar attribute: Day. Full years enable unambiguous time context; no assertion of observations outside source coverage.
+Dim_Date,Is Complete Sales Month,int64,True,observed order timestamp bounds,One only for Apr 2012–Feb 2015. Excludes both partial boundary months and all uncovered months.
+Dim_Date,Is In Sales Coverage,int64,True,observed order timestamp bounds,Date within inclusive observed order dates; boundary days remain partial.
+Dim_Customer,Customer ID,int64,True,Source-derived conformed dimension or utility,Customer ID at Dim_Customer grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+Dim_Customer,First Session Date,dateTime,True,website_sessions.created_at per user_id,"Earliest observed session date, not necessarily true first-ever visit."
+Dim_Customer,First Purchase Date,dateTime,True,orders.created_at per user_id,Earliest observed purchase date; blank for observed nonbuyers.
+Dim_Customer,Purchase Cohort,string,False,First Purchase Date,YYYY-MM of first observed purchase; nonbuyers labeled separately.
+Dim_Customer,Observed Lifetime Orders,int64,False,orders grouped by user_id,Complete-extract purchase count. Fixed at refresh; not recalculated by report date slicers.
+Dim_Customer,Observed Frequency,string,False,Observed Lifetime Orders,"No purchase, one, two, three-to-four, or five-plus purchases in extract."
+Dim_Customer,Customer Status,string,False,Observed Lifetime Orders,Observed buyer vs no observed purchase.
+Dim_Channel,Channel ID,int64,True,website_sessions UTM fields + http_referer,Deterministic surrogate for observed source/campaign/content/referrer tuple; classifications do not prove paid status.
+Dim_Channel,Traffic Group,string,False,website_sessions UTM/referrer,"Tagged search, tagged social, untagged search referral, or direct/unknown; no paid/organic assertion."
+Dim_Channel,Source,string,False,utm_source or recognized http_referer,Tagged source preferred; recognized untagged search referrer otherwise; direct/unknown is residual.
+Dim_Channel,Campaign,string,False,website_sessions.utm_campaign,"Source campaign text, with literal NULL/missing normalized to (not tagged)."
+Dim_Channel,Ad Content,string,False,website_sessions.utm_content,Source ad/content label. No spend or exposure metric.
+Dim_Channel,Referrer,string,False,website_sessions.http_referer,Observed referrer URL; missing is (not tagged).
+Dim_Channel,Channel,string,False,Source + Campaign,Display grouping of source and campaign; ad-content variants roll up safely.
+Dim_Device,Device,string,False,Source-derived conformed dimension or utility,Device at Dim_Device grain. See docs/03-data-dictionary.csv for source lineage and meaning.
+Dim_Visitor,Visitor Type,string,False,website_sessions.is_repeat_session,Source flag 0 = new visitor session; 1 = repeat visitor session. Not purchase recurrence.
+Dim_Landing,Landing Page,string,False,website_pageviews.pageview_url + created_at + website_pageview_id,"URL of the first pageview in deterministic (timestamp, pageview ID) order within session."
+Dim_FunnelStage,Stage,string,False,website_pageviews observed URL inventory,Disconnected ordered-stage label; selects a distinct-session funnel measure.
+Dim_FunnelStage,Stage Order,int64,False,Stage,"Landing 1, Product 2, Cart 3, Shipping 4, Billing 5, Purchase 6."
+Dim_CohortAge,Month After First Purchase,int64,False,0 through 36,Disconnected cohort-age axis. Report displays ages zero through twelve by default.
+_Measures,Label,string,True,Source-derived conformed dimension or utility,Utility label.
